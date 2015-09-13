@@ -1,0 +1,12 @@
+public class Driver extends Thread {
+    public void run() {
+        while (true) {
+            System.out.println("A");
+            System.out.println("B");
+        }
+    }
+    public static void main(String[] args) {
+        Thread t = new Driver();
+        t.start();
+    }
+}

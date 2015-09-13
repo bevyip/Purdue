@@ -1,0 +1,3 @@
+class CarLot implements Inventory<Car> {
+  // your code goes here
+}
