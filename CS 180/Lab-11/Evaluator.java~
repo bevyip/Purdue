@@ -1,0 +1,29 @@
+import java.util.*;
+
+public class Evaluator {
+    public static int evaluate(String s) {
+        Stack<Integer> st = new Stack<Integer>();
+        for (int i = 0; i < s.length(); i++) {
+            if (Character.isDigit(s.charAt(i))) {
+                int temp = (int) s.charAt(i) - '0';
+                st.push(temp);
+            } else {
+                char temp = s.charAt(i);
+                int tempo = 0;
+                switch (temp) {
+                    case '+': {tempo = st.pop() + st.pop(); st.push(tempo); break;}
+                    case '-': {tempo = st.pop() - st.pop(); st.push(-tempo); break;}
+                    case '/': {tempo = st.pop() / st.pop(); st.push(tempo); break;}
+                    case '*': {tempo = st.pop() * st.pop(); st.push(tempo); break;}
+                    case ' ': break;
+                    default: {System.out.println("Error");}
+                }
+            }
+        }
+        return st.pop();
+    }
+    
+    public static void main(String[] args) {
+        System.out.printf("%d",evaluate("6 1 2 + 4 * + 3 -"));
+    }
+}

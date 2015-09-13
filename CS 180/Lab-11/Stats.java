@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.HashMap;
+import java.util.Map;
+
+public class Stats {
+    
+    public static HashMap wins() throws IOException {
+        Map<String,Integer> map = new HashMap<String,Integer>();
+        File f = new File("inputfile.txt");
+        BufferedReader br = new BufferedReader(new FileReader(f));
+        while (br.readLine() != null) {
+            String s = br.readLine();
+            String[] names = s.split(" ");
+            if (s.charAt(0) == '0') {
+                for (int i = 7; i < 12; i++) {
+                    map.put(names[i], c++);
+                }
+            } else if (s.charAt(0) == '1') {
+                for (int i = 7; i < 12; i++) {
+                    map.put(names[i], c);
+                }
+            }
+        }
+        return null;
+    }
+}
