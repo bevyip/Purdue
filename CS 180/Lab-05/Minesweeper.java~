@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class Minesweeper {
+  public Minesweeper(int rows, int columns, int mines) {
+    this.rows = rows;
+    this.columns = columns;
+    this.mines = mines;
+  }
+  private void generateMinefield(int mines) {
+  }
+  private void generateClueGrid() {
+  }
+  private int countMines(int row, int column) {
+  }
+  private void printBoard() {
+  }
+  public void start() {
+  }
+  private final boolean[][] mineField {
+  }
+  private final int[][] clueGrid {
+  }
+  private boolean[][] checked {
+  }
+}
+int minefield[][] = new int[3][3]
+for (int i = 0; i < 3; i++){
+  for (int j = 0; j < 3; j++){
+    minefield[i][j] = 
+  }
+}
