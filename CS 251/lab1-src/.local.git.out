@@ -1,0 +1,215 @@
+[master (root-commit) c4292e6] 10 of 100
+ Committer: CS251 Account <cs251@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 25 files changed, 2712 insertions(+)
+ create mode 100644 .local.git.out
+ create mode 100644 HashTableTemplate.h
+ create mode 100644 HashTableTemplateTest.cc
+ create mode 100644 HashTableVoid.cc
+ create mode 100644 HashTableVoid.h
+ create mode 100644 HashTableVoidTest.cc
+ create mode 100644 ListTemplate.h
+ create mode 100644 ListTemplateTest.cc
+ create mode 100644 Makefile
+ create mode 100644 MyString.cc
+ create mode 100644 MyString.h
+ create mode 100644 TestMyString.cc
+ create mode 100644 TestMyString.s
+ create mode 100644 greetings.txt
+ create mode 100644 mygrep.cc
+ create mode 100644 out1
+ create mode 100644 out2
+ create mode 100644 results.txt
+ create mode 100755 testWcTemplate
+ create mode 100755 testWcVoid
+ create mode 100755 testall
+ create mode 100644 total.out
+ create mode 100644 wcTemplate.cc
+ create mode 100644 wcVoid.cc
+ create mode 100755 wcVoidExample
+[master 19f4497] 13 of 100
+ Committer: CS251 Account <cs251@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 8 files changed, 42 insertions(+), 3 deletions(-)
+ create mode 100755 HashTableTemplateTest
+ create mode 100755 HashTableVoidTest
+ create mode 100755 TestMyString
+ create mode 100755 wcTemplate
+ create mode 100755 wcVoid
+[master aeffe87] 3 of 100
+ Committer: CS251 Account <cs251@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 8 files changed, 655 insertions(+), 6 deletions(-)
+ create mode 100755 wcTemplateExample
+ rewrite wcVoidExample (98%)
+[master 03bcaaf] 3 of 100
+ Committer: CS251 Account <cs251@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 17 insertions(+), 1 deletion(-)
+[master 8206636] 10 of 100
+ Committer: CS251 Account <cs251@lore.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 10 files changed, 22 insertions(+), 638 deletions(-)
+ delete mode 100755 HashTableTemplateTest
+ delete mode 100755 HashTableVoidTest
+ delete mode 100755 TestMyString
+ rewrite out2 (100%)
+ delete mode 100755 wcTemplate
+ delete mode 100755 wcVoid
+[master d98f50a] 10 of 100
+ Committer: CS251 Account <cs251@lore.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 22 insertions(+), 1 deletion(-)
+[master 80ccde4] 0 of 100
+ 6 files changed, 832 insertions(+), 57 deletions(-)
+[master 8ee13f4] 3 of 100
+ 10 files changed, 16 insertions(+), 12 deletions(-)
+ create mode 100755 HashTableTemplateTest
+ create mode 100755 HashTableVoidTest
+ create mode 100755 TestMyString
+ create mode 100755 wcTemplate
+ create mode 100755 wcVoid
+[master 47756ab] 33 of 100
+ 5 files changed, 262 insertions(+), 245 deletions(-)
+ rewrite MyString.cc (68%)
+ rewrite TestMyString (78%)
+[master 6e81203] 3 of 100
+ 5 files changed, 257 insertions(+), 255 deletions(-)
+ rewrite MyString.cc (62%)
+ rewrite TestMyString (79%)
+[master 8be8936] 3 of 100
+ 4 files changed, 6 insertions(+), 2 deletions(-)
+[master 91246a2] 8 of 100
+ 5 files changed, 85 insertions(+), 71 deletions(-)
+ rewrite wcVoid (67%)
+[master e08e75c] 3 of 100
+ 5 files changed, 74 insertions(+), 83 deletions(-)
+ rewrite wcVoid (67%)
+[master 0c52132] 3 of 100
+ 4 files changed, 5 insertions(+), 1 deletion(-)
+[master 96a1138] 8 of 100
+ 5 files changed, 42 insertions(+), 34 deletions(-)
+[master 351471f] 8 of 100
+ 3 files changed, 6 insertions(+), 4 deletions(-)
+[master 18c5c9f] 8 of 100
+ 4 files changed, 84 insertions(+), 77 deletions(-)
+ rewrite wcVoid (66%)
+[master 059c814] 35 of 100
+ 5 files changed, 12 insertions(+), 8 deletions(-)
+ rewrite HashTableVoidTest (70%)
+[master f1402e6] 35 of 100
+ 4 files changed, 26 insertions(+), 24 deletions(-)
+[master 4a510dc] 62 of 100
+ 6 files changed, 56 insertions(+), 29 deletions(-)
+ rewrite TestMyString (76%)
+[master 306cdba] 62 of 100
+ 4 files changed, 6 insertions(+), 4 deletions(-)
+[master 897cab2] 65 of 100
+ 5 files changed, 10 insertions(+), 17 deletions(-)
+[master e1b2c41] 65 of 100
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+[master 423385c] 70 of 100
+ 5 files changed, 85 insertions(+), 7 deletions(-)
+ rewrite HashTableTemplateTest (89%)
+[master 38f1497] 75 of 100
+ 5 files changed, 8 insertions(+), 3 deletions(-)
+[master 08b5934] 75 of 100
+ 4 files changed, 5 insertions(+), 1 deletion(-)
+[master 489b6a0] 75 of 100
+ 4 files changed, 8 insertions(+), 4 deletions(-)
+[master af8c124] 80 of 100
+ 6 files changed, 13 insertions(+), 6 deletions(-)
+[master 940f7b1] 90 of 100
+ 5 files changed, 7 insertions(+), 5 deletions(-)
+[master 108577f] 90 of 100
+ 4 files changed, 10 insertions(+), 1 deletion(-)
+[master 98e10ce] 95 of 100
+ 6 files changed, 18 insertions(+), 11 deletions(-)
+ rewrite HashTableTemplateTest (62%)
+[master 5f41ee3] 95 of 100
+ 2 files changed, 4 insertions(+), 1 deletion(-)
+[master 1bc689d] 95 of 100
+ 3 files changed, 58 insertions(+), 6 deletions(-)
+[master 1748ddc] 95 of 100
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+[master 070510c] 95 of 100
+ 5 files changed, 606 insertions(+), 2 deletions(-)
+ rewrite wcTemplate (88%)
+[master 9df8363] 95 of 100
+ 2 files changed, 4 insertions(+), 1 deletion(-)
+[master ff963b3] 95 of 100
+ 5 files changed, 130 insertions(+), 90 deletions(-)
+ rewrite HashTableTemplateTest (60%)
+[master 9bba6ba] 95 of 100
+ 4 files changed, 93 insertions(+), 128 deletions(-)
+ rewrite HashTableTemplateTest (60%)
+[master 2348924] 95 of 100
+ 4 files changed, 9 insertions(+), 3 deletions(-)
+[master b49088f] 95 of 100
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+[master fd5108d] 95 of 100
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+[master 5b88140] 95 of 100
+ 3 files changed, 4 insertions(+), 2 deletions(-)

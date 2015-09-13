@@ -1,0 +1,256 @@
+a 20 14 13 9 8 7 5 0 
+301 29 
+￼and 2 0 
+as 5 3 2 1 0 
+at 24 23 22 15 12 10 9 8 7 5 0 
+of 24 16 14 5 3 
+in 20 14 13 12 8 7 5 0 
+we 20 14 13 9 8 7 5 0 
+is 24 14 13 9 8 7 5 0 
+it 19 15 9 8 7 6 5 3 2 1 0 
+on 27 24 5 2 0 
+so 14 13 9 8 7 5 0 
+to 22 20 18 13 10 5 2 0 
+Up! 15 
+as: 17 14 10 9 8 7 6 5 3 2 1 0 
+Big 5 3 2 
+See 20 14 13 9 8 7 5 0 
+Get 27 24 22 20 19 18 17 16 15 14 13 12 10 9 8 7 5 2 0 
+The 27 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 3 2 1 0 
+Art 12 10 9 8 7 5 2 0 
+Ten 5 3 2 
+(AIS) 26 24 2 1 0 
+aid 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 3 2 1 0 
+can 15 9 8 7 6 5 3 2 1 0 
+and 31 27 24 22 20 19 18 17 16 15 14 13 12 10 9 8 7 5 2 0 
+STEM 13 8 7 5 0 
+sea 5 0 
+all 27 24 2 
+has 27 16 5 3 2 
+see 13 10 5 2 0 
+men 5 2 0 
+the 27 22 16 14 10 5 3 2 
+art 12 10 9 8 7 5 2 0 
+for 28 27 18 17 8 7 0 
+use 20 14 13 9 8 7 5 0 
+how 20 14 13 9 8 7 5 0 
+buy 15 9 8 7 6 5 3 2 1 0 
+top 5 3 2 
+now 24 14 13 9 8 7 5 0 
+our 22 20 18 16 15 14 13 10 9 8 7 6 5 3 2 1 0 
+out 24 19 17 
+why 14 13 10 5 2 0 
+you 19 15 9 8 7 6 5 3 2 1 0 
+Read 2 0 
+Gear 27 25 24 22 21 20 18 17 16 15 14 13 12 11 10 9 8 7 6 5 3 2 1 0 
+Land 8 7 0 
+Find 24 19 17 
+Come 5 
+More 16 2 0 
+This 9 8 7 5 0 
+Shop 27 16 5 3 2 
+alma 5 3 2 
+News 24 2 1 0 
+make 20 18 13 10 5 2 0 
+&amp; 16 2 0 
+land 5 0 
+life 18 10 
+mean 19 15 9 8 7 6 5 3 2 1 0 
+West 5 0 
+real 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 3 2 1 0 
+here 24 15 9 8 7 6 5 3 2 1 0 
+like 19 
+main 5 0 
+flat 27 24 22 20 19 18 17 16 15 14 13 12 10 9 8 7 5 2 0 
+fans 27 24 22 20 19 18 17 16 15 14 13 12 10 9 8 7 5 2 0 
+home 5 3 2 1 0 
+meet 15 9 8 7 6 5 3 2 1 0 
+rate 27 24 22 20 19 18 17 16 15 14 13 12 10 9 8 7 5 2 0 
+best 2 0 
+walk 5 2 0 
+such 17 14 10 9 8 7 6 5 3 2 1 0 
+more 18 17 8 7 0 
+what 24 19 17 
+last 5 2 0 
+from 2 0 
+move 22 10 5 2 0 
+moon 5 3 2 
+with 20 5 2 0 
+news 24 2 0 
+stay 24 22 20 19 18 17 16 15 14 13 12 10 9 8 7 5 2 0 
+ways 12 8 7 5 0 
+your 27 24 2 
+￼Browse 
+Ideas 12 10 9 8 7 5 2 0 
+Learn 8 7 0 
+Staff 25 24 22 21 20 18 17 16 15 14 13 12 11 10 9 8 7 6 5 3 2 1 0 
+Alert 6 5 3 2 1 0 
+Moved 29 
+About 16 5 3 2 
+Grant 8 7 0 
+Gifts 27 24 22 20 19 18 17 16 15 14 13 12 10 9 8 7 5 2 0 
+Think 19 
+Today 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 3 2 1 0 
+space 5 2 0 
+Store 27 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 3 2 1 0 
+learn 18 17 16 15 14 13 12 10 9 8 7 5 2 0 
+among 5 3 2 
+mater 5 3 2 
+major 8 7 0 
+teams 15 14 13 10 9 8 7 6 5 3 2 1 0 
+about 18 8 7 2 0 
+grant 5 2 0 
+value 31 28 21 11 3 
+right 24 14 13 9 8 7 5 0 
+state 5 3 2 
+lives 14 10 5 3 2 
+menus 17 14 10 9 8 7 6 5 3 2 1 0 
+world 22 13 10 5 3 2 
+first 5 3 2 
+proud 5 2 0 
+court 17 14 10 9 8 7 6 5 3 2 1 0 
+known 8 7 0 
+visit 5 
+study 19 18 16 15 13 12 10 5 3 2 
+Engage 20 19 18 17 16 15 14 13 12 10 9 8 7 5 2 0 
+Become 9 
+Office 3 
+Boiler 15 
+Center 28 21 11 3 
+Alumni 14 13 12 11 10 9 8 7 6 5 3 2 1 0 
+Living 28 27 18 17 8 7 0 
+abroad 19 18 16 15 13 12 10 5 3 2 
+leader 13 12 10 9 8 7 5 2 0 
+Always 14 
+global 13 12 10 9 8 7 5 2 0 
+Browse 24 
+ranked 5 3 2 
+Purdue 31 30 28 27 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 3 2 1 0 
+member 5 2 0 
+Summer 19 
+dining 17 14 10 9 8 7 6 5 3 2 1 0 
+public 5 3 2 
+alumni 27 14 13 12 11 10 9 8 7 6 5 3 2 1 0 
+school 19 
+campus 5 0 
+across 5 2 0 
+majors 22 10 9 8 7 6 5 3 2 1 0 
+latest 2 
+course 17 14 10 9 8 7 6 5 3 2 1 0 
+minors 22 10 9 8 7 5 2 0 
+serves 5 3 2 1 0 
+Indiana 20 8 7 0 
+today's 24 16 14 5 3 
+Apparel 27 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 3 2 1 0 
+Careers 21 11 3 
+Healthy 28 27 18 17 8 7 0 
+Service 26 24 2 1 0 
+Hotline 30 28 27 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 3 2 1 0 
+Faculty 25 24 22 21 20 18 17 16 15 14 13 12 11 10 9 8 7 6 5 3 2 1 0 
+science 8 7 0 
+located 8 7 0 
+combine 12 10 9 8 7 5 2 0 
+Explore 22 19 18 16 15 13 12 10 5 3 2 
+Current 17 8 7 0 
+classes 19 17 
+prepare 22 10 9 8 7 6 5 3 2 1 0 
+Visitor 5 3 2 
+History 16 2 0 
+centers 12 10 5 3 2 
+forward 22 10 5 3 2 
+tickets 15 9 8 7 6 5 3 2 1 0 
+housing 19 9 8 7 5 2 0 
+Apparel: 27 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 3 2 1 0 
+current 24 17 8 7 0 
+student 18 10 
+Academic 22 10 
+Purdue's 16 2 0 
+history 16 14 10 5 3 2 
+Official 27 16 5 3 2 
+support 14 13 12 11 10 9 8 7 6 5 3 2 1 0 
+nation's 5 3 2 
+academic 18 16 15 14 13 10 9 8 7 6 5 3 2 1 0 
+Research 13 12 11 10 9 8 7 6 5 3 2 1 0 
+Clothing 27 16 5 3 2 
+official 27 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 3 2 1 0 
+changing 13 10 5 3 2 
+Retirees 25 24 22 21 20 18 17 16 15 14 13 12 11 10 9 8 7 6 5 3 2 1 0 
+distance 19 18 16 15 13 12 10 5 3 2 
+valuable 14 13 9 8 7 5 0 
+research 13 8 7 5 0 
+colleges 22 10 9 8 7 6 5 3 2 1 0 
+Indiana's 8 7 5 0 
+learning 19 18 16 15 13 12 10 5 3 2 
+releases 24 2 0 
+national 13 9 8 7 5 0 
+Students 18 17 8 7 0 
+discover 15 14 13 12 10 9 8 7 5 2 0 
+theatres 12 10 5 3 2 
+shipping 27 24 22 20 19 18 17 16 15 14 13 12 10 9 8 7 5 2 0 
+applying 18 10 
+programs 22 18 10 
+provides 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 3 2 1 0 
+cultural 12 10 5 3 2 
+powerful 12 8 7 5 0 
+releases! 2 0 
+Academics 10 9 8 7 5 2 0 
+students 27 22 18 17 14 10 9 8 7 6 5 3 2 1 0 
+Lafayette 8 7 5 0 
+Athletics 15 14 13 12 10 9 8 7 5 2 0 
+financial 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 3 2 1 0 
+President 3 2 
+Inclusion 31 11 3 
+galleries 12 10 9 8 7 5 2 0 
+happening 24 14 13 9 8 7 5 0 
+Resources 18 17 8 7 0 
+education 12 10 9 8 7 5 2 0 
+including 27 9 8 7 6 5 3 2 1 0 
+athletics 15 13 12 10 5 3 2 
+Diversity 31 28 21 11 3 
+elsewhere 20 19 18 17 16 15 14 13 12 10 9 8 7 5 2 0 
+locations 5 2 0 
+brightest 2 0 
+discovery 13 12 8 7 5 0 
+resources 20 18 17 
+important 14 10 9 8 7 6 5 3 2 1 0 
+Blackboard 17 14 10 9 8 7 6 5 3 2 1 0 
+solutions 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 3 2 1 0 
+Conference 5 3 2 
+difference 20 14 13 9 8 7 5 0 
+Admissions 9 1 0 
+engagement 20 18 16 15 14 13 10 9 8 7 6 5 3 2 1 0 
+Technology 23 5 3 2 
+Traditions 16 2 0 
+admissions 9 8 7 5 0 
+technology 8 7 0 
+intramural 15 14 13 12 10 9 8 7 5 2 0 
+traditions 16 14 10 5 3 2 
+University 31 30 28 27 25 24 22 21 20 18 17 16 15 14 13 12 11 10 9 8 7 6 5 3 2 1 0 
+innovation 13 12 10 9 8 7 5 2 0 
+university 8 7 5 2 0 
+Merchandise 27 16 5 3 2 
+Boilermaker 9 8 7 5 0 
+Perennially 5 3 2 
+Information 26 23 5 3 2 
+engineering 8 7 0 
+Boilermaker! 14 13 9 8 7 5 0 
+Permanently 29 
+Prospective 18 17 8 7 0 
+application 9 8 7 6 5 3 2 1 0 
+discoveries 8 7 2 0 
+information 17 14 10 9 8 7 6 5 3 2 1 0 
+prospective 18 17 8 7 0 
+internships 19 18 17 16 15 14 13 12 10 9 8 7 5 2 0 
+innovations 2 
+$description 31 28 21 11 3 
+Achievements 16 2 0 
+Boilermakers 27 16 5 3 2 
+achievements 16 15 14 13 12 10 9 8 7 5 2 0 
+requirements 9 8 7 6 5 3 2 1 0 
+universities 5 3 2 
+institutions 5 0 
+Entertainment 12 
+opportunities 15 14 13 12 10 9 8 7 5 2 0 
+Administrative 26 
+Entrepreneurship 22 10 9 8 7 5 2 0 
+Commercialization 22 20 19 18 17 16 15 14 13 12 10 9 8 7 5 2 0 

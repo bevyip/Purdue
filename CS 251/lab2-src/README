@@ -1,0 +1,13 @@
+Shreyaansh Bassi sbassi@purdue.edu
+PUID: 0027538071
+
+Features that work:
+Creates url.txt and word.txt
+Format is correct in both the files
+url.txt doesn't have duplicate links
+word.txt doesn't have duplicate words
+url.txt has all 32 links
+links are in the right order
+
+Features that don't work:
+WebCrawler doesn't work for 100 and 1000 urls, it only works up till 44-45 urls

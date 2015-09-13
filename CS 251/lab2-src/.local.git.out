@@ -1,0 +1,1810 @@
+[master (root-commit) 30334ca] otal of otalmax
+ Committer: CS251 Account <cs251@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 9 files changed, 732 insertions(+)
+ create mode 100644 Makefile
+ create mode 100644 SimpleHTMLParser.cpp
+ create mode 100644 SimpleHTMLParser.h
+ create mode 100644 fetchHTML.h
+ create mode 100644 gethttp.cpp
+ create mode 100644 openhttp.cpp
+ create mode 100644 openhttp.h
+ create mode 100644 webcrawler.cpp
+ create mode 100644 webcrawler.h
+[master 8447795] Commit web-crawler
+ Committer: CS251 Account <cs251@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+
+nothing added to commit but untracked files present
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+
+nothing added to commit but untracked files present
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+
+nothing added to commit but untracked files present
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+
+nothing added to commit but untracked files present
+[master 0f1cbbd] Commit web-crawler
+ 1 file changed, 1 deletion(-)
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+
+nothing added to commit but untracked files present
+[master 05837f5] Commit web-crawler
+ 1 file changed, 3 insertions(+)
+[master 164e2ce] Commit web-crawler
+ 1 file changed, 8 insertions(+)
+[master e81362c] Commit web-crawler
+ 4 files changed, 348 insertions(+), 2 deletions(-)
+ create mode 100644 HashTableTemplate.h
+[master 4401714] Commit web-crawler
+ 4 files changed, 104 insertions(+), 63 deletions(-)
+ rewrite webcrawler.h (63%)
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	webcrawler
+
+nothing added to commit but untracked files present
+[master 0b47670] Commit web-crawler
+ 2 files changed, 9 insertions(+), 12 deletions(-)
+[master ef97d25] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+[master be64529] Commit web-crawler
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[master 459be0d] Commit web-crawler
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+[master 4e3c22a] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+[master 98e4367] Commit web-crawler
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+[master 18c522d] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 9233994] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master bb99516] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 2b08e6b] Commit web-crawler
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+[master 1b5b895] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 88a2686] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master a4f771d] Commit web-crawler
+ 1 file changed, 3 insertions(+), 4 deletions(-)
+[master 802ce94] Commit web-crawler
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[master 0d7c347] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 3b8c11c] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master cd4d3f2] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master 16c6eab] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	webcrawler
+
+nothing added to commit but untracked files present
+[master 88ce459] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 997e067] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 08bdf1c] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master da329c2] Commit web-crawler
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+[master 6ff9329] Commit web-crawler
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+[master f48521b] Commit web-crawler
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+[master 803ec1b] Commit web-crawler
+ 1 file changed, 9 insertions(+), 9 deletions(-)
+[master 1d111a0] Commit web-crawler
+ 1 file changed, 29 insertions(+), 3 deletions(-)
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	webcrawler
+
+nothing added to commit but untracked files present
+[master 1fd25ba] Commit web-crawler
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+[master 15910b0] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 44c7f26] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master f61cbd7] Commit web-crawler
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+[master d86d2ba] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 022565d] Commit web-crawler
+ 1 file changed, 28 insertions(+), 1 deletion(-)
+[master 5850a5e] Commit web-crawler
+ 1 file changed, 6 insertions(+), 32 deletions(-)
+[master 0a725a9] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	webcrawler
+
+nothing added to commit but untracked files present
+[master ab03d00] Commit web-crawler
+ 1 file changed, 11 insertions(+), 11 deletions(-)
+[master c72eec2] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 3299d24] Commit web-crawler
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+[master e80a43d] Commit web-crawler
+ 1 file changed, 21 insertions(+), 24 deletions(-)
+[master 46304af] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 9243b14] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+[master bb417f6] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 31475eb] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+[master 3707d1e] Commit web-crawler
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+[master 2a7c9ae] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 83cb526] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 6467231] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 0826d6f] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master d0d25c1] Commit web-crawler
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+[master 484293b] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 902f4a7] Commit web-crawler
+ 1 file changed, 9 insertions(+), 10 deletions(-)
+[master 535bba7] Commit web-crawler
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+[master 421f0bc] Commit web-crawler
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+[master 5b96640] Commit web-crawler
+ 1 file changed, 2 insertions(+)
+[master a7abe2b] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 715c924] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 3cacc75] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 89c0cb7] Commit web-crawler
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+[master 1e724ab] Commit web-crawler
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+[master 9907e29] Commit web-crawler
+ 1 file changed, 2 insertions(+)
+[master 7a07132] Commit web-crawler
+ 1 file changed, 8 insertions(+), 2 deletions(-)
+[master 5eb8ff1] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+[master cae8404] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 8495fa3] Commit web-crawler
+ 1 file changed, 9 insertions(+)
+[master 47c3451] Commit web-crawler
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+[master edae11d] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master e37d9d8] Commit web-crawler
+ 1 file changed, 4 insertions(+)
+[master 336bc6c] Commit web-crawler
+ 1 file changed, 3 insertions(+)
+[master 7153c82] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 470359a] Commit web-crawler
+ 1 file changed, 6 insertions(+), 4 deletions(-)
+[master e8b3816] Commit web-crawler
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+[master 7ecf414] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+[master 2aaa742] Commit web-crawler
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+[master 5dbc2fb] Commit web-crawler
+ 1 file changed, 16 insertions(+), 3 deletions(-)
+[master 1cf2a90] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 12ea9a9] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 95cb7eb] Commit web-crawler
+ 1 file changed, 21 insertions(+), 23 deletions(-)
+[master e2c6bca] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 2822cb0] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master ff2d236] Commit web-crawler
+ 2 files changed, 14 insertions(+), 23 deletions(-)
+[master a71714c] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 2e78410] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master bdc937f] Commit web-crawler
+ 2 files changed, 4 insertions(+), 2 deletions(-)
+[master f25bca2] Commit web-crawler
+ 2 files changed, 8 insertions(+), 1 deletion(-)
+[master ec8dac4] Commit web-crawler
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+[master 83a8b63] Commit web-crawler
+ 1 file changed, 2 insertions(+)
+[master 7d501e2] Commit web-crawler
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+[master 9b79aac] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master ed109e0] Commit web-crawler
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+[master 3393fc8] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	webcrawler
+
+nothing added to commit but untracked files present
+[master 2e390be] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master c4ee4ad] Commit web-crawler
+ 2 files changed, 6 insertions(+), 3 deletions(-)
+[master 3a2fa2a] Commit web-crawler
+ 2 files changed, 7 insertions(+), 7 deletions(-)
+[master 436c432] Commit web-crawler
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+[master f5a482c] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+[master 0118468] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+[master 6563917] Commit web-crawler
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+[master 8b9902d] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 2b97e18] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master 13834df] Commit web-crawler
+ 3 files changed, 7 insertions(+), 5 deletions(-)
+[master 6d677b6] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+[master 7e0e60f] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+[master d0f0dd7] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master c652b4d] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master 8e66c12] Commit web-crawler
+ 1 file changed, 2 insertions(+)
+[master 36e1d16] Commit web-crawler
+ 2 files changed, 6 insertions(+), 4 deletions(-)
+[master 3f9ed5b] Commit web-crawler
+ 2 files changed, 6 insertions(+), 6 deletions(-)
+[master 91d3ac0] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master 669b574] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master 6433a12] Commit web-crawler
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+[master 11c5166] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master 22307d9] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master c9a2122] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master f583f46] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master c4c0fee] Commit web-crawler
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+[master 93aa3d9] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master e185f1c] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 35dcd47] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 535085d] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master 37bea56] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master c057ac1] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master cc6eeb1] Commit web-crawler
+ 2 files changed, 12 insertions(+), 16 deletions(-)
+[master 9fc90a4] Commit web-crawler
+ 1 file changed, 5 insertions(+), 6 deletions(-)
+[master 2490dcf] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master aedc887] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master 0f3f64e] Commit web-crawler
+ 1 file changed, 2 insertions(+)
+[master 3ac2ba8] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master feb5de2] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master d972791] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 1fa9462] Commit web-crawler
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+[master f15c029] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 8edcc59] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 9043e1f] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master f4b9625] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master 72b6a03] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master 147fd9a] Commit web-crawler
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+[master 9edc3a3] Commit web-crawler
+ 1 file changed, 6 insertions(+), 3 deletions(-)
+[master a28251c] Commit web-crawler
+ 2 files changed, 2 insertions(+), 5 deletions(-)
+[master fd2afd7] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master 8dbebad] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	webcrawler
+
+nothing added to commit but untracked files present
+[master 4b6aed4] Commit web-crawler
+ 1 file changed, 50 insertions(+), 2 deletions(-)
+[master 89945c7] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+[master d299086] Commit web-crawler
+ 1 file changed, 2 insertions(+)
+[master d72ee6d] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master ea2700e] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	webcrawler
+
+nothing added to commit but untracked files present
+[master 07f0929] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 2bb00a2] Commit web-crawler
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[master a42d4ab] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master a8e5b05] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master df81e26] Commit web-crawler
+ 1 file changed, 4 insertions(+), 41 deletions(-)
+[master 0326c66] Commit web-crawler
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+[master d90d2c4] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master d3497ec] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 7e987b7] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master bd0d5b5] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 8c45d16] Commit web-crawler
+ 1 file changed, 11 insertions(+), 4 deletions(-)
+[master cba7d11] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+[master 69b33f5] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master ff1531c] Commit web-crawler
+ 1 file changed, 12 insertions(+)
+[master 09ffb77] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+[master 4d98106] Commit web-crawler
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+[master 1ab4ced] Commit web-crawler
+ 1 file changed, 14 deletions(-)
+[master 183d8f7] Commit web-crawler
+ 1 file changed, 16 insertions(+), 1 deletion(-)
+[master b109109] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 9516e60] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 87ef5dc] Commit web-crawler
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+[master e2d6322] Commit web-crawler
+ 1 file changed, 2 insertions(+)
+[master 986d7a4] Commit web-crawler
+ 1 file changed, 1 insertion(+), 22 deletions(-)
+[master 443796d] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master fd19d4b] Commit web-crawler
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+[master ede27ed] Commit web-crawler
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+[master 0d9372f] Commit web-crawler
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+[master c4fbc27] Commit web-crawler
+ 1 file changed, 9 insertions(+), 4 deletions(-)
+[master d1ee88e] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 149010f] Commit web-crawler
+ 1 file changed, 3 insertions(+)
+[master b313c94] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+[master 5093fde] Commit web-crawler
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[master 1c771de] Commit web-crawler
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+[master cce23ba] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master a264fda] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 6a5fd33] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 8a5a966] Commit web-crawler
+ 1 file changed, 2 insertions(+)
+[master d5d615b] Commit web-crawler
+ 1 file changed, 1 deletion(-)
+[master 6dc5867] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master 30b4cc5] Commit web-crawler
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+[master 4fc4029] Commit web-crawler
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+[master 6394ee1] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 3e4f712] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 8387f78] Commit web-crawler
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+[master f4d3a69] Commit web-crawler
+ 1 file changed, 2 deletions(-)
+[master 1d61620] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master bfa397e] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master 2d5b6a0] Commit web-crawler
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+[master bbbdf6f] Commit web-crawler
+ 2 files changed, 8 insertions(+), 9 deletions(-)
+[master 5a67f2e] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master b573a2a] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master 3cf0404] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+[master 59dd627] Commit web-crawler
+ 1 file changed, 8 insertions(+), 16 deletions(-)
+[master 644162f] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master c7fb7c7] Commit web-crawler
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+[master eac083a] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master ecfe9dc] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master cbc092b] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	webcrawler
+
+nothing added to commit but untracked files present
+[master b12bee1] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 4df1b16] Commit web-crawler
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+[master 05f9961] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master e4bc745] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master d9442eb] Commit web-crawler
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+[master 5c60514] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+[master 7881366] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 7dcb5a9] Commit web-crawler
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+[master afd3391] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+[master fd96528] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 5fba18d] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 2f3a59b] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master b770f76] Commit web-crawler
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+[master e258b52] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master b947e07] Commit web-crawler
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+[master 105e2d3] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master a325b50] Commit web-crawler
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+[master 9536f4d] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 00005c5] Commit web-crawler
+ 1 file changed, 8 insertions(+), 7 deletions(-)
+[master 4396832] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master 78c0765] Commit web-crawler
+ 1 file changed, 6 insertions(+), 4 deletions(-)
+[master 358b8ec] Commit web-crawler
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+[master 221b636] Commit web-crawler
+ 1 file changed, 14 insertions(+), 1 deletion(-)
+[master 3481c7f] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 216c7cc] Commit web-crawler
+ 1 file changed, 7 insertions(+), 6 deletions(-)
+[master b87e3e4] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 742ee3e] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master d9f8024] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 6165a54] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 0a015af] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master ae660b5] Commit web-crawler
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+[master 3721773] Commit web-crawler
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[master 7f29e39] Commit web-crawler
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+[master 9a4bead] Commit web-crawler
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+[master a103c62] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master 7b8bbc3] Commit web-crawler
+ 1 file changed, 2 insertions(+), 64 deletions(-)
+[master 843e049] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master e692b54] Commit web-crawler
+ 1 file changed, 15 insertions(+), 2 deletions(-)
+[master 8ae4d3a] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+[master f4a65b4] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+[master 31d166f] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master 8d94311] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 77a0876] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 7cf6582] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master fa62987] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	webcrawler
+
+nothing added to commit but untracked files present
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	webcrawler
+
+nothing added to commit but untracked files present
+[master 127ef95] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+[master f16d7a2] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+[master dd6cdd6] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master c240318] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 1af722b] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master 57c2ecf] Commit web-crawler
+ 1 file changed, 3 insertions(+)
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	webcrawler
+
+nothing added to commit but untracked files present
+[master 974bc8d] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master 82ebcef] Commit web-crawler
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+[master c93ceef] Commit web-crawler
+ 1 file changed, 2 insertions(+), 7 deletions(-)
+[master 27e7ad1] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 75a366b] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master db63f86] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 89642ac] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 2c7e947] Commit web-crawler
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+[master d5ff0b9] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 6deed8a] Commit web-crawler
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[master c8cd07d] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master ff17388] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master e8102ec] Commit web-crawler
+ 1 file changed, 3 deletions(-)
+[master 5c74415] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 017b959] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master aec19d8] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 347e34b] Commit web-crawler
+ 1 file changed, 2 insertions(+)
+[master 57bf098] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master bcedfb2] Commit web-crawler
+ 2 files changed, 40 insertions(+), 10 deletions(-)
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	webcrawler
+
+nothing added to commit but untracked files present
+[master 3d25426] Commit web-crawler
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+[master 0bfa296] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 9fb8c7c] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master 17cbe31] Commit web-crawler
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+[master 55ec18b] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+[master 6f999fa] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	webcrawler
+
+nothing added to commit but untracked files present
+[master b2883c5] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master f7d9031] Commit web-crawler
+ 1 file changed, 11 insertions(+), 6 deletions(-)
+[master b53b187] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 699b8a1] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 9078e89] Commit web-crawler
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+[master 4637435] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 1cdf9ca] Commit web-crawler
+ 1 file changed, 6 insertions(+), 10 deletions(-)
+[master 9ef332f] Commit web-crawler
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	webcrawler
+
+nothing added to commit but untracked files present
+[master a3e04a9] Commit web-crawler
+ 1 file changed, 7 insertions(+), 3 deletions(-)
+[master d10320d] Commit web-crawler
+ 1 file changed, 2 deletions(-)
+[master 74d5904] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+[master 47a1bf3] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 69829fc] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master b18735e] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 9be808f] Commit web-crawler
+ 1 file changed, 3 insertions(+)
+[master 58654bc] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master b419d7a] Commit web-crawler
+ 2 files changed, 3 insertions(+)
+[master 570f403] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	webcrawler
+
+nothing added to commit but untracked files present
+[master 1ee70d6] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master 1594b47] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master 8775e9b] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master cc8172f] Commit web-crawler
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+[master d9d89ef] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master d56c2ac] Commit web-crawler
+ 1 file changed, 13 insertions(+), 1 deletion(-)
+[master 8bddbfa] Commit web-crawler
+ 2 files changed, 3 insertions(+), 10 deletions(-)
+[master e79f835] Commit web-crawler
+ 1 file changed, 2 insertions(+)
+[master b6a1b0e] Commit web-crawler
+ 1 file changed, 11 insertions(+), 15 deletions(-)
+[master df0ea19] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master eec372c] Commit web-crawler
+ 1 file changed, 2 insertions(+)
+[master 231fe89] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 12039ee] Commit web-crawler
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+[master ed8b5b7] Commit web-crawler
+ 1 file changed, 15 insertions(+), 86 deletions(-)
+[master b3ca3b1] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master c7a8c38] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+[master 6a6cb58] Commit web-crawler
+ 1 file changed, 1 deletion(-)
+[master 50b2ea5] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master d86449e] Commit web-crawler
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+[master c43dd8b] Commit web-crawler
+ 1 file changed, 7 insertions(+), 21 deletions(-)
+[master 73588b7] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master ea30903] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	webcrawler
+
+nothing added to commit but untracked files present
+[master 5bfb97f] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master c3a604d] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master 550dfb7] Commit web-crawler
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[master e141bfb] Commit web-crawler
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[master a1acfd0] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 4f67a0b] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master a7b6b03] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 46bcb04] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master 6a5c49c] Commit web-crawler
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	webcrawler
+
+nothing added to commit but untracked files present
+[master cd7dfb4] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 6b80996] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 8f96201] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 24ef97d] Commit web-crawler
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+[master cde8055] Commit web-crawler
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+[master eb09343] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+[master 7a8a9d0] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master cdc70a4] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 046e59b] Commit web-crawler
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+[master 9eba52f] Commit web-crawler
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+[master 5d5b267] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 3b0da5f] Commit web-crawler
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+[master 432e141] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 5798868] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master a70a8ac] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master 4a584c2] Commit web-crawler
+ 1 file changed, 2 insertions(+), 5 deletions(-)
+[master 5fc50d5] Commit web-crawler
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+[master 1aeb06f] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master c4150ce] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 5d3fbab] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master adefc2c] Commit web-crawler
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+[master 62f3960] Commit web-crawler
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+[master ce276fd] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 86153ba] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 9dcd77d] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master eb7b5f1] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 6933147] Commit web-crawler
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+[master 9dd339e] Commit web-crawler
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+[master b1e690f] Commit web-crawler
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+[master 659a52f] Commit web-crawler
+ 1 file changed, 2 insertions(+)
+[master e40b89b] Commit web-crawler
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+[master 3a856d8] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master af044f9] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master 99c5ddd] Commit web-crawler
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+[master 4474d6a] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master 874507d] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 31a801c] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 2669725] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master 0a3c322] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	webcrawler
+
+nothing added to commit but untracked files present
+[master b0aa021] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master c58f578] Commit web-crawler
+ 1 file changed, 5 insertions(+)
+[master f5e667e] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 4fd02d1] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 291d048] Commit web-crawler
+ 2 files changed, 9 insertions(+), 8 deletions(-)
+[master e932974] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master d00ea4d] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master 43434c9] Commit web-crawler
+ 2 files changed, 12 insertions(+), 42 deletions(-)
+[master 9da513c] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 0c853cc] Commit web-crawler
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[master bc0938c] Commit web-crawler
+ 2 files changed, 28 insertions(+), 1 deletion(-)
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	webcrawler
+
+nothing added to commit but untracked files present
+[master a1d0db4] Commit web-crawler
+ 2 files changed, 65 insertions(+), 2 deletions(-)
+[master f0c29db] Commit web-crawler
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+[master 054c720] Commit web-crawler
+ 1 file changed, 6 insertions(+), 3 deletions(-)
+[master 85aa134] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master df4c9fd] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master a9b1820] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 38e398d] Commit web-crawler
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+[master f827f3e] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 6179b9e] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+[master 15ec65b] Commit web-crawler
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+[master 47f518d] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master 7a01eda] Commit web-crawler
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+[master ba95b5e] Commit web-crawler
+ 2 files changed, 42 insertions(+), 25 deletions(-)
+[master e0bf118] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master 4d701ab] Commit web-crawler
+ 1 file changed, 8 insertions(+), 5 deletions(-)
+[master 5a7aa12] Commit web-crawler
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+[master 1eb0772] Commit web-crawler
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+[master 618ca34] Commit web-crawler
+ 1 file changed, 16 insertions(+), 14 deletions(-)
+[master 0c027f3] Commit web-crawler
+ 1 file changed, 13 insertions(+), 2 deletions(-)
+[master 7cba520] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 4914d6a] Commit web-crawler
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+[master f527e35] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 3a3c655] Commit web-crawler
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[master 8c7aa91] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+[master 2b4f885] Commit web-crawler
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+[master db3a793] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 713d356] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master e6d0575] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 7018158] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+[master 5106a52] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 5e92205] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+[master 4817c78] Commit web-crawler
+ 1 file changed, 6 insertions(+), 5 deletions(-)
+[master c8c6e95] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master 6edfcfb] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master a272239] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master a66bed8] Commit web-crawler
+ 1 file changed, 11 insertions(+), 11 deletions(-)
+[master 766c0fb] Commit web-crawler
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	url.txt
+	webcrawler
+
+nothing added to commit but untracked files present
+[master 3f1fac9] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 31783e3] Commit web-crawler
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[master ebcb320] Commit web-crawler
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+[master 345fc5b] Commit web-crawler
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+[master 57cf993] Commit web-crawler
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+[master cda05ee] Commit web-crawler
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[master ab31fcc] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 0dee697] Commit web-crawler
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+[master 929083c] Commit web-crawler
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+[master d82f139] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master f92cc36] Commit web-crawler
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+[master f64aeb9] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master baa7f97] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 7e2e638] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+[master 619c4f2] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+[master 13183bc] Commit web-crawler
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[master 3ca2299] Commit web-crawler
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+[master 563341a] Commit web-crawler
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+[master e6b848e] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+[master 9502c54] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+[master bf7282c] Commit web-crawler
+ 1 file changed, 3 insertions(+)
+[master c2ddd1d] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master a3640e5] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	url.txt
+	webcrawler
+
+nothing added to commit but untracked files present
+[master 401255b] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master 3786288] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+[master e5da9fe] Commit web-crawler
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+[master d81ab97] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+[master acc7f59] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+[master 6d1a6ba] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+[master a1ea282] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master d979cbc] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 7810433] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 5467755] Commit web-crawler
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+[master 1e56f20] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	url.txt
+	webcrawler
+
+nothing added to commit but untracked files present
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	url.txt
+	webcrawler
+
+nothing added to commit but untracked files present
+[master 2721196] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 575ce15] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	url.txt
+	webcrawler
+
+nothing added to commit but untracked files present
+[master 6f01f24] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	webcrawler
+
+nothing added to commit but untracked files present
+[master 36c2dd4] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+[master b3bbc42] Commit web-crawler
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[master 2f6e909] Commit web-crawler
+ 2 files changed, 8 insertions(+), 2 deletions(-)
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	url.txt
+	webcrawler
+
+nothing added to commit but untracked files present
+[master cfb9c32] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	url.txt
+	webcrawler
+
+nothing added to commit but untracked files present
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	url.txt
+	webcrawler
+
+nothing added to commit but untracked files present
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	url.txt
+	webcrawler
+
+nothing added to commit but untracked files present
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	url.txt
+	webcrawler
+
+nothing added to commit but untracked files present
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	url.txt
+	webcrawler
+
+nothing added to commit but untracked files present
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	url.txt
+	webcrawler
+
+nothing added to commit but untracked files present
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	url.txt
+	webcrawler
+
+nothing added to commit but untracked files present
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	url.txt
+	webcrawler
+
+nothing added to commit but untracked files present
+[master 9d759a4] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+[master 72cee7e] Commit web-crawler
+ 2 files changed, 6 insertions(+), 6 deletions(-)
+[master 71424b6] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 13e9e1c] Commit web-crawler
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+[master b393a01] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master d9dcb80] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 6911c9e] Commit web-crawler
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+[master 3ac2aa2] Commit web-crawler
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+[master d69904f] Commit web-crawler
+ 1 file changed, 1 deletion(-)
+[master 90253bf] Commit web-crawler
+ 2 files changed, 76 insertions(+), 7 deletions(-)
+[master 1526dd1] Commit web-crawler
+ 1 file changed, 11 insertions(+), 1 deletion(-)
+[master 37362cb] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 2d00605] Commit web-crawler
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+[master a8acbeb] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master b26c98d] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 55c0d62] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master d0393df] Commit web-crawler
+ 1 file changed, 19 insertions(+), 36 deletions(-)
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	url.txt
+	webcrawler
+	word.txt
+
+nothing added to commit but untracked files present
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	url.txt
+	webcrawler
+	word.txt
+
+nothing added to commit but untracked files present
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	url.txt
+	webcrawler
+	word.txt
+
+nothing added to commit but untracked files present
+[master 3753859] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master aaa85d4] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 227c3d8] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+[master 0f127ed] Commit web-crawler
+ 1 file changed, 1 deletion(-)
+[master 1916b68] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master 8bdc038] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	url.txt
+	webcrawler
+	word.txt
+
+nothing added to commit but untracked files present
+[master f2174a0] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	url.txt
+	webcrawler
+	word.txt
+
+nothing added to commit but untracked files present
+[master 5fb8897] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master 7a66a4b] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	url.txt
+	webcrawler
+
+nothing added to commit but untracked files present
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	url.txt
+	webcrawler
+
+nothing added to commit but untracked files present
+[master 4dbfdd2] Commit web-crawler
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+[master 9f35042] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master f4ede56] Commit web-crawler
+ 1 file changed, 1 insertion(+), 8 deletions(-)
+[master 4ec82e6] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 90e56c2] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 527aebe] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master b2a9b8a] Commit web-crawler
+ 1 file changed, 249 insertions(+), 5 deletions(-)
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	url.txt
+	webcrawler
+	word.txt
+
+nothing added to commit but untracked files present
+[master c29c4c8] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	url.txt
+	webcrawler
+	word.txt
+
+nothing added to commit but untracked files present
+[master e53d10e] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master d07230c] Commit web-crawler
+ 1 file changed, 1 insertion(+), 248 deletions(-)
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	url.txt
+	webcrawler
+	word.txt
+
+nothing added to commit but untracked files present
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	url.txt
+	webcrawler
+	word.txt
+
+nothing added to commit but untracked files present
+[master 603e4d3] Commit web-crawler
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+[master 2b43d54] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 2d51983] Commit web-crawler
+ 1 file changed, 3 insertions(+)
+[master 04242f3] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master e00e34a] Commit web-crawler
+ 1 file changed, 6 deletions(-)
+[master 3fe7fe3] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master ffd5a8a] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master 98ade82] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	url.txt
+	webcrawler
+	word.txt
+
+nothing added to commit but untracked files present
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	url.txt
+	webcrawler
+	word.txt
+
+nothing added to commit but untracked files present
+[master 37b7703] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master f38e4f6] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	url.txt
+	webcrawler
+	word.txt
+
+nothing added to commit but untracked files present
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	url.txt
+	webcrawler
+	word.txt
+
+nothing added to commit but untracked files present
+[master abbb122] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master ce19db5] Commit web-crawler
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+[master e32e772] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master c42b9e2] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 5685db2] Commit web-crawler
+ 1 file changed, 11 insertions(+), 3 deletions(-)
+[master 4c1c47c] Commit web-crawler
+ 1 file changed, 4 insertions(+), 14 deletions(-)
+[master 983ee88] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 9202d8f] Commit web-crawler
+ 1 file changed, 6 insertions(+), 5 deletions(-)
+[master c12e255] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master b6260b1] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master 6f44b3b] Commit web-crawler
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+[master eab4e66] Commit web-crawler
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+[master 9d8b0c5] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 30f11a3] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 921e274] Commit web-crawler
+ 1 file changed, 15 insertions(+), 4 deletions(-)
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	url.txt
+	webcrawler
+	word.txt
+
+nothing added to commit but untracked files present
+[master 46da913] Commit web-crawler
+ 1 file changed, 1 deletion(-)
+[master 1e05a3f] Commit web-crawler
+ 1 file changed, 5 insertions(+)
+[master 6443362] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+[master cc9293c] Commit web-crawler
+ 1 file changed, 2 insertions(+), 20 deletions(-)
+[master eca1209] Commit web-crawler
+ 1 file changed, 11 insertions(+), 1 deletion(-)
+[master c05d2f6] Commit web-crawler
+ 1 file changed, 6 insertions(+)
+[master 18416e3] Commit web-crawler
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+[master 27dcfcb] Commit web-crawler
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+[master 19b528c] Commit web-crawler
+ 1 file changed, 12 insertions(+), 13 deletions(-)
+[master 8ac6a05] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master b255840] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 4f9b332] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 1dc4b05] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+[master 85e3d57] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+[master 735f80a] Commit web-crawler
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+[master 1de4871] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 3369fd3] Commit web-crawler
+ 1 file changed, 2 insertions(+)
+[master 0b1da5b] Commit web-crawler
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+[master 382245d] Commit web-crawler
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	url.txt
+	webcrawler
+	word.txt
+
+nothing added to commit but untracked files present
+[master 5253a39] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 312f24e] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 7269c32] Commit web-crawler
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master cbda069] Commit web-crawler
+ 1 file changed, 15 insertions(+), 62 deletions(-)
+[master d5dc1fe] Commit web-crawler
+ 2 files changed, 17 insertions(+)
+[master fb31489] Commit web-crawler
+ 2 files changed, 1 insertion(+), 16 deletions(-)
+[master 2e18d1e] Commit web-crawler
+ 1 file changed, 2 deletions(-)
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	url.txt
+	webcrawler
+	word.txt
+
+nothing added to commit but untracked files present
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	url.txt
+	webcrawler
+	word.txt
+
+nothing added to commit but untracked files present
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	url.txt
+	webcrawler
+	word.txt
+
+nothing added to commit but untracked files present
+[master 291c310] Commit web-crawler
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+[master acdfb41] Commit web-crawler
+ 1 file changed, 4 insertions(+), 28 deletions(-)
+[master 5cf1f23] Commit web-crawler
+ 1 file changed, 3 insertions(+)
+[master 3d495ec] Commit web-crawler
+ 1 file changed, 82 insertions(+), 17 deletions(-)
+[master 2e32251] Commit web-crawler
+ 1 file changed, 21 insertions(+), 2 deletions(-)
+[master f0ac551] Commit web-crawler
+ 1 file changed, 3 insertions(+)
+[master 64b02f7] Commit web-crawler
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+[master fb0c7af] Commit web-crawler
+ 1 file changed, 1 insertion(+)
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	url.txt
+	webcrawler
+	word.txt
+
+nothing added to commit but untracked files present
+On branch master
+Untracked files:
+	.local.git.out
+	SimpleHTMLParser.cpp~
+	SimpleHTMLParser.h~
+	gethttp
+	gethttp.cpp~
+	url.txt
+	webcrawler
+	word.txt
+
+nothing added to commit but untracked files present

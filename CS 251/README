@@ -1,0 +1,15 @@
+README
+
+Shreyaansh Bassi PUID: 0027538071
+
+Lab-3: Building a search engine
+
+Problems:
+AVL Tree is incomplete
+Remove function doesn't work
+
+Extra Features:
+Got a fixed background image in both home page and the result window
+Have my name as credits for the page on the home page (on clicking it, it redirects to a better seach engine (google))
+Have a marquee showing the words we are searching for
+Got the words boiler search with one word as black and one as gold

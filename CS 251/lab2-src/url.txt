@@ -1,0 +1,96 @@
+0 http://purdue.edu
+ Learn about Purdue University, a major research university located in Lafayette, Indiana known for discoveries in science, technology, engineering and more.   Purdue University - Indiana's Land Grant University
+
+1 http://purdue.edu/admissions/index.html
+Purdue University Admissions
+
+2 http://www.purdue.edu/newsroom/index.html
+ ￼Browse all the latest university news releases! Read about all the latest innovations and discoveries from Purdue's best ￼and brightest.  Purdue University News Service
+
+3 http://www.purdue.edu/president/index.html
+ $description.value  Office of the President - Purdue University
+
+4 http://www.purdueofficialstore.com/index.html
+
+
+5 http://www.purdue.edu/visit/
+ Come visit Purdue University, home of the Boilermakers, alma mater of the first and last men to walk on the moon, and proud member of the Big Ten Conference. Perennially ranked among the nation's top public universities and research institutions, Purdue serves as Indiana's land-, sea-, and space-grant university with a main campus in West Lafayette and locations across the state.  Visitor Information - Purdue University
+
+6 http://www.purdue.edu/ea/index.html
+ Purdue University Alert
+
+7 http://www.purdue.edu
+ Learn about Purdue University, a major research university located in Lafayette, Indiana known for discoveries in science, technology, engineering and more.   Purdue University - Indiana's Land Grant University
+
+8 http://www.purdue.edu/index.html
+ Learn about Purdue University, a major research university located in Lafayette, Indiana known for discoveries in science, technology, engineering and more.   Purdue University - Indiana's Land Grant University
+
+9 http://www.purdue.edu/purdue/admissions/index.html
+ Become a Boilermaker. This is admissions at Purdue — including our majors, application requirements and housing.   Admissions - Purdue University
+
+10 http://www.purdue.edu/purdue/academics/index.html
+ Academic programs at Purdue prepare students to move the world forward. Explore our colleges, majors and minors.   Academics - Purdue University
+
+11 http://www.purdue.edu/purdue/inclusion/index.html
+ $description.value  Inclusion - Purdue University
+
+12 http://www.purdue.edu/purdue/arts/index.html
+ Entertainment and education combine in powerful ways at Purdue. Explore cultural centers, theatres and art galleries.   Art and Ideas - Purdue University
+
+13 http://www.purdue.edu/purdue/research/index.html
+ Explore our world-changing research STEM to see why Purdue is a national and global leader in discovery and innovation.  University Research - Purdue University
+
+14 http://www.purdue.edu/purdue/alumni/index.html
+ Always a Boilermaker! See why Purdue alumni support is so valuable in the lives of our students and the University.   Alumni - Purdue University
+
+15 http://www.purdue.edu/purdue/athletics/index.html
+ Boiler Up! Explore athletics at Purdue — here you can buy tickets, meet our teams and discover intramural opportunities.   Athletics - Purdue University
+
+16 http://www.purdue.edu/purdue/about/index.html
+ Explore the history, traditions and achievements of the University and our Boilermakers.  About Purdue's History, Traditions, Achievements &amp; More - Purdue University
+
+17 http://www.purdue.edu/purdue/current_students/index.html
+ Find resources for current students such as: Blackboard, dining court menus, important course information and more.  Resources for Current Students - Purdue University
+
+18 http://www.purdue.edu/purdue/prospective_students/index.html
+ Explore resources for prospective students and learn about our academic programs, student life, applying to Purdue, financial aid and more.  Resources for Prospective Students - Purdue University
+
+19 http://www.purdue.edu/thinksummer/index.html
+ Think Summer. Think Purdue. Find classes, financial aid and housing. Explore study abroad, distance learning and internships. Summer school like you mean it.  Think Summer
+
+20 http://www.purdue.edu/purdue/engage/index.html
+ Purdue provides real solutions. See how we use our engagement resources to make a difference in Indiana and elsewhere.  Engage with Purdue - Purdue University
+
+21 http://www.purdue.edu/hr/careers/
+ $description.value  Careers - Purdue University
+
+22 http://www.purdue.edu/purdue/commercialization/index.html
+ Academic programs at Purdue prepare students to move the world forward. Explore our colleges, majors and minors.   Entrepreneurship and Commercialization - Purdue University
+
+23 http://www.itap.purdue.edu/learning/tools/blackboard/
+ Information Technology at Purdue
+
+24 http://www.purdue.edu/newsroom/purduetoday/
+ Browse all of today's news releases. Find out what is happening right now at Purdue University here and stay current on today's news.  Purdue Today - University News Service
+
+25 http://www.purdue.edu/purdue/information_for/for_faculty_staff_re.html
+ Purdue University - Faculty, Staff, Retirees
+
+26 http://www.purdue.edu/ais/
+  Administrative Information Service (AIS)
+
+27 http://www.purdueofficialstore.com/
+ Purdue Apparel - Purdue University Gear, Purdue Boilermakers Merchandise, Clothing, Shop - Official Purdue Store The official Purdue Shop has all the Purdue Gear and Clothing for Boilermakers students, alumni and fans. Get flat rate shipping on all your Purdue Apparel: including Purdue University Merchandise and Gifts. 
+
+28 http://www.purdue.edu/hr/CHL/
+ $description.value  Center for Healthy Living - Purdue University
+
+29 http://www.purdue.edu/hr
+ 301 Moved Permanently
+
+30 http://www.purdue.edu/hotline/
+ Purdue Hotline  Purdue University - Hotline
+
+31 http://www.purdue.edu/diversity-inclusion/
+ $description.value  Diversity and Inclusion - Purdue University
+

@@ -1,3 +1,0 @@
-class Car implements Vehicle {
-  // your code goes here
-}
