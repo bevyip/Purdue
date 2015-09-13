@@ -1,0 +1,552 @@
+
+
+-------------------------------------------------
+CS240: lab3b . cs240   
+Mon Feb  9 11:04:09 EST 2015
+-------------------------------------------------
+./convert                           : 0   of 3  
+./convert 10                        : 0   of 3  
+./convert 10 10                     : 0   of 3  
+./convert 10 10                     : 0   of 3  
+./convert 10 10 10                  : 0   of 3  
+./convert 16 10 FF                  : 0   of 3  
+./convert 16 10 100                 : 0   of 3  
+./convert 10 8 20                   : 0   of 3  
+./convert 10 2 127                  : 0   of 3  
+./convert 10 16 8191                : 0   of 3  
+./convert 10 25 100077900           : 0   of 3  
+./convert 2 16 100010001111         : 0   of 3  
+./convert 5 10 1234                 : 0   of 3  
+./convert 5 10 123456               : 0   of 3  
+-------------------------------------------------
+CS240: lab3b. cs240 Mon Feb 9 11:04:09 EST 2015  Total:  0 of 42
+
+
+
+-------------------------------------------------
+CS240: lab3b . cs240   
+Mon Feb  9 11:19:55 EST 2015
+-------------------------------------------------
+./convert                           : 0   of 1  
+./convert 10                        : 0   of 1  
+./convert 10 10                     : 0   of 1  
+./convert 10 10                     : 0   of 1  
+./convert 10 10 10                  : 0   of 1  
+./convert 16 10 FF                  : 0   of 1  
+./convert 16 10 100                 : 0   of 1  
+./convert 10 8 20                   : 0   of 1  
+./convert 10 2 127                  : 0   of 1  
+./convert 10 16 8191                : 0   of 1  
+./convert 10 25 100077900           : 0   of 1  
+./convert 2 16 100010001111         : 0   of 1  
+./convert 5 10 1234                 : 0   of 1  
+./convert 5 10 123456               : 0   of 1  
+-------------------------------------------------
+CS240: lab3b. cs240 Mon Feb 9 11:19:55 EST 2015  Total:  0 of 14
+
+
+
+-------------------------------------------------
+CS240: lab3b . cs240   
+Mon Feb  9 11:24:28 EST 2015
+-------------------------------------------------
+./convert                           : 0   of 1  
+./convert 10                        : 0   of 1  
+./convert 10 10                     : 0   of 1  
+./convert 10 10                     : 0   of 1  
+./convert 10 10 10                  : 0   of 1  
+./convert 16 10 FF                  : 0   of 1  
+./convert 16 10 100                 : 0   of 1  
+./convert 10 8 20                   : 0   of 1  
+./convert 10 2 127                  : 0   of 1  
+./convert 10 16 8191                : 0   of 1  
+./convert 10 25 100077900           : 0   of 1  
+./convert 2 16 100010001111         : 0   of 1  
+./convert 5 10 1234                 : 0   of 1  
+./convert 5 10 123456               : 0   of 1  
+-------------------------------------------------
+CS240: lab3b. cs240 Mon Feb 9 11:24:28 EST 2015  Total:  0 of 14
+
+
+
+-------------------------------------------------
+CS240: lab3b . sbassi   
+Sun Feb 15 17:01:00 EST 2015
+-------------------------------------------------
+./convert                           : 0   of 1  
+./convert 10                        : 0   of 1  
+./convert 10 10                     : 0   of 1  
+./convert 10 10                     : 0   of 1  
+./convert 10 10 10                  : 0   of 1  
+./convert 16 10 FF                  : 0   of 1  
+./convert 16 10 100                 : 0   of 1  
+./convert 10 8 20                   : 0   of 1  
+./convert 10 2 127                  : 0   of 1  
+./convert 10 16 8191                : 0   of 1  
+./convert 10 25 100077900           : 0   of 1  
+./convert 2 16 100010001111         : 0   of 1  
+./convert 5 10 1234                 : 0   of 1  
+./convert 5 10 123456               : 0   of 1  
+-------------------------------------------------
+CS240: lab3b. sbassi Sun Feb 15 17:01:00 EST 2015  Total:  0 of 14
+
+
+
+-------------------------------------------------
+CS240: lab3b . sbassi   
+Sun Feb 15 17:03:19 EST 2015
+-------------------------------------------------
+./convert                           : 0   of 1  
+./convert 10                        : 0   of 1  
+./convert 10 10                     : 0   of 1  
+./convert 10 10                     : 0   of 1  
+./convert 10 10 10                  : 0   of 1  
+./convert 16 10 FF                  : 0   of 1  
+./convert 16 10 100                 : 0   of 1  
+./convert 10 8 20                   : 0   of 1  
+./convert 10 2 127                  : 0   of 1  
+./convert 10 16 8191                : 0   of 1  
+./convert 10 25 100077900           : 0   of 1  
+./convert 2 16 100010001111         : 0   of 1  
+./convert 5 10 1234                 : 0   of 1  
+./convert 5 10 123456               : 0   of 1  
+-------------------------------------------------
+CS240: lab3b. sbassi Sun Feb 15 17:03:19 EST 2015  Total:  0 of 14
+
+
+
+-------------------------------------------------
+CS240: lab3b . sbassi   
+Sun Feb 15 17:03:49 EST 2015
+-------------------------------------------------
+./convert                           : 0   of 1  
+./convert 10                        : 0   of 1  
+./convert 10 10                     : 0   of 1  
+./convert 10 10                     : 0   of 1  
+./convert 10 10 10                  : 0   of 1  
+./convert 16 10 FF                  : 0   of 1  
+./convert 16 10 100                 : 0   of 1  
+./convert 10 8 20                   : 0   of 1  
+./convert 10 2 127                  : 0   of 1  
+./convert 10 16 8191                : 0   of 1  
+./convert 10 25 100077900           : 0   of 1  
+./convert 2 16 100010001111         : 0   of 1  
+./convert 5 10 1234                 : 0   of 1  
+./convert 5 10 123456               : 0   of 1  
+-------------------------------------------------
+CS240: lab3b. sbassi Sun Feb 15 17:03:49 EST 2015  Total:  0 of 14
+
+
+
+-------------------------------------------------
+CS240: lab3b . sbassi   
+Sun Feb 15 17:04:11 EST 2015
+-------------------------------------------------
+./convert                           : 0   of 1  
+./convert 10                        : 0   of 1  
+./convert 10 10                     : 0   of 1  
+./convert 10 10                     : 0   of 1  
+./convert 10 10 10                  : 0   of 1  
+./convert 16 10 FF                  : 0   of 1  
+./convert 16 10 100                 : 0   of 1  
+./convert 10 8 20                   : 0   of 1  
+./convert 10 2 127                  : 0   of 1  
+./convert 10 16 8191                : 0   of 1  
+./convert 10 25 100077900           : 0   of 1  
+./convert 2 16 100010001111         : 0   of 1  
+./convert 5 10 1234                 : 0   of 1  
+./convert 5 10 123456               : 1   of 1  
+-------------------------------------------------
+CS240: lab3b. sbassi Sun Feb 15 17:04:11 EST 2015  Total:  1 of 14
+
+
+
+-------------------------------------------------
+CS240: lab3b . sbassi   
+Sun Feb 15 17:06:18 EST 2015
+-------------------------------------------------
+./convert                           : 0   of 1  
+./convert 10                        : 0   of 1  
+./convert 10 10                     : 0   of 1  
+./convert 10 10                     : 0   of 1  
+./convert 10 10 10                  : 0   of 1  
+./convert 16 10 FF                  : 0   of 1  
+./convert 16 10 100                 : 0   of 1  
+./convert 10 8 20                   : 0   of 1  
+./convert 10 2 127                  : 0   of 1  
+./convert 10 16 8191                : 0   of 1  
+./convert 10 25 100077900           : 0   of 1  
+./convert 2 16 100010001111         : 0   of 1  
+./convert 5 10 1234                 : 0   of 1  
+./convert 5 10 123456               : 1   of 1  
+-------------------------------------------------
+CS240: lab3b. sbassi Sun Feb 15 17:06:18 EST 2015  Total:  1 of 14
+
+
+
+-------------------------------------------------
+CS240: lab3b . sbassi   
+Sun Feb 15 17:07:31 EST 2015
+-------------------------------------------------
+./convert                           : 0   of 1  
+./convert 10                        : 0   of 1  
+./convert 10 10                     : 0   of 1  
+./convert 10 10                     : 0   of 1  
+./convert 10 10 10                  : 0   of 1  
+./convert 16 10 FF                  : 0   of 1  
+./convert 16 10 100                 : 0   of 1  
+./convert 10 8 20                   : 0   of 1  
+./convert 10 2 127                  : 0   of 1  
+./convert 10 16 8191                : 0   of 1  
+./convert 10 25 100077900           : 0   of 1  
+./convert 2 16 100010001111         : 0   of 1  
+./convert 5 10 1234                 : 0   of 1  
+./convert 5 10 123456               : 1   of 1  
+-------------------------------------------------
+CS240: lab3b. sbassi Sun Feb 15 17:07:31 EST 2015  Total:  1 of 14
+
+
+
+-------------------------------------------------
+CS240: lab3b . sbassi   
+Sun Feb 15 17:08:57 EST 2015
+-------------------------------------------------
+./convert                           : 0   of 1  
+./convert 10                        : 0   of 1  
+./convert 10 10                     : 0   of 1  
+./convert 10 10                     : 0   of 1  
+./convert 10 10 10                  : 0   of 1  
+./convert 16 10 FF                  : 0   of 1  
+./convert 16 10 100                 : 0   of 1  
+./convert 10 8 20                   : 0   of 1  
+./convert 10 2 127                  : 0   of 1  
+./convert 10 16 8191                : 0   of 1  
+./convert 10 25 100077900           : 0   of 1  
+./convert 2 16 100010001111         : 0   of 1  
+./convert 5 10 1234                 : 0   of 1  
+./convert 5 10 123456               : 1   of 1  
+-------------------------------------------------
+CS240: lab3b. sbassi Sun Feb 15 17:08:57 EST 2015  Total:  1 of 14
+
+
+
+-------------------------------------------------
+CS240: lab3b . sbassi   
+Sun Feb 15 17:10:45 EST 2015
+-------------------------------------------------
+./convert                           : 0   of 1  
+./convert 10                        : 0   of 1  
+./convert 10 10                     : 0   of 1  
+./convert 10 10                     : 0   of 1  
+./convert 10 10 10                  : 0   of 1  
+./convert 16 10 FF                  : 0   of 1  
+./convert 16 10 100                 : 0   of 1  
+./convert 10 8 20                   : 0   of 1  
+./convert 10 2 127                  : 0   of 1  
+./convert 10 16 8191                : 0   of 1  
+./convert 10 25 100077900           : 0   of 1  
+./convert 2 16 100010001111         : 0   of 1  
+./convert 5 10 1234                 : 0   of 1  
+./convert 5 10 123456               : 1   of 1  
+-------------------------------------------------
+CS240: lab3b. sbassi Sun Feb 15 17:10:45 EST 2015  Total:  1 of 14
+
+
+
+-------------------------------------------------
+CS240: lab3b . sbassi   
+Sun Feb 15 17:11:43 EST 2015
+-------------------------------------------------
+./convert                           : 1   of 1  
+./convert 10                        : 1   of 1  
+./convert 10 10                     : 1   of 1  
+./convert 10 10                     : 1   of 1  
+./convert 10 10 10                  : 0   of 1  
+./convert 16 10 FF                  : 0   of 1  
+./convert 16 10 100                 : 0   of 1  
+./convert 10 8 20                   : 0   of 1  
+./convert 10 2 127                  : 0   of 1  
+./convert 10 16 8191                : 0   of 1  
+./convert 10 25 100077900           : 0   of 1  
+./convert 2 16 100010001111         : 0   of 1  
+./convert 5 10 1234                 : 0   of 1  
+./convert 5 10 123456               : 1   of 1  
+-------------------------------------------------
+CS240: lab3b. sbassi Sun Feb 15 17:11:43 EST 2015  Total:  5 of 14
+
+
+
+-------------------------------------------------
+CS240: lab3b . sbassi   
+Sun Feb 15 17:12:28 EST 2015
+-------------------------------------------------
+./convert                           : 1   of 1  
+./convert 10                        : 1   of 1  
+./convert 10 10                     : 1   of 1  
+./convert 10 10                     : 1   of 1  
+./convert 10 10 10                  : 0   of 1  
+./convert 16 10 FF                  : 0   of 1  
+./convert 16 10 100                 : 0   of 1  
+./convert 10 8 20                   : 0   of 1  
+./convert 10 2 127                  : 0   of 1  
+./convert 10 16 8191                : 0   of 1  
+./convert 10 25 100077900           : 0   of 1  
+./convert 2 16 100010001111         : 0   of 1  
+./convert 5 10 1234                 : 0   of 1  
+./convert 5 10 123456               : 1   of 1  
+-------------------------------------------------
+CS240: lab3b. sbassi Sun Feb 15 17:12:28 EST 2015  Total:  5 of 14
+
+
+
+-------------------------------------------------
+CS240: lab3b . sbassi   
+Sun Feb 15 21:14:36 EST 2015
+-------------------------------------------------
+./convert                           : 1   of 1  
+./convert 10                        : 1   of 1  
+./convert 10 10                     : 1   of 1  
+./convert 10 10                     : 1   of 1  
+./convert 10 10 10                  : 0   of 1  
+./convert 16 10 FF                  : 0   of 1  
+./convert 16 10 100                 : 0   of 1  
+./convert 10 8 20                   : 0   of 1  
+./convert 10 2 127                  : 0   of 1  
+./convert 10 16 8191                : 0   of 1  
+./convert 10 25 100077900           : 0   of 1  
+./convert 2 16 100010001111         : 0   of 1  
+./convert 5 10 1234                 : 0   of 1  
+./convert 5 10 123456               : 1   of 1  
+-------------------------------------------------
+CS240: lab3b. sbassi Sun Feb 15 21:14:36 EST 2015  Total:  5 of 14
+
+
+
+-------------------------------------------------
+CS240: lab3b . sbassi   
+Sun Feb 15 21:21:22 EST 2015
+-------------------------------------------------
+./convert                           : 1   of 1  
+./convert 10                        : 1   of 1  
+./convert 10 10                     : 1   of 1  
+./convert 10 10                     : 1   of 1  
+./convert 10 10 10                  : 0   of 1  
+./convert 16 10 FF                  : 0   of 1  
+./convert 16 10 100                 : 0   of 1  
+./convert 10 8 20                   : 0   of 1  
+./convert 10 2 127                  : 0   of 1  
+./convert 10 16 8191                : 0   of 1  
+./convert 10 25 100077900           : 0   of 1  
+./convert 2 16 100010001111         : 0   of 1  
+./convert 5 10 1234                 : 0   of 1  
+./convert 5 10 123456               : 1   of 1  
+-------------------------------------------------
+CS240: lab3b. sbassi Sun Feb 15 21:21:22 EST 2015  Total:  5 of 14
+
+
+
+-------------------------------------------------
+CS240: lab3b . sbassi   
+Sun Feb 15 21:32:05 EST 2015
+-------------------------------------------------
+./convert                           : 1   of 1  
+./convert 10                        : 1   of 1  
+./convert 10 10                     : 1   of 1  
+./convert 10 10                     : 1   of 1  
+./convert 10 10 10                  : 0   of 1  
+./convert 16 10 FF                  : 0   of 1  
+./convert 16 10 100                 : 0   of 1  
+./convert 10 8 20                   : 0   of 1  
+./convert 10 2 127                  : 0   of 1  
+./convert 10 16 8191                : 0   of 1  
+./convert 10 25 100077900           : 0   of 1  
+./convert 2 16 100010001111         : 0   of 1  
+./convert 5 10 1234                 : 0   of 1  
+./convert 5 10 123456               : 1   of 1  
+-------------------------------------------------
+CS240: lab3b. sbassi Sun Feb 15 21:32:05 EST 2015  Total:  5 of 14
+
+
+
+-------------------------------------------------
+CS240: lab3b . sbassi   
+Sun Feb 15 21:33:39 EST 2015
+-------------------------------------------------
+./convert                           : 1   of 1  
+./convert 10                        : 1   of 1  
+./convert 10 10                     : 1   of 1  
+./convert 10 10                     : 1   of 1  
+./convert 10 10 10                  : 0   of 1  
+./convert 16 10 FF                  : 0   of 1  
+./convert 16 10 100                 : 0   of 1  
+./convert 10 8 20                   : 0   of 1  
+./convert 10 2 127                  : 0   of 1  
+./convert 10 16 8191                : 0   of 1  
+./convert 10 25 100077900           : 0   of 1  
+./convert 2 16 100010001111         : 0   of 1  
+./convert 5 10 1234                 : 0   of 1  
+./convert 5 10 123456               : 1   of 1  
+-------------------------------------------------
+CS240: lab3b. sbassi Sun Feb 15 21:33:39 EST 2015  Total:  5 of 14
+
+
+
+-------------------------------------------------
+CS240: lab3b . sbassi   
+Sun Feb 15 21:35:56 EST 2015
+-------------------------------------------------
+./convert                           : 1   of 1  
+./convert 10                        : 1   of 1  
+./convert 10 10                     : 1   of 1  
+./convert 10 10                     : 1   of 1  
+./convert 10 10 10                  : 0   of 1  
+./convert 16 10 FF                  : 0   of 1  
+./convert 16 10 100                 : 0   of 1  
+./convert 10 8 20                   : 0   of 1  
+./convert 10 2 127                  : 0   of 1  
+./convert 10 16 8191                : 0   of 1  
+./convert 10 25 100077900           : 0   of 1  
+./convert 2 16 100010001111         : 0   of 1  
+./convert 5 10 1234                 : 0   of 1  
+./convert 5 10 123456               : 1   of 1  
+-------------------------------------------------
+CS240: lab3b. sbassi Sun Feb 15 21:35:56 EST 2015  Total:  5 of 14
+
+
+
+-------------------------------------------------
+CS240: lab3b . sbassi   
+Sun Feb 15 21:36:07 EST 2015
+-------------------------------------------------
+./convert                           : 1   of 1  
+./convert 10                        : 1   of 1  
+./convert 10 10                     : 1   of 1  
+./convert 10 10                     : 1   of 1  
+./convert 10 10 10                  : 0   of 1  
+./convert 16 10 FF                  : 0   of 1  
+./convert 16 10 100                 : 0   of 1  
+./convert 10 8 20                   : 0   of 1  
+./convert 10 2 127                  : 0   of 1  
+./convert 10 16 8191                : 0   of 1  
+./convert 10 25 100077900           : 0   of 1  
+./convert 2 16 100010001111         : 0   of 1  
+./convert 5 10 1234                 : 0   of 1  
+./convert 5 10 123456               : 1   of 1  
+-------------------------------------------------
+CS240: lab3b. sbassi Sun Feb 15 21:36:07 EST 2015  Total:  5 of 14
+
+
+
+-------------------------------------------------
+CS240: lab3b . sbassi   
+Sun Feb 15 21:36:37 EST 2015
+-------------------------------------------------
+./convert                           : 1   of 1  
+./convert 10                        : 1   of 1  
+./convert 10 10                     : 1   of 1  
+./convert 10 10                     : 1   of 1  
+./convert 10 10 10                  : 1   of 1  
+./convert 16 10 FF                  : 1   of 1  
+./convert 16 10 100                 : 1   of 1  
+./convert 10 8 20                   : 1   of 1  
+./convert 10 2 127                  : 1   of 1  
+./convert 10 16 8191                : 1   of 1  
+./convert 10 25 100077900           : 1   of 1  
+./convert 2 16 100010001111         : 1   of 1  
+./convert 5 10 1234                 : 1   of 1  
+./convert 5 10 123456               : 1   of 1  
+-------------------------------------------------
+CS240: lab3b. sbassi Sun Feb 15 21:36:37 EST 2015  Total:  14 of 14
+
+
+
+-------------------------------------------------
+CS240: lab3b . sbassi   
+Sun Feb 15 23:39:21 EST 2015
+-------------------------------------------------
+./convert                           : 1   of 1  
+./convert 10                        : 1   of 1  
+./convert 10 10                     : 1   of 1  
+./convert 10 10                     : 1   of 1  
+./convert 10 10 10                  : 1   of 1  
+./convert 16 10 FF                  : 1   of 1  
+./convert 16 10 100                 : 1   of 1  
+./convert 10 8 20                   : 1   of 1  
+./convert 10 2 127                  : 1   of 1  
+./convert 10 16 8191                : 1   of 1  
+./convert 10 25 100077900           : 1   of 1  
+./convert 2 16 100010001111         : 1   of 1  
+./convert 5 10 1234                 : 1   of 1  
+./convert 5 10 123456               : 1   of 1  
+-------------------------------------------------
+CS240: lab3b. sbassi Sun Feb 15 23:39:21 EST 2015  Total:  14 of 14
+
+
+
+-------------------------------------------------
+CS240: lab3b . sbassi   
+Mon Feb 16 19:57:51 EST 2015
+-------------------------------------------------
+./convert                           : 1   of 1  
+./convert 10                        : 1   of 1  
+./convert 10 10                     : 1   of 1  
+./convert 10 10                     : 1   of 1  
+./convert 10 10 10                  : 1   of 1  
+./convert 16 10 FF                  : 1   of 1  
+./convert 16 10 100                 : 1   of 1  
+./convert 10 8 20                   : 1   of 1  
+./convert 10 2 127                  : 1   of 1  
+./convert 10 16 8191                : 1   of 1  
+./convert 10 25 100077900           : 1   of 1  
+./convert 2 16 100010001111         : 1   of 1  
+./convert 5 10 1234                 : 1   of 1  
+./convert 5 10 123456               : 1   of 1  
+-------------------------------------------------
+CS240: lab3b. sbassi Mon Feb 16 19:57:51 EST 2015  Total:  14 of 14
+
+
+
+-------------------------------------------------
+CS240: lab3b . sbassi   
+Mon Feb 16 22:20:07 EST 2015
+-------------------------------------------------
+./convert                           : 1   of 1  
+./convert 10                        : 1   of 1  
+./convert 10 10                     : 1   of 1  
+./convert 10 10                     : 1   of 1  
+./convert 10 10 10                  : 1   of 1  
+./convert 16 10 FF                  : 1   of 1  
+./convert 16 10 100                 : 1   of 1  
+./convert 10 8 20                   : 1   of 1  
+./convert 10 2 127                  : 1   of 1  
+./convert 10 16 8191                : 1   of 1  
+./convert 10 25 100077900           : 1   of 1  
+./convert 2 16 100010001111         : 1   of 1  
+./convert 5 10 1234                 : 1   of 1  
+./convert 5 10 123456               : 1   of 1  
+-------------------------------------------------
+CS240: lab3b. sbassi Mon Feb 16 22:20:07 EST 2015  Total:  14 of 14
+
+
+
+-------------------------------------------------
+CS240: lab3b . sbassi   
+Tue Mar  3 13:27:48 EST 2015
+-------------------------------------------------
+./convert                           : 1   of 1  
+./convert 10                        : 1   of 1  
+./convert 10 10                     : 1   of 1  
+./convert 10 10                     : 1   of 1  
+./convert 10 10 10                  : 1   of 1  
+./convert 16 10 FF                  : 1   of 1  
+./convert 16 10 100                 : 1   of 1  
+./convert 10 8 20                   : 1   of 1  
+./convert 10 2 127                  : 1   of 1  
+./convert 10 16 8191                : 1   of 1  
+./convert 10 25 100077900           : 1   of 1  
+./convert 2 16 100010001111         : 1   of 1  
+./convert 5 10 1234                 : 1   of 1  
+./convert 5 10 123456               : 1   of 1  
+-------------------------------------------------
+CS240: lab3b. sbassi Tue Mar 3 13:27:48 EST 2015  Total:  14 of 14
+

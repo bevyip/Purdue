@@ -1,0 +1,14 @@
+./convert                           : 1   of 1  
+./convert 10                        : 1   of 1  
+./convert 10 10                     : 1   of 1  
+./convert 10 10                     : 1   of 1  
+./convert 10 10 10                  : 1   of 1  
+./convert 16 10 FF                  : 1   of 1  
+./convert 16 10 100                 : 1   of 1  
+./convert 10 8 20                   : 1   of 1  
+./convert 10 2 127                  : 1   of 1  
+./convert 10 16 8191                : 1   of 1  
+./convert 10 25 100077900           : 1   of 1  
+./convert 2 16 100010001111         : 1   of 1  
+./convert 5 10 1234                 : 1   of 1  
+./convert 5 10 123456               : 1   of 1  

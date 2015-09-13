@@ -1,0 +1,23 @@
+On branch master
+
+Initial commit
+
+Untracked files:
+	.local.total.out
+	Makefile
+	convert
+	convert.c
+	convert.org
+	convert.org.out
+	convert.out
+	diff.out
+	git.out
+	none
+	printargs
+	printargs.c
+	printargs.org
+	testall
+	total.out
+	total.txt
+
+nothing added to commit but untracked files present

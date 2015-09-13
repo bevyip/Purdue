@@ -1,0 +1,1731 @@
+rm -f hello countlines towords test_stack rpncalc plot *out
+gcc  -std=c99 -g -o countlines countlines.c
+gcc  -std=c99 -g -o towords towords.c nextword.c
+gcc  -std=c99 -g -o test_stack test_stack.c stack.c
+gcc  -std=c99 -g -o rpncalc rpncalc.c stack.c nextword.c rpn.c -lm
+gcc  -std=c99 -g -o plot plot.c stack.c nextword.c rpn.c -lm
+========== ./countlines in1  ===========
+Program that counts lines.
+Total lines: 2
+Test passed...
+
+========== ./countlines in2  ===========
+Program that counts lines.
+Total lines: 9
+Test passed...
+
+========== ./countlines hamlet  ===========
+Program that counts lines.
+Total lines: 32
+Test passed...
+
+========== ./towords in1  ===========
+*****Test Failed*****
+------ Your Output ----------
+Program that separates text to words.
+0: Hello
+1: world.
+2: Howld.
+3: areld.
+4: you.d.
+words total = 5
+------ Expected Output ------
+Program that separates text to words.
+0: Hello
+1: world.
+2: How
+3: are
+4: you.
+words total = 5
+------ Difference -----------
+4,6c4,6
+< 2: Howld.
+< 3: areld.
+< 4: you.d.
+---
+> 2: How
+> 3: are
+> 4: you.
+-----------------------------
+
+========== ./towords in2  ===========
+*****Test Failed*****
+------ Your Output ----------
+Program that separates text to words.
+0: CS240
+1: Programming
+2: inogramming
+3: Cnogramming
+4: Thisramming
+5: isisramming
+6: asisramming
+7: greatamming
+8: classamming
+9: Yesssamming
+10: Keepsamming
+11: fightinging
+12: Edittinging
+13: Compileging
+14: Runpileging
+15: Debugleging
+16: Repeateging
+17: untilteging
+18: donelteging
+words total = 19
+------ Expected Output ------
+Program that separates text to words.
+0: CS240
+1: Programming
+2: in
+3: C
+4: This
+5: is
+6: a
+7: great
+8: class
+9: Yes
+10: Keep
+11: fighting
+12: Edit
+13: Compile
+14: Run
+15: Debug
+16: Repeat
+17: until
+18: done
+words total = 19
+------ Difference -----------
+4,20c4,20
+< 2: inogramming
+< 3: Cnogramming
+< 4: Thisramming
+< 5: isisramming
+< 6: asisramming
+< 7: greatamming
+< 8: classamming
+< 9: Yesssamming
+< 10: Keepsamming
+< 11: fightinging
+< 12: Edittinging
+< 13: Compileging
+< 14: Runpileging
+< 15: Debugleging
+< 16: Repeateging
+< 17: untilteging
+< 18: donelteging
+---
+> 2: in
+> 3: C
+> 4: This
+> 5: is
+> 6: a
+> 7: great
+> 8: class
+> 9: Yes
+> 10: Keep
+> 11: fighting
+> 12: Edit
+> 13: Compile
+> 14: Run
+> 15: Debug
+> 16: Repeat
+> 17: until
+> 18: done
+-----------------------------
+
+========== ./towords hamlet  ===========
+*****Test Failed*****
+------ Your Output ----------
+Program that separates text to words.
+0: Whether
+1: 'tisher
+2: noblerr
+3: inblerr
+4: thelerr
+5: minderr
+6: tonderr
+7: sufferr
+8: Theferr
+9: slingsr
+10: andngsr
+11: arrowsr
+12: ofrowsr
+13: outrageous
+14: fortune,us
+15: Orrtune,us
+16: tortune,us
+17: takeune,us
+18: armsune,us
+19: against,us
+20: against,us
+21: seainst,us
+22: ofainst,us
+23: troubles,s
+24: Andubles,s
+25: bydubles,s
+26: opposing,s
+27: endosing,s
+28: them?ing,s
+29: Toem?ing,s
+30: die,?ing,s
+31: toe,?ing,s
+32: sleep,ng,s
+33: Noeep,ng,s
+34: more;,ng,s
+35: ande;,ng,s
+36: byde;,ng,s
+37: ayde;,ng,s
+38: sleep,ng,s
+39: toeep,ng,s
+40: sayep,ng,s
+41: weyep,ng,s
+42: endep,ng,s
+43: Theep,ng,s
+44: heart-ache,
+45: andrt-ache,
+46: thert-ache,
+47: thousandhe,
+48: naturaldhe,
+49: shocksldhe,
+50: Thatksldhe,
+51: fleshsldhe,
+52: iseshsldhe,
+53: heirhsldhe,
+54: to,rhsldhe,
+55: 'tishsldhe,
+56: atishsldhe,
+57: consummation
+58: Devoutlytion
+59: tovoutlytion
+60: bevoutlytion
+61: wish'd.ytion
+62: Tosh'd.ytion
+63: die,'d.ytion
+64: toe,'d.ytion
+65: sleep;.ytion
+66: Toeep;.ytion
+67: sleep,.ytion
+68: perchanceion
+69: torchanceion
+70: dream:nceion
+71: ay,am:nceion
+72: there'sceion
+73: there'sceion
+74: rub;e'sceion
+75: For;e'sceion
+76: inr;e'sceion
+77: thate'sceion
+78: sleep'sceion
+79: ofeep'sceion
+80: death'sceion
+81: whath'sceion
+82: dreamssceion
+83: mayamssceion
+84: come,ssceion
+85: When,ssceion
+86: ween,ssceion
+87: have,ssceion
+88: shuffledeion
+89: offffledeion
+90: thisfledeion
+91: mortaledeion
+92: coil,ledeion
+93: Must,ledeion
+94: give,ledeion
+95: usve,ledeion
+96: pause:edeion
+97: there'sdeion
+98: there'sdeion
+99: respectdeion
+100: Thatectdeion
+101: makesctdeion
+102: calamityeion
+103: oflamityeion
+104: solamityeion
+105: longmityeion
+106: life;ityeion
+107: Fore;ityeion
+108: whoe;ityeion
+109: wouldityeion
+110: beardityeion
+111: therdityeion
+112: whipsityeion
+113: andpsityeion
+114: scornstyeion
+115: ofornstyeion
+116: time,styeion
+117: Thee,styeion
+118: oppressor'sn
+119: wrong,sor'sn
+120: theng,sor'sn
+121: proud,sor'sn
+122: man's,sor'sn
+123: contumely,sn
+124: Thetumely,sn
+125: pangsmely,sn
+126: ofngsmely,sn
+127: despis'dy,sn
+128: love,s'dy,sn
+129: thee,s'dy,sn
+130: law'ss'dy,sn
+131: delay,'dy,sn
+132: Theay,'dy,sn
+133: insolence,sn
+134: ofsolence,sn
+135: office,ce,sn
+136: andice,ce,sn
+137: theice,ce,sn
+138: spurns,ce,sn
+139: Thatns,ce,sn
+140: patientce,sn
+141: meritntce,sn
+142: ofritntce,sn
+143: theitntce,sn
+144: unworthye,sn
+145: takes,hye,sn
+146: Whens,hye,sn
+147: heens,hye,sn
+148: himselfye,sn
+149: mightlfye,sn
+150: hishtlfye,sn
+151: quietusye,sn
+152: maketusye,sn
+153: Withtusye,sn
+154: aithtusye,sn
+155: baretusye,sn
+156: bodkin?ye,sn
+157: whokin?ye,sn
+158: wouldn?ye,sn
+159: thesen?ye,sn
+160: fardelsye,sn
+161: bear,lsye,sn
+162: Toar,lsye,sn
+163: gruntlsye,sn
+164: andntlsye,sn
+165: sweatlsye,sn
+166: underlsye,sn
+167: anderlsye,sn
+168: wearylsye,sn
+169: life,lsye,sn
+170: Bute,lsye,sn
+171: that,lsye,sn
+172: thet,lsye,sn
+173: dreadlsye,sn
+174: ofeadlsye,sn
+175: something,sn
+176: afterhing,sn
+177: death,ing,sn
+178: Theth,ing,sn
+179: undiscover'd
+180: country,er'd
+181: fromtry,er'd
+182: whosery,er'd
+183: bournry,er'd
+184: Nournry,er'd
+185: travellerr'd
+186: returns,rr'd
+187: puzzles,rr'd
+188: thezles,rr'd
+189: will,es,rr'd
+190: Andl,es,rr'd
+191: makeses,rr'd
+192: uskeses,rr'd
+193: rathers,rr'd
+194: bearers,rr'd
+195: thosers,rr'd
+196: illsers,rr'd
+197: welsers,rr'd
+198: haveers,rr'd
+199: Thaners,rr'd
+200: flyners,rr'd
+201: toyners,rr'd
+202: otherss,rr'd
+203: thatrss,rr'd
+204: weatrss,rr'd
+205: knowrss,rr'd
+206: naughts,rr'd
+207: of?ghts,rr'd
+208: Thushts,rr'd
+209: conscience'd
+210: doescience'd
+211: makecience'd
+212: cowardsnce'd
+213: ofwardsnce'd
+214: uswardsnce'd
+215: all;rdsnce'd
+216: And;rdsnce'd
+217: thusrdsnce'd
+218: thesrdsnce'd
+219: nativesnce'd
+220: hueivesnce'd
+221: ofeivesnce'd
+222: resolution'd
+223: Issolution'd
+224: sickliedon'd
+225: o'erliedon'd
+226: withliedon'd
+227: thehliedon'd
+228: paleliedon'd
+229: castliedon'd
+230: ofstliedon'd
+231: thought;on'd
+232: Andught;on'd
+233: enterprisesd
+234: ofterprisesd
+235: greatprisesd
+236: pithtprisesd
+237: andhtprisesd
+238: moment,isesd
+239: Withnt,isesd
+240: thisnt,isesd
+241: regard,isesd
+242: theird,isesd
+243: currentssesd
+244: turnentssesd
+245: awry,ntssesd
+246: Andy,ntssesd
+247: lose,ntssesd
+248: thee,ntssesd
+249: name,ntssesd
+250: ofme,ntssesd
+251: action.ssesd
+words total = 252
+------ Expected Output ------
+Program that separates text to words.
+0: Whether
+1: 'tis
+2: nobler
+3: in
+4: the
+5: mind
+6: to
+7: suffer
+8: The
+9: slings
+10: and
+11: arrows
+12: of
+13: outrageous
+14: fortune,
+15: Or
+16: to
+17: take
+18: arms
+19: against
+20: a
+21: sea
+22: of
+23: troubles,
+24: And
+25: by
+26: opposing
+27: end
+28: them?
+29: To
+30: die,
+31: to
+32: sleep,
+33: No
+34: more;
+35: and
+36: by
+37: a
+38: sleep
+39: to
+40: say
+41: we
+42: end
+43: The
+44: heart-ache,
+45: and
+46: the
+47: thousand
+48: natural
+49: shocks
+50: That
+51: flesh
+52: is
+53: heir
+54: to,
+55: 'tis
+56: a
+57: consummation
+58: Devoutly
+59: to
+60: be
+61: wish'd.
+62: To
+63: die,
+64: to
+65: sleep;
+66: To
+67: sleep,
+68: perchance
+69: to
+70: dream:
+71: ay,
+72: there's
+73: the
+74: rub;
+75: For
+76: in
+77: that
+78: sleep
+79: of
+80: death
+81: what
+82: dreams
+83: may
+84: come,
+85: When
+86: we
+87: have
+88: shuffled
+89: off
+90: this
+91: mortal
+92: coil,
+93: Must
+94: give
+95: us
+96: pause:
+97: there's
+98: the
+99: respect
+100: That
+101: makes
+102: calamity
+103: of
+104: so
+105: long
+106: life;
+107: For
+108: who
+109: would
+110: bear
+111: the
+112: whips
+113: and
+114: scorns
+115: of
+116: time,
+117: The
+118: oppressor's
+119: wrong,
+120: the
+121: proud
+122: man's
+123: contumely,
+124: The
+125: pangs
+126: of
+127: despis'd
+128: love,
+129: the
+130: law's
+131: delay,
+132: The
+133: insolence
+134: of
+135: office,
+136: and
+137: the
+138: spurns
+139: That
+140: patient
+141: merit
+142: of
+143: the
+144: unworthy
+145: takes,
+146: When
+147: he
+148: himself
+149: might
+150: his
+151: quietus
+152: make
+153: With
+154: a
+155: bare
+156: bodkin?
+157: who
+158: would
+159: these
+160: fardels
+161: bear,
+162: To
+163: grunt
+164: and
+165: sweat
+166: under
+167: a
+168: weary
+169: life,
+170: But
+171: that
+172: the
+173: dread
+174: of
+175: something
+176: after
+177: death,
+178: The
+179: undiscover'd
+180: country,
+181: from
+182: whose
+183: bourn
+184: No
+185: traveller
+186: returns,
+187: puzzles
+188: the
+189: will,
+190: And
+191: makes
+192: us
+193: rather
+194: bear
+195: those
+196: ills
+197: we
+198: have
+199: Than
+200: fly
+201: to
+202: others
+203: that
+204: we
+205: know
+206: naught
+207: of?
+208: Thus
+209: conscience
+210: does
+211: make
+212: cowards
+213: of
+214: us
+215: all;
+216: And
+217: thus
+218: the
+219: native
+220: hue
+221: of
+222: resolution
+223: Is
+224: sicklied
+225: o'er
+226: with
+227: the
+228: pale
+229: cast
+230: of
+231: thought;
+232: And
+233: enterprises
+234: of
+235: great
+236: pith
+237: and
+238: moment,
+239: With
+240: this
+241: regard,
+242: their
+243: currents
+244: turn
+245: awry,
+246: And
+247: lose
+248: the
+249: name
+250: of
+251: action.
+words total = 252
+------ Difference -----------
+3,14c3,14
+< 1: 'tisher
+< 2: noblerr
+< 3: inblerr
+< 4: thelerr
+< 5: minderr
+< 6: tonderr
+< 7: sufferr
+< 8: Theferr
+< 9: slingsr
+< 10: andngsr
+< 11: arrowsr
+< 12: ofrowsr
+---
+> 1: 'tis
+> 2: nobler
+> 3: in
+> 4: the
+> 5: mind
+> 6: to
+> 7: suffer
+> 8: The
+> 9: slings
+> 10: and
+> 11: arrows
+> 12: of
+16,45c16,45
+< 14: fortune,us
+< 15: Orrtune,us
+< 16: tortune,us
+< 17: takeune,us
+< 18: armsune,us
+< 19: against,us
+< 20: against,us
+< 21: seainst,us
+< 22: ofainst,us
+< 23: troubles,s
+< 24: Andubles,s
+< 25: bydubles,s
+< 26: opposing,s
+< 27: endosing,s
+< 28: them?ing,s
+< 29: Toem?ing,s
+< 30: die,?ing,s
+< 31: toe,?ing,s
+< 32: sleep,ng,s
+< 33: Noeep,ng,s
+< 34: more;,ng,s
+< 35: ande;,ng,s
+< 36: byde;,ng,s
+< 37: ayde;,ng,s
+< 38: sleep,ng,s
+< 39: toeep,ng,s
+< 40: sayep,ng,s
+< 41: weyep,ng,s
+< 42: endep,ng,s
+< 43: Theep,ng,s
+---
+> 14: fortune,
+> 15: Or
+> 16: to
+> 17: take
+> 18: arms
+> 19: against
+> 20: a
+> 21: sea
+> 22: of
+> 23: troubles,
+> 24: And
+> 25: by
+> 26: opposing
+> 27: end
+> 28: them?
+> 29: To
+> 30: die,
+> 31: to
+> 32: sleep,
+> 33: No
+> 34: more;
+> 35: and
+> 36: by
+> 37: a
+> 38: sleep
+> 39: to
+> 40: say
+> 41: we
+> 42: end
+> 43: The
+47,58c47,58
+< 45: andrt-ache,
+< 46: thert-ache,
+< 47: thousandhe,
+< 48: naturaldhe,
+< 49: shocksldhe,
+< 50: Thatksldhe,
+< 51: fleshsldhe,
+< 52: iseshsldhe,
+< 53: heirhsldhe,
+< 54: to,rhsldhe,
+< 55: 'tishsldhe,
+< 56: atishsldhe,
+---
+> 45: and
+> 46: the
+> 47: thousand
+> 48: natural
+> 49: shocks
+> 50: That
+> 51: flesh
+> 52: is
+> 53: heir
+> 54: to,
+> 55: 'tis
+> 56: a
+60,180c60,180
+< 58: Devoutlytion
+< 59: tovoutlytion
+< 60: bevoutlytion
+< 61: wish'd.ytion
+< 62: Tosh'd.ytion
+< 63: die,'d.ytion
+< 64: toe,'d.ytion
+< 65: sleep;.ytion
+< 66: Toeep;.ytion
+< 67: sleep,.ytion
+< 68: perchanceion
+< 69: torchanceion
+< 70: dream:nceion
+< 71: ay,am:nceion
+< 72: there'sceion
+< 73: there'sceion
+< 74: rub;e'sceion
+< 75: For;e'sceion
+< 76: inr;e'sceion
+< 77: thate'sceion
+< 78: sleep'sceion
+< 79: ofeep'sceion
+< 80: death'sceion
+< 81: whath'sceion
+< 82: dreamssceion
+< 83: mayamssceion
+< 84: come,ssceion
+< 85: When,ssceion
+< 86: ween,ssceion
+< 87: have,ssceion
+< 88: shuffledeion
+< 89: offffledeion
+< 90: thisfledeion
+< 91: mortaledeion
+< 92: coil,ledeion
+< 93: Must,ledeion
+< 94: give,ledeion
+< 95: usve,ledeion
+< 96: pause:edeion
+< 97: there'sdeion
+< 98: there'sdeion
+< 99: respectdeion
+< 100: Thatectdeion
+< 101: makesctdeion
+< 102: calamityeion
+< 103: oflamityeion
+< 104: solamityeion
+< 105: longmityeion
+< 106: life;ityeion
+< 107: Fore;ityeion
+< 108: whoe;ityeion
+< 109: wouldityeion
+< 110: beardityeion
+< 111: therdityeion
+< 112: whipsityeion
+< 113: andpsityeion
+< 114: scornstyeion
+< 115: ofornstyeion
+< 116: time,styeion
+< 117: Thee,styeion
+< 118: oppressor'sn
+< 119: wrong,sor'sn
+< 120: theng,sor'sn
+< 121: proud,sor'sn
+< 122: man's,sor'sn
+< 123: contumely,sn
+< 124: Thetumely,sn
+< 125: pangsmely,sn
+< 126: ofngsmely,sn
+< 127: despis'dy,sn
+< 128: love,s'dy,sn
+< 129: thee,s'dy,sn
+< 130: law'ss'dy,sn
+< 131: delay,'dy,sn
+< 132: Theay,'dy,sn
+< 133: insolence,sn
+< 134: ofsolence,sn
+< 135: office,ce,sn
+< 136: andice,ce,sn
+< 137: theice,ce,sn
+< 138: spurns,ce,sn
+< 139: Thatns,ce,sn
+< 140: patientce,sn
+< 141: meritntce,sn
+< 142: ofritntce,sn
+< 143: theitntce,sn
+< 144: unworthye,sn
+< 145: takes,hye,sn
+< 146: Whens,hye,sn
+< 147: heens,hye,sn
+< 148: himselfye,sn
+< 149: mightlfye,sn
+< 150: hishtlfye,sn
+< 151: quietusye,sn
+< 152: maketusye,sn
+< 153: Withtusye,sn
+< 154: aithtusye,sn
+< 155: baretusye,sn
+< 156: bodkin?ye,sn
+< 157: whokin?ye,sn
+< 158: wouldn?ye,sn
+< 159: thesen?ye,sn
+< 160: fardelsye,sn
+< 161: bear,lsye,sn
+< 162: Toar,lsye,sn
+< 163: gruntlsye,sn
+< 164: andntlsye,sn
+< 165: sweatlsye,sn
+< 166: underlsye,sn
+< 167: anderlsye,sn
+< 168: wearylsye,sn
+< 169: life,lsye,sn
+< 170: Bute,lsye,sn
+< 171: that,lsye,sn
+< 172: thet,lsye,sn
+< 173: dreadlsye,sn
+< 174: ofeadlsye,sn
+< 175: something,sn
+< 176: afterhing,sn
+< 177: death,ing,sn
+< 178: Theth,ing,sn
+---
+> 58: Devoutly
+> 59: to
+> 60: be
+> 61: wish'd.
+> 62: To
+> 63: die,
+> 64: to
+> 65: sleep;
+> 66: To
+> 67: sleep,
+> 68: perchance
+> 69: to
+> 70: dream:
+> 71: ay,
+> 72: there's
+> 73: the
+> 74: rub;
+> 75: For
+> 76: in
+> 77: that
+> 78: sleep
+> 79: of
+> 80: death
+> 81: what
+> 82: dreams
+> 83: may
+> 84: come,
+> 85: When
+> 86: we
+> 87: have
+> 88: shuffled
+> 89: off
+> 90: this
+> 91: mortal
+> 92: coil,
+> 93: Must
+> 94: give
+> 95: us
+> 96: pause:
+> 97: there's
+> 98: the
+> 99: respect
+> 100: That
+> 101: makes
+> 102: calamity
+> 103: of
+> 104: so
+> 105: long
+> 106: life;
+> 107: For
+> 108: who
+> 109: would
+> 110: bear
+> 111: the
+> 112: whips
+> 113: and
+> 114: scorns
+> 115: of
+> 116: time,
+> 117: The
+> 118: oppressor's
+> 119: wrong,
+> 120: the
+> 121: proud
+> 122: man's
+> 123: contumely,
+> 124: The
+> 125: pangs
+> 126: of
+> 127: despis'd
+> 128: love,
+> 129: the
+> 130: law's
+> 131: delay,
+> 132: The
+> 133: insolence
+> 134: of
+> 135: office,
+> 136: and
+> 137: the
+> 138: spurns
+> 139: That
+> 140: patient
+> 141: merit
+> 142: of
+> 143: the
+> 144: unworthy
+> 145: takes,
+> 146: When
+> 147: he
+> 148: himself
+> 149: might
+> 150: his
+> 151: quietus
+> 152: make
+> 153: With
+> 154: a
+> 155: bare
+> 156: bodkin?
+> 157: who
+> 158: would
+> 159: these
+> 160: fardels
+> 161: bear,
+> 162: To
+> 163: grunt
+> 164: and
+> 165: sweat
+> 166: under
+> 167: a
+> 168: weary
+> 169: life,
+> 170: But
+> 171: that
+> 172: the
+> 173: dread
+> 174: of
+> 175: something
+> 176: after
+> 177: death,
+> 178: The
+182,253c182,253
+< 180: country,er'd
+< 181: fromtry,er'd
+< 182: whosery,er'd
+< 183: bournry,er'd
+< 184: Nournry,er'd
+< 185: travellerr'd
+< 186: returns,rr'd
+< 187: puzzles,rr'd
+< 188: thezles,rr'd
+< 189: will,es,rr'd
+< 190: Andl,es,rr'd
+< 191: makeses,rr'd
+< 192: uskeses,rr'd
+< 193: rathers,rr'd
+< 194: bearers,rr'd
+< 195: thosers,rr'd
+< 196: illsers,rr'd
+< 197: welsers,rr'd
+< 198: haveers,rr'd
+< 199: Thaners,rr'd
+< 200: flyners,rr'd
+< 201: toyners,rr'd
+< 202: otherss,rr'd
+< 203: thatrss,rr'd
+< 204: weatrss,rr'd
+< 205: knowrss,rr'd
+< 206: naughts,rr'd
+< 207: of?ghts,rr'd
+< 208: Thushts,rr'd
+< 209: conscience'd
+< 210: doescience'd
+< 211: makecience'd
+< 212: cowardsnce'd
+< 213: ofwardsnce'd
+< 214: uswardsnce'd
+< 215: all;rdsnce'd
+< 216: And;rdsnce'd
+< 217: thusrdsnce'd
+< 218: thesrdsnce'd
+< 219: nativesnce'd
+< 220: hueivesnce'd
+< 221: ofeivesnce'd
+< 222: resolution'd
+< 223: Issolution'd
+< 224: sickliedon'd
+< 225: o'erliedon'd
+< 226: withliedon'd
+< 227: thehliedon'd
+< 228: paleliedon'd
+< 229: castliedon'd
+< 230: ofstliedon'd
+< 231: thought;on'd
+< 232: Andught;on'd
+< 233: enterprisesd
+< 234: ofterprisesd
+< 235: greatprisesd
+< 236: pithtprisesd
+< 237: andhtprisesd
+< 238: moment,isesd
+< 239: Withnt,isesd
+< 240: thisnt,isesd
+< 241: regard,isesd
+< 242: theird,isesd
+< 243: currentssesd
+< 244: turnentssesd
+< 245: awry,ntssesd
+< 246: Andy,ntssesd
+< 247: lose,ntssesd
+< 248: thee,ntssesd
+< 249: name,ntssesd
+< 250: ofme,ntssesd
+< 251: action.ssesd
+---
+> 180: country,
+> 181: from
+> 182: whose
+> 183: bourn
+> 184: No
+> 185: traveller
+> 186: returns,
+> 187: puzzles
+> 188: the
+> 189: will,
+> 190: And
+> 191: makes
+> 192: us
+> 193: rather
+> 194: bear
+> 195: those
+> 196: ills
+> 197: we
+> 198: have
+> 199: Than
+> 200: fly
+> 201: to
+> 202: others
+> 203: that
+> 204: we
+> 205: know
+> 206: naught
+> 207: of?
+> 208: Thus
+> 209: conscience
+> 210: does
+> 211: make
+> 212: cowards
+> 213: of
+> 214: us
+> 215: all;
+> 216: And
+> 217: thus
+> 218: the
+> 219: native
+> 220: hue
+> 221: of
+> 222: resolution
+> 223: Is
+> 224: sicklied
+> 225: o'er
+> 226: with
+> 227: the
+> 228: pale
+> 229: cast
+> 230: of
+> 231: thought;
+> 232: And
+> 233: enterprises
+> 234: of
+> 235: great
+> 236: pith
+> 237: and
+> 238: moment,
+> 239: With
+> 240: this
+> 241: regard,
+> 242: their
+> 243: currents
+> 244: turn
+> 245: awry,
+> 246: And
+> 247: lose
+> 248: the
+> 249: name
+> 250: of
+> 251: action.
+-----------------------------
+
+========== ./test_stack   ===========
+*****Test Failed*****
+------ Your Output ----------
+Pushing values...
+Pop values...
+x=0.000000 y=0.000000
+top=0 max=100
+isempty=1Pop values...
+top=0 max=100
+isempty=1------ Expected Output ------
+Pushing values...
+Stack:
+0: 5.000000
+1: 9.000000
+2: 2.000000
+3: 3.000000
+Pop values...
+x=3.000000 y=2.000000
+Stack:
+0: 5.000000
+1: 9.000000
+top=2 max=100
+isempty=0Pop values...
+Stack:
+Stack is emptytop=0 max=100
+isempty=1------ Difference -----------
+1a2,6
+> Stack:
+> 0: 5.000000
+> 1: 9.000000
+> 2: 2.000000
+> 3: 3.000000
+3,6c8,15
+< x=0.000000 y=0.000000
+< top=0 max=100
+< isempty=1Pop values...
+< top=0 max=100
+---
+> x=3.000000 y=2.000000
+> Stack:
+> 0: 5.000000
+> 1: 9.000000
+> top=2 max=100
+> isempty=0Pop values...
+> Stack:
+> Stack is emptytop=0 max=100
+-----------------------------
+
+========== ./rpncalc rpn1  ===========
+*****Test Failed*****
+------ Your Output ----------
+RPN Calculator.
+Result: 0.000000
+------ Expected Output ------
+RPN Calculator.
+Result: 5.000000
+------ Difference -----------
+2c2
+< Result: 0.000000
+---
+> Result: 5.000000
+-----------------------------
+
+========== ./rpncalc rpn2  ===========
+*****Test Failed*****
+------ Your Output ----------
+RPN Calculator.
+Result: 0.000000
+------ Expected Output ------
+RPN Calculator.
+Result: -2.800000
+------ Difference -----------
+2c2
+< Result: 0.000000
+---
+> Result: -2.800000
+-----------------------------
+
+========== ./rpncalc rpn3  ===========
+*****Test Failed*****
+------ Your Output ----------
+RPN Calculator.
+Result: 0.000000
+------ Expected Output ------
+RPN Calculator.
+Result: 7.312500
+------ Difference -----------
+2c2
+< Result: 0.000000
+---
+> Result: 7.312500
+-----------------------------
+
+========== ./rpncalc rpn4  ===========
+*****Test Failed*****
+------ Your Output ----------
+RPN Calculator.
+Result: 0.000000
+------ Expected Output ------
+RPN Calculator.
+Result: 58.000000
+------ Difference -----------
+2c2
+< Result: 0.000000
+---
+> Result: 58.000000
+-----------------------------
+
+========== ./rpncalc rpn5  ===========
+*****Test Failed*****
+------ Your Output ----------
+RPN Calculator.
+Result: 0.000000
+------ Expected Output ------
+RPN Calculator.
+Result: -1.673077
+------ Difference -----------
+2c2
+< Result: 0.000000
+---
+> Result: -1.673077
+-----------------------------
+
+========== ./rpncalc rpn6  ===========
+*****Test Failed*****
+------ Your Output ----------
+RPN Calculator.
+Result: 0.000000
+------ Expected Output ------
+RPN Calculator.
+Result: 0.001593
+------ Difference -----------
+2c2
+< Result: 0.000000
+---
+> Result: 0.001593
+-----------------------------
+
+========== ./rpncalc rpn7  ===========
+*****Test Failed*****
+------ Your Output ----------
+RPN Calculator.
+Result: 0.000000
+------ Expected Output ------
+RPN Calculator.
+Result: 2.998407
+------ Difference -----------
+2c2
+< Result: 0.000000
+---
+> Result: 2.998407
+-----------------------------
+
+========== ./rpncalc rpn8  ===========
+*****Test Failed*****
+------ Your Output ----------
+RPN Calculator.
+Result: 0.000000
+------ Expected Output ------
+RPN Calculator.
+Result: 8.000000
+------ Difference -----------
+2c2
+< Result: 0.000000
+---
+> Result: 8.000000
+-----------------------------
+
+========== ./rpncalc rpn9  ===========
+*****Test Failed*****
+------ Your Output ----------
+RPN Calculator.
+Result: 0.000000
+------ Expected Output ------
+RPN Calculator.
+Elements remain in the stack
+------ Difference -----------
+2c2
+< Result: 0.000000
+---
+> Elements remain in the stack
+-----------------------------
+
+========== ./rpncalc rpn10  ===========
+*****Test Failed*****
+------ Your Output ----------
+RPN Calculator.
+Result: 0.000000
+------ Expected Output ------
+RPN Calculator.
+Stack underflow
+------ Difference -----------
+2c2
+< Result: 0.000000
+---
+> Stack underflow
+-----------------------------
+
+========== ./rpncalc rpn11 3  ===========
+*****Test Failed*****
+------ Your Output ----------
+RPN Calculator.
+Result: 0.000000
+------ Expected Output ------
+RPN Calculator.
+Result: 18.000000
+------ Difference -----------
+2c2
+< Result: 0.000000
+---
+> Result: 18.000000
+-----------------------------
+
+========== ./rpncalc rpn12 45  ===========
+*****Test Failed*****
+------ Your Output ----------
+RPN Calculator.
+Result: 0.000000
+------ Expected Output ------
+RPN Calculator.
+Result: 0.707107
+------ Difference -----------
+2c2
+< Result: 0.000000
+---
+> Result: 0.707107
+-----------------------------
+
+========== ./rpncalc rpn13 2  ===========
+*****Test Failed*****
+------ Your Output ----------
+RPN Calculator.
+Result: 0.000000
+------ Expected Output ------
+RPN Calculator.
+Result: 9.000000
+------ Difference -----------
+2c2
+< Result: 0.000000
+---
+> Result: 9.000000
+-----------------------------
+
+========== ./rpncalc rpn13 2  ===========
+*****Test Failed*****
+------ Your Output ----------
+RPN Calculator.
+Result: 0.000000
+------ Expected Output ------
+RPN Calculator.
+Result: 9.000000
+------ Difference -----------
+2c2
+< Result: 0.000000
+---
+> Result: 9.000000
+-----------------------------
+
+========== ./rpncalc rpn13 2  ===========
+*****Test Failed*****
+------ Your Output ----------
+RPN Calculator.
+Result: 0.000000
+------ Expected Output ------
+RPN Calculator.
+Result: 9.000000
+------ Difference -----------
+2c2
+< Result: 0.000000
+---
+> Result: 9.000000
+-----------------------------
+
+========== ./plot rpn14 -1 1  ===========
+*****Test Failed*****
+------ Your Output ----------
+RPN Plotter.
+------ Expected Output ------
+RPN Plotter.
+                                        |                                       
+ *                                      |                                      *
+                                        |                                       
+  *                                     |                                     * 
+                                        |                                       
+   *                                    |                                    *  
+                                        |                                       
+    *                                   |                                   *   
+                                        |                                       
+     *                                  |                                  *    
+                                        |                                       
+      *                                 |                                 *     
+       *                                |                                *      
+                                        |                                       
+        *                               |                               *       
+         *                              |                              *        
+                                        |                                       
+          *                             |                             *         
+           *                            |                            *          
+                                        |                                       
+            *                           |                           *           
+             *                          |                          *            
+                                        |                                       
+              *                         |                         *             
+               *                        |                        *              
+                *                       |                       *               
+                 *                      |                      *                
+                  *                     |                     *                 
+                   *                    |                    *                  
+                    *                   |                   *                   
+                     *                  |                  *                    
+                      *                 |                 *                     
+                       *                |                *                      
+                        *               |               *                       
+                         *              |              *                        
+                          **            |            **                         
+                            **          |          **                           
+                              **        |        **                             
+                                **      |      **                               
+__________________________________*************_________________________________
+------ Difference -----------
+1a2,41
+>                                         |                                       
+>  *                                      |                                      *
+>                                         |                                       
+>   *                                     |                                     * 
+>                                         |                                       
+>    *                                    |                                    *  
+>                                         |                                       
+>     *                                   |                                   *   
+>                                         |                                       
+>      *                                  |                                  *    
+>                                         |                                       
+>       *                                 |                                 *     
+>        *                                |                                *      
+>                                         |                                       
+>         *                               |                               *       
+>          *                              |                              *        
+>                                         |                                       
+>           *                             |                             *         
+>            *                            |                            *          
+>                                         |                                       
+>             *                           |                           *           
+>              *                          |                          *            
+>                                         |                                       
+>               *                         |                         *             
+>                *                        |                        *              
+>                 *                       |                       *               
+>                  *                      |                      *                
+>                   *                     |                     *                 
+>                    *                    |                    *                  
+>                     *                   |                   *                   
+>                      *                  |                  *                    
+>                       *                 |                 *                     
+>                        *                |                *                      
+>                         *               |               *                       
+>                          *              |              *                        
+>                           **            |            **                         
+>                             **          |          **                           
+>                               **        |        **                             
+>                                 **      |      **                               
+> __________________________________*************_________________________________
+-----------------------------
+
+========== ./plot rpn15 -5 5  ===========
+*****Test Failed*****
+------ Your Output ----------
+RPN Plotter.
+------ Expected Output ------
+RPN Plotter.
+** **                                   |          *****                        
+     *                                  |        **     *                       
+      *                                 |                *                      
+       *                                |       *                               
+        *                               |      *          *                     
+                                        |                                       
+         *                              |     *            *                    
+                                        |                                       
+          *                             |    *              *                   
+                                        |                                       
+           *                            |   *                *                  
+                                        |                                       
+            *                           |  *                  *                 
+                                        |                                       
+                                        |                      *                
+             *                          | *                                     
+                                        |                                       
+              *                         |*                      *               
+                                        |                                       
+________________________________________*________________________*______________
+               *                        |                                       
+                                        |                                       
+                *                      *|                         *             
+                                        |                                       
+                                      * |                          *            
+                 *                      |                                       
+                                        |                                       
+                  *                  *  |                           *           
+                                        |                                       
+                   *                *   |                            *          
+                                        |                                       
+                    *              *    |                             *         
+                                        |                                       
+                     *            *     |                              *        
+                                        |                                       
+                      *          *      |                               *       
+                                *       |                                *      
+                       *                |                                 *     
+                        *     **        |                                  *    
+                         *****          |                                   ****
+------ Difference -----------
+1a2,41
+> ** **                                   |          *****                        
+>      *                                  |        **     *                       
+>       *                                 |                *                      
+>        *                                |       *                               
+>         *                               |      *          *                     
+>                                         |                                       
+>          *                              |     *            *                    
+>                                         |                                       
+>           *                             |    *              *                   
+>                                         |                                       
+>            *                            |   *                *                  
+>                                         |                                       
+>             *                           |  *                  *                 
+>                                         |                                       
+>                                         |                      *                
+>              *                          | *                                     
+>                                         |                                       
+>               *                         |*                      *               
+>                                         |                                       
+> ________________________________________*________________________*______________
+>                *                        |                                       
+>                                         |                                       
+>                 *                      *|                         *             
+>                                         |                                       
+>                                       * |                          *            
+>                  *                      |                                       
+>                                         |                                       
+>                   *                  *  |                           *           
+>                                         |                                       
+>                    *                *   |                            *          
+>                                         |                                       
+>                     *              *    |                             *         
+>                                         |                                       
+>                      *            *     |                              *        
+>                                         |                                       
+>                       *          *      |                               *       
+>                                 *       |                                *      
+>                        *                |                                 *     
+>                         *     **        |                                  *    
+>                          *****          |                                   ****
+-----------------------------
+
+========== ./plot rpn15 -10 10  ===========
+*****Test Failed*****
+------ Your Output ----------
+RPN Plotter.
+------ Expected Output ------
+RPN Plotter.
+                    * *                 |     **                       **       
+                                        |    *  *                     *  *      
+                   *   *                |                                       
+                                        |   *                        *          
+                        *               |        *                        *     
+                  *                     |                                       
+                                        |  *                        *           
+                                        |                                  *    
+                         *              |         *                             
+*                *                      |                                       
+                                        | *                        *            
+                                        |                                   *   
+                          *             |          *                            
+ *                                      |                                       
+                *                       |                                       
+                                        |*                        *             
+                                        |                                    *  
+                           *            |           *                           
+  *                                     |                                       
+_______________*________________________*_______________________________________
+                                        |                        *              
+                                        |                                     * 
+                            *           |            *                          
+   *                                    |                                       
+              *                        *|                                       
+                                        |                       *               
+                                        |                                      *
+                             *          |             *                         
+    *                                   |                                       
+             *                        * |                                       
+                                        |                      *                
+                              *         |              *                        
+     *                                  |                                       
+            *                        *  |                                       
+                                        |                     *                 
+      *                        *        |               *                       
+           *                        *   |                                       
+                                        |                *   *                  
+       *  *                     *  *    |                                       
+        **                       **     |                 ***                   
+------ Difference -----------
+1a2,41
+>                     * *                 |     **                       **       
+>                                         |    *  *                     *  *      
+>                    *   *                |                                       
+>                                         |   *                        *          
+>                         *               |        *                        *     
+>                   *                     |                                       
+>                                         |  *                        *           
+>                                         |                                  *    
+>                          *              |         *                             
+> *                *                      |                                       
+>                                         | *                        *            
+>                                         |                                   *   
+>                           *             |          *                            
+>  *                                      |                                       
+>                 *                       |                                       
+>                                         |*                        *             
+>                                         |                                    *  
+>                            *            |           *                           
+>   *                                     |                                       
+> _______________*________________________*_______________________________________
+>                                         |                        *              
+>                                         |                                     * 
+>                             *           |            *                          
+>    *                                    |                                       
+>               *                        *|                                       
+>                                         |                       *               
+>                                         |                                      *
+>                              *          |             *                         
+>     *                                   |                                       
+>              *                        * |                                       
+>                                         |                      *                
+>                               *         |              *                        
+>      *                                  |                                       
+>             *                        *  |                                       
+>                                         |                     *                 
+>       *                        *        |               *                       
+>            *                        *   |                                       
+>                                         |                *   *                  
+>        *  *                     *  *    |                                       
+>         **                       **     |                 ***                   
+-----------------------------
+
+
+
+-------------------------------------------------
+CS240: Lab 3. sbassi   
+Sat Feb  7 03:14:24 EST 2015
+-------------------------------------------------
+./countlines in1                    : 4   of 4  
+./countlines in2                    : 4   of 4  
+./countlines hamlet                 : 3   of 3  
+./towords in1                       : 0   of 4  
+./towords in2                       : 0   of 4  
+./towords hamlet                    : 0   of 3  
+./test_stack                        : 0   of 10 
+./rpncalc rpn1                      : 0   of 3  
+./rpncalc rpn2                      : 0   of 3  
+./rpncalc rpn3                      : 0   of 3  
+./rpncalc rpn4                      : 0   of 3  
+./rpncalc rpn5                      : 0   of 3  
+./rpncalc rpn6                      : 0   of 3  
+./rpncalc rpn7                      : 0   of 3  
+./rpncalc rpn8                      : 0   of 3  
+./rpncalc rpn9                      : 0   of 3  
+./rpncalc rpn10                     : 0   of 3  
+./rpncalc rpn11 3                   : 0   of 3  
+./rpncalc rpn12 45                  : 0   of 3  
+./rpncalc rpn13 2                   : 0   of 3  
+./rpncalc rpn13 2                   : 0   of 3  
+./rpncalc rpn13 2                   : 0   of 3  
+./plot rpn14 -1 1                   : 0   of 8  
+./plot rpn15 -5 5                   : 0   of 8  
+./plot rpn15 -10 10                 : 0   of 7  
+-------------------------------------------------
+                              Total:  11 of 100
+

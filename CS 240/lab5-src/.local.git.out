@@ -1,0 +1,232 @@
+[master (root-commit) 82facc2] 0 of 100
+ Committer: CS24000 Account <cs240@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 35 files changed, 986 insertions(+)
+ create mode 100644 .local.git.out
+ create mode 100644 .local.total.out
+ create mode 100644 Makefile
+ create mode 100755 check-strfunc.sh
+ create mode 100644 cosmos.txt
+ create mode 100755 countwords
+ create mode 100644 countwords.c
+ create mode 100755 countwords.org
+ create mode 100644 countwords.org.out
+ create mode 100644 countwords.out
+ create mode 100644 diff.out
+ create mode 100755 isbalanced
+ create mode 100644 isbalanced.c
+ create mode 100755 isbalanced.org
+ create mode 100644 isbalanced.org.out
+ create mode 100644 isbalanced.out
+ create mode 100644 mystring.c
+ create mode 100644 mystring.o
+ create mode 100644 none
+ create mode 100644 slist.c
+ create mode 100644 slist.h
+ create mode 100644 test.txt
+ create mode 100755 test_mystring
+ create mode 100644 test_mystring.c
+ create mode 100755 test_mystring.org
+ create mode 100644 test_mystring.org.out
+ create mode 100644 test_mystring.out
+ create mode 100755 test_slist
+ create mode 100644 test_slist.c
+ create mode 100755 test_slist.org
+ create mode 100644 test_slist.org.out
+ create mode 100644 test_slist.out
+ create mode 100755 testall
+ create mode 100644 total.out
+ create mode 100644 total.txt
+[master 704d3ec] 0 of 100
+ Committer: CS24000 Account <cs240@data.cs.purdue.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 3 files changed, 52 insertions(+), 1 deletion(-)
+[master 91c4c80] 0 of 100
+ 9 files changed, 28 insertions(+), 4 deletions(-)
+ rewrite mystring.o (83%)
+[master b0327b2] 5 of 100
+ 7 files changed, 13 insertions(+), 7 deletions(-)
+[master e0094f1] 5 of 100
+ 6 files changed, 22 insertions(+), 3 deletions(-)
+ rewrite mystring.o (80%)
+[master 2879e2a] 10 of 100
+ 7 files changed, 8 insertions(+), 3 deletions(-)
+[master d94df5b] 15 of 100
+ 7 files changed, 17 insertions(+), 4 deletions(-)
+ rewrite mystring.o (67%)
+[master e4a0774] 15 of 100
+ 3 files changed, 6 insertions(+), 1 deletion(-)
+[master ef4a814] 15 of 100
+ 9 files changed, 41 insertions(+), 23 deletions(-)
+ rewrite mystring.o (79%)
+ rewrite test_mystring (66%)
+ rewrite test_slist (66%)
+[master fde7539] 15 of 100
+ 7 files changed, 56 insertions(+), 5 deletions(-)
+ rewrite isbalanced (76%)
+[master ae05d53] 15 of 100
+ 5 files changed, 8 insertions(+), 1 deletion(-)
+[master 137b426] 15 of 100
+ 5 files changed, 13 insertions(+), 8 deletions(-)
+[master 2845179] 40 of 100
+ 7 files changed, 17 insertions(+), 13 deletions(-)
+[master 39bbb3f] 40 of 100
+ 6 files changed, 6 insertions(+), 2 deletions(-)
+[master 6ca3fea] 40 of 100
+ 7 files changed, 28 insertions(+), 22 deletions(-)
+ rewrite mystring.o (76%)
+ rewrite test_mystring (68%)
+[master 3e23134] 40 of 100
+ 6 files changed, 9 insertions(+), 2 deletions(-)
+[master 8f10cab] 40 of 100
+ 3 files changed, 5 insertions(+), 1 deletion(-)
+[master 2355364] 40 of 100
+ 7 files changed, 26 insertions(+), 4 deletions(-)
+ rewrite mystring.o (82%)
+[master bba2cc8] 40 of 100
+ 5 files changed, 12 insertions(+), 5 deletions(-)
+[master 17b3135] 40 of 100
+ 5 files changed, 6 insertions(+), 1 deletion(-)
+[master a42bc6d] 40 of 100
+ 5 files changed, 6 insertions(+), 2 deletions(-)
+[master 7c3a564] 40 of 100
+ 3 files changed, 5 insertions(+), 1 deletion(-)
+[master cbfad7c] 40 of 100
+ 5 files changed, 12 insertions(+), 3 deletions(-)
+[master cafb715] 40 of 100
+ 5 files changed, 6 insertions(+), 2 deletions(-)
+[master f0bfb84] 40 of 100
+ 5 files changed, 6 insertions(+), 2 deletions(-)
+[master 9cd8940] 45 of 100
+ 6 files changed, 12 insertions(+), 9 deletions(-)
+[master 5b68131] 45 of 100
+ 5 files changed, 13 insertions(+), 2 deletions(-)
+[master b7848bb] 45 of 100
+ 5 files changed, 8 insertions(+), 1 deletion(-)
+[master 889c63a] 45 of 100
+ 5 files changed, 7 insertions(+), 3 deletions(-)
+[master 5ed71f6] 50 of 100
+ 6 files changed, 8 insertions(+), 3 deletions(-)
+[master c83d066] 50 of 100
+ 5 files changed, 12 insertions(+), 2 deletions(-)
+[master 8b08a23] 50 of 100
+ 5 files changed, 7 insertions(+), 3 deletions(-)
+[master fd15c83] 55 of 100
+ 6 files changed, 7 insertions(+), 3 deletions(-)
+[master 162600c] 55 of 100
+ 6 files changed, 43 insertions(+), 4 deletions(-)
+[master 841c17a] 55 of 100
+ 7 files changed, 113 insertions(+), 7 deletions(-)
+ create mode 100644 1
+[master a0c171e] 55 of 100
+ 3 files changed, 6 insertions(+), 1 deletion(-)
+[master 9099b24] 55 of 140
+ 22 files changed, 568 insertions(+), 159 deletions(-)
+ create mode 100644 bits.c
+ create mode 100644 bits.h
+ rewrite countwords (86%)
+ rewrite diff.out (100%)
+ create mode 100644 mysort.c
+ create mode 100644 mysort.h
+ create mode 100755 test_bits
+ create mode 100644 test_bits.c
+ create mode 100755 test_bits.org
+ create mode 100644 test_bits.org.out
+ create mode 100644 test_bits.out
+ create mode 100755 test_mysort
+ create mode 100644 test_mysort.c
+ create mode 100755 test_mysort.org
+ create mode 100644 test_mysort.org.out
+ create mode 100644 test_mysort.out
+[master 4e083e1] 55 of 140
+ 9 files changed, 60 insertions(+), 7 deletions(-)
+[master 211cce9] 65 of 140
+ 9 files changed, 22 insertions(+), 7 deletions(-)
+[master acc3104] 65 of 140
+ 5 files changed, 9 insertions(+), 5 deletions(-)
+[master bde0e46] 65 of 140
+ 7 files changed, 60 insertions(+), 30 deletions(-)
+ rewrite countwords (92%)
+[master 1ebba3a] 65 of 140
+ 7 files changed, 13 insertions(+), 8 deletions(-)
+[master 4808607] 65 of 140
+ 7 files changed, 20 insertions(+), 9 deletions(-)
+[master f26eaf3] 90 of 140
+ 9 files changed, 176 insertions(+), 8 deletions(-)
+ rewrite countwords (66%)
+[master 7230d45] 90 of 140
+ 9 files changed, 49 insertions(+), 9 deletions(-)
+ rewrite mystring.o (78%)
+ rewrite test_mystring (71%)
+[master 89be622] 90 of 140
+ 9 files changed, 18 insertions(+), 24 deletions(-)
+ rewrite mystring.o (61%)
+ rewrite test_mystring.out (100%)
+[master dec9eb7] 90 of 140
+ 6 files changed, 14 insertions(+), 5 deletions(-)
+[master 60dd36b] 90 of 140
+ 6 files changed, 13 insertions(+), 5 deletions(-)
+[master f9835cd] 90 of 140
+ 5 files changed, 9 insertions(+), 5 deletions(-)
+[master d8f82d6] 90 of 140
+ 6 files changed, 13 insertions(+), 7 deletions(-)
+[master 52395a5] 90 of 140
+ 9 files changed, 30 insertions(+), 16 deletions(-)
+ rewrite test_bits (69%)
+[master 8d9c114] 98 of 140
+ 8 files changed, 31 insertions(+), 13 deletions(-)
+[master 7de4f63] 102 of 140
+ 8 files changed, 18 insertions(+), 7 deletions(-)
+[master 6d9215b] 102 of 140
+ 7 files changed, 41 insertions(+), 9 deletions(-)
+[master 8e145f7] 102 of 140
+ 7 files changed, 15 insertions(+), 18 deletions(-)
+[master 8d105a0] 106 of 140
+ 8 files changed, 9 insertions(+), 12 deletions(-)
+[master 9ec0dce] 106 of 140
+ 5 files changed, 9 insertions(+), 6 deletions(-)
+[master ef0a869] 106 of 140
+ 5 files changed, 5 insertions(+), 2 deletions(-)
+[master ac65ea5] 106 of 140
+ 5 files changed, 10 insertions(+), 2 deletions(-)
+[master 04a3b53] 122 of 140
+ 10 files changed, 54 insertions(+), 28 deletions(-)
+ rewrite test_mysort (75%)
+[master b3528c6] 126 of 140
+ 6 files changed, 9 insertions(+), 4 deletions(-)
+[master 82a52c5] 126 of 140
+ 10 files changed, 53 insertions(+), 26 deletions(-)
+ create mode 100644 .mystring.c.swp
+ rewrite mystring.o (65%)
+[master 59317c6] 136 of 140
+ 9 files changed, 33 insertions(+), 61 deletions(-)
+ delete mode 100644 .mystring.c.swp
+ rewrite mystring.o (77%)
+[master 6c9f554] 140 of 140
+ 6 files changed, 15 insertions(+), 4 deletions(-)
+[master 4e1f9d9] 140 of 140
+ 3 files changed, 5 insertions(+), 1 deletion(-)
+[master bd1771b] 140 of 140
+ 3 files changed, 5 insertions(+), 1 deletion(-)
+[master 60d2fdf] 140 of 140
+ 3 files changed, 5 insertions(+), 1 deletion(-)

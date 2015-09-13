@@ -1,0 +1,19 @@
+Running test4
+original=<apple>
+from=<pp>
+to=<orange>
+replace=<b=aorangele>
+original=Dear friend, We thank you friend for your present.
+We hope to see you friend in our next party.
+Sincerely yours.
+
+from=<friend>
+to=<George>
+result=<Dear George, We thank you George for your present.
+We hope to see you George in our next party.
+Sincerely yours.
+>
+original=aaa bbbbb a bbbbaa bbb vvv bb fff b
+from=<bb>
+to=< xxx >
+result=<aaa  xxx  xxx b a  xxx  xxx aa  xxx b vvv  xxx  fff b>
