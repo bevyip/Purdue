@@ -1,0 +1,34 @@
+/**
+ * CS 180 - Lab 08 - CollegeFeeCalculator
+ * 
+ * (Brief description of the class file)
+ * 
+ * @author Shreyaansh Bassi sbassi@purdue.edu
+ * 
+ * @lab (Your lab section)
+ *
+ * @ 11/05/14
+ */
+
+import javax.swing.JOptionPane;
+
+public class CollegeFeeCalculator {
+    public static void main(String[] args) {
+        JOptionPane.showMessageDialog(null, "Welcome to College Fee Calculator", "College Fee Calculator", JOptionPane.INFORMATION_MESSAGE);
+        String name = JOptionPane.showMessageDialog(null, "Please enter your name, then press OK", "Name", JOptionPane.QUESTION_MESSAGE);
+        if (name == null || name == "") {
+            break;
+        }
+        String[] enrollment = {"Part-time", "Full-time"};
+        int enroll = JOptionPane.showOptionDialog(null, "Please select your enrollment", "Enrollment", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, enrollment, enroll[1]);
+        int creditHours = JOptionPane.showMessageDialog(null, "Please enter the no. of credit hours, then press OK", "Credit Hours", JOptionPane.QUESTION_MESSAGE);
+        if (creditHours >= 1 && credithours <= 24) {
+            if ((creditHours < 8 && enroll == 0) || (creditHours >= 8 && enroll == 1)) {
+                String[] residency = {"In-State", "Out-of-State", "International"};
+                JOptionPane.shoeOptionDialog(null, "Please select the appropriate residency", "Residency", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, residency, residency[2]);
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Please enter valid credit hours for the current enrollment", "Invalid no. of credits", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+}
