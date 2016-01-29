@@ -1,0 +1,1253 @@
+[master (root-commit) 17ada99] 5 of 90
+ 14 files changed, 716 insertions(+)
+ create mode 100644 MyMalloc.c
+ create mode 100644 MyMalloc.h
+ create mode 100644 test0.c
+ create mode 100644 test1-1.c
+ create mode 100644 test1-2.c
+ create mode 100644 test1-3.c
+ create mode 100644 test1-4.c
+ create mode 100644 test1.c
+ create mode 100644 test2.c
+ create mode 100644 test3.c
+ create mode 100644 test4.c
+ create mode 100644 test5.c
+ create mode 100644 test6.c
+ create mode 100644 test7.c
+On branch master
+Untracked files:
+	.local.git.out
+	.local.total.out
+	Makefile
+	MyMalloc.o
+	MyMalloc.so
+	diff.out
+	none
+	test0
+	test0.org
+	test0.org.out
+	test0.out
+	test1
+	test1-1
+	test1-1.org
+	test1-1.org.out
+	test1-1.out
+	test1-2
+	test1-2.org
+	test1-2.org.out
+	test1-2.out
+	test1-3
+	test1-3.org
+	test1-3.org.out
+	test1-3.out
+	test1-4
+	test1-4.org
+	test1-4.org.out
+	test1-4.out
+	test1.org
+	test2
+	test2.org
+	test2.org.out
+	test2.out
+	test3
+	test3.org
+	test3.org.out
+	test3.out
+	test4
+	test4.org
+	test4.org.out
+	test4.out
+	test5
+	test5.org
+	test5.org.out
+	test5.out
+	test6
+	test6.org
+	test7
+	test7.org
+	test7.org.out
+	test7.out
+	testall
+	total.out
+	total.txt
+
+nothing added to commit but untracked files present
+On branch master
+Untracked files:
+	.local.git.out
+	.local.total.out
+	Makefile
+	MyMalloc.o
+	MyMalloc.so
+	diff.out
+	none
+	test0
+	test0.org
+	test0.org.out
+	test0.out
+	test1
+	test1-1
+	test1-1.org
+	test1-1.org.out
+	test1-1.out
+	test1-2
+	test1-2.org
+	test1-2.org.out
+	test1-2.out
+	test1-3
+	test1-3.org
+	test1-3.org.out
+	test1-3.out
+	test1-4
+	test1-4.org
+	test1-4.org.out
+	test1-4.out
+	test1.org
+	test2
+	test2.org
+	test2.org.out
+	test2.out
+	test3
+	test3.org
+	test3.org.out
+	test3.out
+	test4
+	test4.org
+	test4.org.out
+	test4.out
+	test5
+	test5.org
+	test5.org.out
+	test5.out
+	test6
+	test6.org
+	test7
+	test7.org
+	test7.org.out
+	test7.out
+	testall
+	total.out
+	total.txt
+
+nothing added to commit but untracked files present
+On branch master
+Untracked files:
+	.local.git.out
+	.local.total.out
+	Makefile
+	MyMalloc.o
+	MyMalloc.so
+	diff.out
+	none
+	test0
+	test0.org
+	test0.org.out
+	test0.out
+	test1
+	test1-1
+	test1-1.org
+	test1-1.org.out
+	test1-1.out
+	test1-2
+	test1-2.org
+	test1-2.org.out
+	test1-2.out
+	test1-3
+	test1-3.org
+	test1-3.org.out
+	test1-3.out
+	test1-4
+	test1-4.org
+	test1-4.org.out
+	test1-4.out
+	test1.org
+	test2
+	test2.org
+	test2.org.out
+	test2.out
+	test3
+	test3.org
+	test3.org.out
+	test3.out
+	test4
+	test4.org
+	test4.org.out
+	test4.out
+	test5
+	test5.org
+	test5.org.out
+	test5.out
+	test6
+	test6.org
+	test7
+	test7.org
+	test7.org.out
+	test7.out
+	testall
+	total.out
+	total.txt
+
+nothing added to commit but untracked files present
+On branch master
+Untracked files:
+	.local.git.out
+	.local.total.out
+	Makefile
+	MyMalloc.o
+	MyMalloc.so
+	diff.out
+	none
+	test0
+	test0.org
+	test0.org.out
+	test0.out
+	test1
+	test1-1
+	test1-1.org
+	test1-1.org.out
+	test1-1.out
+	test1-2
+	test1-2.org
+	test1-2.org.out
+	test1-2.out
+	test1-3
+	test1-3.org
+	test1-3.org.out
+	test1-3.out
+	test1-4
+	test1-4.org
+	test1-4.org.out
+	test1-4.out
+	test1.org
+	test2
+	test2.org
+	test2.org.out
+	test2.out
+	test3
+	test3.org
+	test3.org.out
+	test3.out
+	test4
+	test4.org
+	test4.org.out
+	test4.out
+	test5
+	test5.org
+	test5.org.out
+	test5.out
+	test6
+	test6.org
+	test7
+	test7.org
+	test7.org.out
+	test7.out
+	testall
+	total.out
+	total.txt
+
+nothing added to commit but untracked files present
+[master 6f32700] 5 of 90
+ 1 file changed, 14 insertions(+), 2 deletions(-)
+[master 9c55c33] 5 of 100
+ 1 file changed, 2 insertions(+)
+On branch master
+Untracked files:
+	.local.git.out
+	.local.total.out
+	Makefile
+	MyMalloc.o
+	MyMalloc.so
+	diff.out
+	none
+	test0
+	test0.org
+	test0.org.out
+	test0.out
+	test1
+	test1-1
+	test1-1.org
+	test1-1.org.out
+	test1-1.out
+	test1-2
+	test1-2.org
+	test1-2.org.out
+	test1-2.out
+	test1-3
+	test1-3.org
+	test1-3.org.out
+	test1-3.out
+	test1-4
+	test1-4.org
+	test1-4.org.out
+	test1-4.out
+	test1.org
+	test2
+	test2.org
+	test2.org.out
+	test2.out
+	test3
+	test3.org
+	test3.org.out
+	test3.out
+	test4
+	test4.org
+	test4.org.out
+	test4.out
+	test5
+	test5.org
+	test5.org.out
+	test5.out
+	test6
+	test6.org
+	test6.org.out
+	test6.out
+	test7
+	test7.org
+	test7.org.out
+	test7.out
+	testall
+	total.out
+	total.txt
+
+nothing added to commit but untracked files present
+On branch master
+Untracked files:
+	.local.git.out
+	.local.total.out
+	Makefile
+	MyMalloc.o
+	MyMalloc.so
+	diff.out
+	none
+	test0
+	test0.org
+	test0.org.out
+	test0.out
+	test1
+	test1-1
+	test1-1.org
+	test1-1.org.out
+	test1-1.out
+	test1-2
+	test1-2.org
+	test1-2.org.out
+	test1-2.out
+	test1-3
+	test1-3.org
+	test1-3.org.out
+	test1-3.out
+	test1-4
+	test1-4.org
+	test1-4.org.out
+	test1-4.out
+	test1.org
+	test2
+	test2.org
+	test2.org.out
+	test2.out
+	test3
+	test3.org
+	test3.org.out
+	test3.out
+	test4
+	test4.org
+	test4.org.out
+	test4.out
+	test5
+	test5.org
+	test5.org.out
+	test5.out
+	test6
+	test6.org
+	test6.org.out
+	test6.out
+	test7
+	test7.org
+	test7.org.out
+	test7.out
+	testall
+	total.out
+	total.txt
+
+nothing added to commit but untracked files present
+On branch master
+Untracked files:
+	.local.git.out
+	.local.total.out
+	Makefile
+	MyMalloc.o
+	MyMalloc.so
+	diff.out
+	none
+	test0
+	test0.org
+	test0.org.out
+	test0.out
+	test1
+	test1-1
+	test1-1.org
+	test1-1.org.out
+	test1-1.out
+	test1-2
+	test1-2.org
+	test1-2.org.out
+	test1-2.out
+	test1-3
+	test1-3.org
+	test1-3.org.out
+	test1-3.out
+	test1-4
+	test1-4.org
+	test1-4.org.out
+	test1-4.out
+	test1.org
+	test2
+	test2.org
+	test2.org.out
+	test2.out
+	test3
+	test3.org
+	test3.org.out
+	test3.out
+	test4
+	test4.org
+	test4.org.out
+	test4.out
+	test5
+	test5.org
+	test5.org.out
+	test5.out
+	test6
+	test6.org
+	test6.org.out
+	test6.out
+	test7
+	test7.org
+	test7.org.out
+	test7.out
+	testall
+	total.out
+	total.txt
+
+nothing added to commit but untracked files present
+On branch master
+Untracked files:
+	.local.git.out
+	.local.total.out
+	Makefile
+	MyMalloc.o
+	MyMalloc.so
+	diff.out
+	none
+	test0
+	test0.org
+	test0.org.out
+	test0.out
+	test1
+	test1-1
+	test1-1.org
+	test1-1.org.out
+	test1-1.out
+	test1-2
+	test1-2.org
+	test1-2.org.out
+	test1-2.out
+	test1-3
+	test1-3.org
+	test1-3.org.out
+	test1-3.out
+	test1-4
+	test1-4.org
+	test1-4.org.out
+	test1-4.out
+	test1.org
+	test2
+	test2.org
+	test2.org.out
+	test2.out
+	test3
+	test3.org
+	test3.org.out
+	test3.out
+	test4
+	test4.org
+	test4.org.out
+	test4.out
+	test5
+	test5.org
+	test5.org.out
+	test5.out
+	test6
+	test6.org
+	test6.org.out
+	test6.out
+	test7
+	test7.org
+	test7.org.out
+	test7.out
+	testall
+	total.out
+	total.txt
+
+nothing added to commit but untracked files present
+On branch master
+Untracked files:
+	.local.git.out
+	.local.total.out
+	Makefile
+	MyMalloc.o
+	MyMalloc.so
+	diff.out
+	none
+	test0
+	test0.org
+	test0.org.out
+	test0.out
+	test1
+	test1-1
+	test1-1.org
+	test1-1.org.out
+	test1-1.out
+	test1-2
+	test1-2.org
+	test1-2.org.out
+	test1-2.out
+	test1-3
+	test1-3.org
+	test1-3.org.out
+	test1-3.out
+	test1-4
+	test1-4.org
+	test1-4.org.out
+	test1-4.out
+	test1.org
+	test2
+	test2.org
+	test2.org.out
+	test2.out
+	test3
+	test3.org
+	test3.org.out
+	test3.out
+	test4
+	test4.org
+	test4.org.out
+	test4.out
+	test5
+	test5.org
+	test5.org.out
+	test5.out
+	test6
+	test6.org
+	test6.org.out
+	test6.out
+	test7
+	test7.org
+	test7.org.out
+	test7.out
+	testall
+	total.out
+	total.txt
+
+nothing added to commit but untracked files present
+On branch master
+Untracked files:
+	.local.git.out
+	.local.total.out
+	Makefile
+	MyMalloc.o
+	MyMalloc.so
+	diff.out
+	none
+	test0
+	test0.org
+	test0.org.out
+	test0.out
+	test1
+	test1-1
+	test1-1.org
+	test1-1.org.out
+	test1-1.out
+	test1-2
+	test1-2.org
+	test1-2.org.out
+	test1-2.out
+	test1-3
+	test1-3.org
+	test1-3.org.out
+	test1-3.out
+	test1-4
+	test1-4.org
+	test1-4.org.out
+	test1-4.out
+	test1.org
+	test2
+	test2.org
+	test2.org.out
+	test2.out
+	test3
+	test3.org
+	test3.org.out
+	test3.out
+	test4
+	test4.org
+	test4.org.out
+	test4.out
+	test5
+	test5.org
+	test5.org.out
+	test5.out
+	test6
+	test6.org
+	test6.org.out
+	test6.out
+	test7
+	test7.org
+	test7.org.out
+	test7.out
+	testall
+	total.out
+	total.txt
+
+nothing added to commit but untracked files present
+[master b3a5c66] 5 of 100
+ 1 file changed, 41 insertions(+), 5 deletions(-)
+[master be768b0] 5 of 100
+ 1 file changed, 34 insertions(+), 23 deletions(-)
+[master b9ee322] 5 of 100
+ 1 file changed, 8 insertions(+), 7 deletions(-)
+[master 3652e78] 5 of 100
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 3c7d597] 5 of 100
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master abc08ad] 5 of 100
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+[master 7b53da1] 5 of 100
+ 1 file changed, 2 insertions(+), 37 deletions(-)
+[master a2163c0] 5 of 100
+ 1 file changed, 24 insertions(+), 1 deletion(-)
+[master 2b036c2] 5 of 100
+ 1 file changed, 21 insertions(+), 10 deletions(-)
+[master 26ce9ff] 5 of 100
+ 1 file changed, 1 deletion(-)
+[master 3809a1b] 30 of 100
+ 2 files changed, 50 insertions(+), 13 deletions(-)
+[master 41f776d] 30 of 100
+ 1 file changed, 7 insertions(+), 33 deletions(-)
+On branch master
+Untracked files:
+	.MyMalloc.c.swm
+	.MyMalloc.c.swn
+	.MyMalloc.c.swo
+	.MyMalloc.c.swp
+	.local.git.out
+	.local.total.out
+	Makefile
+	MyMalloc.o
+	MyMalloc.so
+	diff.out
+	none
+	test0
+	test0.org
+	test0.org.out
+	test0.out
+	test1
+	test1-1
+	test1-1.org
+	test1-1.org.out
+	test1-1.out
+	test1-2
+	test1-2.org
+	test1-2.org.out
+	test1-2.out
+	test1-3
+	test1-3.org
+	test1-3.org.out
+	test1-3.out
+	test1-4
+	test1-4.org
+	test1-4.org.out
+	test1-4.out
+	test1.org
+	test2
+	test2.org
+	test2.org.out
+	test2.out
+	test3
+	test3.org
+	test3.org.out
+	test3.out
+	test4
+	test4.org
+	test4.org.out
+	test4.out
+	test5
+	test5.org
+	test5.org.out
+	test5.out
+	test6
+	test6.org
+	test6.org.out
+	test6.out
+	test7
+	test7.org
+	test7.org.out
+	test7.out
+	testall
+	total.out
+	total.txt
+
+nothing added to commit but untracked files present
+[master e63ccc5] 30 of 100
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+[master fb6b4b5] 30 of 100
+ 1 file changed, 40 insertions(+), 42 deletions(-)
+[master 83aeb46] 30 of 100
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+On branch master
+Untracked files:
+	.MyMalloc.c.swm
+	.MyMalloc.c.swn
+	.MyMalloc.c.swo
+	.MyMalloc.c.swp
+	.local.git.out
+	.local.total.out
+	Makefile
+	MyMalloc.o
+	MyMalloc.so
+	diff.out
+	none
+	test0
+	test0.org
+	test0.org.out
+	test0.out
+	test1
+	test1-1
+	test1-1.org
+	test1-1.org.out
+	test1-1.out
+	test1-2
+	test1-2.org
+	test1-2.org.out
+	test1-2.out
+	test1-3
+	test1-3.org
+	test1-3.org.out
+	test1-3.out
+	test1-4
+	test1-4.org
+	test1-4.org.out
+	test1-4.out
+	test1.org
+	test2
+	test2.org
+	test2.org.out
+	test2.out
+	test3
+	test3.org
+	test3.org.out
+	test3.out
+	test4
+	test4.org
+	test4.org.out
+	test4.out
+	test5
+	test5.org
+	test5.org.out
+	test5.out
+	test6
+	test6.org
+	test6.org.out
+	test6.out
+	test7
+	test7.org
+	test7.org.out
+	test7.out
+	testall
+	total.out
+	total.txt
+
+nothing added to commit but untracked files present
+[master 074949e] 30 of 100
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+[master 89816c0] 30 of 100
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+[master 591c578] 30 of 100
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+On branch master
+Untracked files:
+	.MyMalloc.c.swm
+	.MyMalloc.c.swn
+	.MyMalloc.c.swo
+	.MyMalloc.c.swp
+	.local.git.out
+	.local.total.out
+	Makefile
+	MyMalloc.o
+	MyMalloc.so
+	diff.out
+	none
+	test0
+	test0.org
+	test0.org.out
+	test0.out
+	test1
+	test1-1
+	test1-1.org
+	test1-1.org.out
+	test1-1.out
+	test1-2
+	test1-2.org
+	test1-2.org.out
+	test1-2.out
+	test1-3
+	test1-3.org
+	test1-3.org.out
+	test1-3.out
+	test1-4
+	test1-4.org
+	test1-4.org.out
+	test1-4.out
+	test1.org
+	test2
+	test2.org
+	test2.org.out
+	test2.out
+	test3
+	test3.org
+	test3.org.out
+	test3.out
+	test4
+	test4.org
+	test4.org.out
+	test4.out
+	test5
+	test5.org
+	test5.org.out
+	test5.out
+	test6
+	test6.org
+	test6.org.out
+	test6.out
+	test7
+	test7.org
+	test7.org.out
+	test7.out
+	testall
+	total.out
+	total.txt
+
+nothing added to commit but untracked files present
+On branch master
+Untracked files:
+	.MyMalloc.c.swm
+	.MyMalloc.c.swn
+	.MyMalloc.c.swo
+	.MyMalloc.c.swp
+	.local.git.out
+	.local.total.out
+	Makefile
+	MyMalloc.o
+	MyMalloc.so
+	diff.out
+	none
+	test0
+	test0.org
+	test0.org.out
+	test0.out
+	test1
+	test1-1
+	test1-1.org
+	test1-1.org.out
+	test1-1.out
+	test1-2
+	test1-2.org
+	test1-2.org.out
+	test1-2.out
+	test1-3
+	test1-3.org
+	test1-3.org.out
+	test1-3.out
+	test1-4
+	test1-4.org
+	test1-4.org.out
+	test1-4.out
+	test1.org
+	test2
+	test2.org
+	test2.org.out
+	test2.out
+	test3
+	test3.org
+	test3.org.out
+	test3.out
+	test4
+	test4.org
+	test4.org.out
+	test4.out
+	test5
+	test5.org
+	test5.org.out
+	test5.out
+	test6
+	test6.org
+	test6.org.out
+	test6.out
+	test7
+	test7.org
+	test7.org.out
+	test7.out
+	testall
+	total.out
+	total.txt
+
+nothing added to commit but untracked files present
+[master 47cf98b] 30 of 100
+ 1 file changed, 23 insertions(+)
+[master 0e40044] 30 of 100
+ 1 file changed, 3 insertions(+)
+[master a290c0c] 30 of 100
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+On branch master
+Untracked files:
+	.MyMalloc.c.swm
+	.MyMalloc.c.swn
+	.MyMalloc.c.swo
+	.MyMalloc.c.swp
+	.local.git.out
+	.local.total.out
+	Makefile
+	MyMalloc.o
+	MyMalloc.so
+	diff.out
+	none
+	test0
+	test0.org
+	test0.org.out
+	test0.out
+	test1
+	test1-1
+	test1-1.org
+	test1-1.org.out
+	test1-1.out
+	test1-2
+	test1-2.org
+	test1-2.org.out
+	test1-2.out
+	test1-3
+	test1-3.org
+	test1-3.org.out
+	test1-3.out
+	test1-4
+	test1-4.org
+	test1-4.org.out
+	test1-4.out
+	test1.org
+	test2
+	test2.org
+	test2.org.out
+	test2.out
+	test3
+	test3.org
+	test3.org.out
+	test3.out
+	test4
+	test4.org
+	test4.org.out
+	test4.out
+	test5
+	test5.org
+	test5.org.out
+	test5.out
+	test6
+	test6.org
+	test6.org.out
+	test6.out
+	test7
+	test7.org
+	test7.org.out
+	test7.out
+	testall
+	total.out
+	total.txt
+
+nothing added to commit but untracked files present
+[master 5f880ae] 30 of 100
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 3f171ab] 30 of 100
+ 1 file changed, 46 insertions(+), 2 deletions(-)
+[master a96321b] 30 of 100
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+[master 2a712c4] 30 of 100
+ 1 file changed, 20 insertions(+), 5 deletions(-)
+On branch master
+Untracked files:
+	.MyMalloc.c.swm
+	.MyMalloc.c.swn
+	.MyMalloc.c.swo
+	.MyMalloc.c.swp
+	.local.git.out
+	.local.total.out
+	.nfs0000000003417a1a00000066
+	.nfs000000000341bf970000006d
+	.nfs000000000341c6d400000069
+	Makefile
+	MyMalloc.o
+	MyMalloc.so
+	diff.out
+	none
+	test0
+	test0.org
+	test1
+	test1-1
+	test1-1.org
+	test1-2
+	test1-2.org
+	test1-3
+	test1-3.org
+	test1-4
+	test1-4.org
+	test1.org
+	test2
+	test2.org
+	test3
+	test3.org
+	test4
+	test4.org
+	test4.org.out
+	test4.out
+	test5
+	test5.org
+	test6
+	test6.org
+	test7
+	test7.org
+	testall
+	total.out
+	total.txt
+
+nothing added to commit but untracked files present
+[master 21a5f45] 0 of 10
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master 6c5d779] 0 of 10
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[master fc76742] 0 of 10
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+On branch master
+Untracked files:
+	.MyMalloc.c.swm
+	.MyMalloc.c.swn
+	.MyMalloc.c.swo
+	.MyMalloc.c.swp
+	.local.git.out
+	.local.total.out
+	.nfs0000000003417a1a00000066
+	.nfs000000000341bf970000006d
+	.nfs000000000341c6d400000069
+	Makefile
+	MyMalloc.o
+	MyMalloc.so
+	diff.out
+	none
+	test0
+	test0.org
+	test1
+	test1-1
+	test1-1.org
+	test1-2
+	test1-2.org
+	test1-3
+	test1-3.org
+	test1-4
+	test1-4.org
+	test1.org
+	test2
+	test2.org
+	test3
+	test3.org
+	test4
+	test4.org
+	test4.org.out
+	test4.out
+	test5
+	test5.org
+	test6
+	test6.org
+	test7
+	test7.org
+	testall
+	total.out
+	total.txt
+
+nothing added to commit but untracked files present
+On branch master
+Untracked files:
+	.MyMalloc.c.swm
+	.MyMalloc.c.swn
+	.MyMalloc.c.swo
+	.MyMalloc.c.swp
+	.local.git.out
+	.local.total.out
+	.nfs0000000003417a1a00000066
+	.nfs000000000341bf970000006d
+	.nfs000000000341c6d400000069
+	Makefile
+	MyMalloc.o
+	MyMalloc.so
+	diff.out
+	none
+	test0
+	test0.org
+	test1
+	test1-1
+	test1-1.org
+	test1-2
+	test1-2.org
+	test1-3
+	test1-3.org
+	test1-4
+	test1-4.org
+	test1.org
+	test2
+	test2.org
+	test3
+	test3.org
+	test4
+	test4.org
+	test4.org.out
+	test4.out
+	test5
+	test5.org
+	test6
+	test6.org
+	test7
+	test7.org
+	testall
+	total.out
+	total.txt
+
+nothing added to commit but untracked files present
+[master b990588] 10 of 10
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+On branch master
+Untracked files:
+	.MyMalloc.c.swm
+	.MyMalloc.c.swn
+	.MyMalloc.c.swo
+	.MyMalloc.c.swp
+	.local.git.out
+	.local.total.out
+	.nfs0000000003417a1a00000066
+	.nfs000000000341bf970000006d
+	.nfs000000000341c6d400000069
+	Makefile
+	MyMalloc.o
+	MyMalloc.so
+	diff.out
+	none
+	test0
+	test0.org
+	test1
+	test1-1
+	test1-1.org
+	test1-2
+	test1-2.org
+	test1-3
+	test1-3.org
+	test1-4
+	test1-4.org
+	test1.org
+	test2
+	test2.org
+	test3
+	test3.org
+	test4
+	test4.org
+	test4.org.out
+	test4.out
+	test5
+	test5.org
+	test6
+	test6.org
+	test7
+	test7.org
+	testall
+	total.out
+	total.txt
+
+nothing added to commit but untracked files present
+On branch master
+Untracked files:
+	.MyMalloc.c.swm
+	.MyMalloc.c.swn
+	.MyMalloc.c.swo
+	.MyMalloc.c.swp
+	.local.git.out
+	.local.total.out
+	.nfs0000000003417a1a00000066
+	.nfs000000000341bf970000006d
+	.nfs000000000341c6d400000069
+	Makefile
+	MyMalloc.o
+	MyMalloc.so
+	diff.out
+	none
+	test0
+	test0.org
+	test0.org.out
+	test0.out
+	test1
+	test1-1
+	test1-1.org
+	test1-1.org.out
+	test1-1.out
+	test1-2
+	test1-2.org
+	test1-2.org.out
+	test1-2.out
+	test1-3
+	test1-3.org
+	test1-3.org.out
+	test1-3.out
+	test1-4
+	test1-4.org
+	test1-4.org.out
+	test1-4.out
+	test1.org
+	test2
+	test2.org
+	test2.org.out
+	test2.out
+	test3
+	test3.org
+	test3.org.out
+	test3.out
+	test4
+	test4.org
+	test4.org.out
+	test4.out
+	test5
+	test5.org
+	test5.org.out
+	test5.out
+	test6
+	test6.org
+	test6.org.out
+	test6.out
+	test7
+	test7.org
+	test7.org.out
+	test7.out
+	testall
+	total.out
+	total.txt
+
+nothing added to commit but untracked files present
+[master fc72cfe] 40 of 100
+ 1 file changed, 10 deletions(-)
+[master db7881e] 40 of 100
+ 1 file changed, 7 deletions(-)
+[master 7d44ae1] 40 of 100
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+[master 65c681e] 40 of 100
+ 1 file changed, 2 deletions(-)
