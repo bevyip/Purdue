@@ -338,7 +338,7 @@ void freeObject( void * ptr )
     printf("checkFooter->_allocated = %d\n", checkFooter->_allocated);
     printf("checkFooter->_objectSize = %d\n", (int) checkFooter->_objectSize);
 
-	if (checkFooter->_allocated == 1) {
+	if (checkFooter->_allocated == 0) {
         flagFooter = 1;
         printf("YOLO\n");
     }
@@ -352,7 +352,7 @@ void freeObject( void * ptr )
     printf("checkHeader->_objectSize = %d\n", (int) checkHeader->_objectSize);
     printf("checkHeader->_allocated = %d\n", checkHeader->_allocated);
 
-    if (checkHeader->_allocated == 1) {
+    if (checkHeader->_allocated == 0) {
         printf("YOLO1\n");
 		flagHeader = 1;
     }
@@ -375,7 +375,7 @@ void freeObject( void * ptr )
         //raise(SIGSEGV);
 	} else {
 		//Just remove the requested node without any coalesing
-        //raise(SIGSEGV);
+        raise(SIGSEGV);
 	}
 
 	return;
