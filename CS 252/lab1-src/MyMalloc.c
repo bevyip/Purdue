@@ -345,7 +345,7 @@ void freeObject( void * ptr )
 
 	if (checkFooter->_allocated == 0) {
         flagFooter = 1;
-        printf("YOLO\n");
+        //printf("YOLO\n");
     }
     //printf("YOLO\n");
 	//Check the lower header
@@ -358,7 +358,7 @@ void freeObject( void * ptr )
     //printf("checkHeader->_allocated = %d\n", checkHeader->_allocated);
 
     if (checkHeader->_allocated == 0) {
-        printf("YOLO1\n");
+        //printf("YOLO1\n");
 		flagHeader = 1;
     }
 
@@ -374,10 +374,34 @@ void freeObject( void * ptr )
 	if (flagHeader && flagFooter) {
 		//Coalese both the nodes with the nodes which needs to be freed
         //raise(SIGSEGV);
+
 	} else if (flagHeader) {
 		//Coalese with the lower node
         //printf("I reached here!\n");
         //raise(SIGSEGV);
+
+        struct ObjectHeader * changeHeader = (struct ObjectHeader *) change;
+        changeHeader->_allocated = 0;
+        size_t copy;// = changeHeader->_objectSize;
+        change = change + changeHeader->_objectSize - sizeof(struct ObjectFooter);
+//printf("I reached here!1\n");
+        struct ObjectFooter * changeFooter = (struct ObjectFooter *) change;
+        //printf("I reached here!\n");
+        changeFooter->_allocated = 0;
+//printf("I reached here!2\n");
+        //Go to the lower node
+        change = change + sizeof(struct ObjectFooter);
+//printf("I reached here!3\n");
+        struct ObjectHeader * changeHeader1 = (struct ObjectHeader *) change;
+        copy = changeHeader1->_objectSize;
+        changeHeader1->_next->_prev = changeHeader1->_prev;
+        changeHeader1->_prev->_next = changeHeader1->_next;
+//printf("I reached here!4\n");
+        //Update the objectSize in Header;
+        changeHeader->_objectSize = changeHeader->_objectSize + copy;
+        changeFooter->_objectSize = changeFooter->_objectSize + copy;
+//printf("I reached here!5\n");
+
 	} else if (flagFooter) {
 		//Coalese with the higher node
         //printf("I reached here!\n");
@@ -410,6 +434,8 @@ void freeObject( void * ptr )
         //GO PRO
     }
 
+    int lastFlag = 0;
+
     while (list != _freeList) {
         //printf("Did I come here?\n");
         if (list > removeHeader) {
@@ -418,12 +444,18 @@ void freeObject( void * ptr )
             removeHeader->_prev = list->_prev;
             removeHeader->_next = list;
             list->_prev = removeHeader;
+            lastFlag = 1;
         }
         //break;
         prev = list;
         list = list->_next;
     }
-
+    if (!lastFlag) {
+        list->_prev->_next = removeHeader;
+        removeHeader->_prev = list->_prev;
+        removeHeader->_next = list;
+        list->_prev = removeHeader;
+    }
 	return;
 
 }
