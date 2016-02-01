@@ -70,8 +70,6 @@ struct ObjectFooter {
   static struct ObjectHeader _freeListSentinel; // Sentinel is used to simplify list operations
   static struct ObjectHeader *_freeList;
 
-  //int intlFlag = 0;
-
 
   //FUNCTIONS
 
@@ -111,8 +109,6 @@ atExitHandlerInC()
   atExitHandler();
 }
 
-//char * test;
-
 void initialize()
 {
   // Environment var VERBOSE prints stats at end and turns on debugging
@@ -127,9 +123,8 @@ void initialize()
   void * _mem = getMemoryFromOS( ArenaSize + (2*sizeof(struct ObjectHeader)) + (2*sizeof(struct ObjectFooter)) );
 
   // In verbose mode register also printing statistics at exit
-  //if (intlFlag == 0) {
-      atexit( atExitHandlerInC );
-  //}
+  atexit( atExitHandlerInC );
+
   //establish fence posts
   struct ObjectFooter * fencepost1 = (struct ObjectFooter *)_mem;
   fencepost1->_allocated = 1;
@@ -159,9 +154,6 @@ void initialize()
   _freeList->_allocated = 2; // sentinel. no coalescing.
   _freeList->_objectSize = 0;
   _memStart = (char*) currentHeader;
-
-  //Extra line
-  //test = _mem;
 }
 
 void initializeNew() {
@@ -191,128 +183,7 @@ void initializeNew() {
     currentHeader->_prev = _freeList->_prev->_next;
 
     _freeList->_prev->_next = currentHeader;
-    //test = _mem;
 }
-
-/*void * allocateObject( size_t size )
-{
-  //Make sure that allocator is initialized
-  if ( !_initialized ) {
-    _initialized = 1;
-    initialize();
-  }
-
-  // Add the ObjectHeader/Footer to the size and round the total size up to a multiple of
-  // 8 bytes for alignment.
-  size_t roundedSize = (size + sizeof(struct ObjectHeader) + sizeof(struct ObjectFooter) + 7) & ~7;
-
-  // Naively get memory from the OS every time
-  //void * _mem = getMemoryFromOS( roundedSize );
-
-    //Make a pointer to the freelist
-    struct ObjectHeader * p = _freeList->_next;
-
-    char * temp;
-
-    struct ObjectHeader * oldHeader;
-    struct ObjectHeader * removeHeader;
-
-    int flag = 0;
-
-    while (p != _freeList) {
-        flag = 0;
-        //Case 1: When we don't need to break the chunk into two parts
-        if (p->_objectSize >= roundedSize && p->_objectSize <= roundedSize + sizeof(struct ObjectHeader) + sizeof(struct ObjectFooter) + 8) {
-            //raise(SIGSEGV);
-            //You found the chunk of the right size
-            temp = (char *) p;
-            removeHeader = p;
-
-            //Set the head's allocated = 1 and remove it from the FreeList
-            removeHeader->_allocated = 1;
-
-            //Removing the header from the FreeList
-            removeHeader->_prev->_next = removeHeader->_next;
-            removeHeader->_next->_prev = removeHeader->_prev;
-
-            //Going to make changes to the Footer
-            temp = temp + removeHeader->_objectSize - sizeof(struct ObjectFooter);
-            struct ObjectFooter * removeFooter = (struct ObjectFooter *) temp;
-
-            //Change the variable in Footer
-            removeFooter->_allocated = 1;
-            removeFooter->_objectSize = removeHeader->_objectSize;
-
-            //Change the header variable to what you want to return
-            oldHeader = removeHeader;
-
-            //Break out of the loop because you're done
-            break;
-
-        } //Case 2: When you can break the memory chunk into two parts
-        if (p->_objectSize >= roundedSize && p->_objectSize > roundedSize + sizeof(struct ObjectHeader) + sizeof(struct ObjectFooter) + 8) {
-            //printf("Idhar ghusa\n");
-            temp = (char *) p;
-            oldHeader = (struct ObjectHeader *)p;
-            size_t remu = p->_objectSize-roundedSize;
-            //Create a new Footer at the end of the requested size
-            temp = temp + roundedSize - sizeof(struct ObjectFooter);
-            struct ObjectFooter * oldFooter = (struct ObjectFooter *) temp;
-
-            //Allocate the variables in the Old Footer
-            oldFooter->_allocated = 1;
-            oldFooter->_objectSize = roundedSize;
-
-            //Create a new Header
-            temp = temp + sizeof(struct ObjectFooter);
-            struct ObjectHeader * newHeader = (struct ObjectHeader *) temp;
-
-            //Allocate the variables in the new header
-            newHeader->_allocated = 0;
-            newHeader->_objectSize = remu;//oldHeader->_objectSize - roundedSize;
-            newHeader->_next = oldHeader->_next;
-            newHeader->_prev = oldHeader->_prev;
-
-            //Double linked list operations (adding the new broken block to the list and removing the old block)
-            oldHeader->_prev->_next = newHeader;
-            oldHeader->_next->_prev = newHeader;
-
-            //Change the variables in Old Header
-            oldHeader->_allocated = 1;
-            oldHeader->_objectSize = roundedSize;
-            oldHeader->_next = newHeader;
-
-            //Allocate the variables in New Footer
-            temp = temp + newHeader->_objectSize - sizeof(struct ObjectFooter);
-            struct ObjectFooter * newFooter = (struct ObjectFooter *) temp;
-            newFooter->_allocated = 0;
-            newFooter->_objectSize = newHeader->_objectSize;
-
-            //Break out of the loop because the job is done
-            break;
-        } //Case 3: All the memory chunk in the initial 2MB block is full/or not enough memory remaining to return for the requested size.
-        else {
-            flag = 1;
-            break;
-        }
-        //Move on to the next node in the FreeList
-        p = p->_next;
-    }
-    if (flag == 1) {
-        initializeNew();
-        allocateObject(size);
-    }
-
-  // Store the size in the header
-  //struct ObjectHeader * o = (struct ObjectHeader *) _mem;
-
-  //o->_objectSize = roundedSize;
-
-  pthread_mutex_unlock(&mutex);
-
-  // Return a pointer to usable memory
-  return (void *) (oldHeader + 1);
-}*/
 
 void * allocateObject( size_t size )
 {
@@ -325,9 +196,6 @@ void * allocateObject( size_t size )
   // Add the ObjectHeader/Footer to the size and round the total size up to a multiple of
   // 8 bytes for alignment.
   size_t roundedSize = (size + sizeof(struct ObjectHeader) + sizeof(struct ObjectFooter) + 7) & ~7;
-
-  // Naively get memory from the OS every time
-  //void * _mem = getMemoryFromOS( roundedSize );
 
     //Make a pointer to the freelist
     struct ObjectHeader * p = _freeList->_next;
@@ -343,8 +211,7 @@ void * allocateObject( size_t size )
         flag = 0;
         //Case 1: When we don't need to break the chunk into two parts
         if (p->_objectSize >= roundedSize && p->_objectSize < roundedSize + sizeof(struct ObjectHeader) + sizeof(struct ObjectFooter) + 8) {
-            //raise(SIGSEGV);
-            //You found the chunk of the right size
+            //You found the right sized
             temp = (char *) p;
             removeHeader = p;
 
@@ -371,7 +238,7 @@ void * allocateObject( size_t size )
 
         } //Case 2: When you can break the memory chunk into two parts
         else if (p->_objectSize >= roundedSize + sizeof(struct ObjectHeader) + sizeof(struct ObjectFooter) + 8) {
-            //printf("Came here\n");
+
             temp = (char *) p;
             oldHeader = p;
 
@@ -397,10 +264,9 @@ void * allocateObject( size_t size )
             oldHeader->_prev->_next = newHeader;
             oldHeader->_next->_prev = newHeader;
             oldHeader->_objectSize = roundedSize;
+
             //Change the variables in Old Header
             oldHeader->_allocated = 1;
-            //printf("oldHeader->_allocated = %d\n", oldHeader->_allocated);
-            //printf("oldHeader->_objectSize = %d\n", (int) oldHeader->_objectSize);
             oldHeader->_next = newHeader;
 
 
