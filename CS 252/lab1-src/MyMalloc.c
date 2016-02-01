@@ -578,6 +578,7 @@ realloc(void *ptr, size_t size)
 
     //Free old object
     freeObject( ptr );
+    //OK MAN TESTING
   }
 
   return newptr;
