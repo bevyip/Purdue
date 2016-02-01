@@ -316,7 +316,7 @@ void freeObject( void * ptr )
 
 	//Check the Upper and Lower nodes and check the appropriate flags.
 
-	int flagFooter, flagHeader = 0;
+	int flagFooter = 0, flagHeader = 0;
 
 	//Make a temp pointer
 	char * temp = (char *) ptr;
@@ -324,10 +324,15 @@ void freeObject( void * ptr )
 	//Go to the header of the given pointer
 	temp = temp - sizeof(struct ObjectHeader);
 
+    char * change = temp;
+
 	struct ObjectHeader * checkHeader = (struct ObjectHeader *) temp;
 
-    printf("checkHeader->_allocated = %d\n", checkHeader->_allocated);
-    printf("checkHeader->_objectSize = %d\n", (int) checkHeader->_objectSize);
+    //If we only remove the specified node. (No coalesing)
+    struct ObjectHeader * removeHeader = (struct ObjectHeader *) temp;
+
+    //printf("checkHeader->_allocated = %d\n", checkHeader->_allocated);
+    //printf("checkHeader->_objectSize = %d\n", (int) checkHeader->_objectSize);
 
 	//Check the upper footer
 	temp = temp - sizeof(struct ObjectFooter);
@@ -335,8 +340,8 @@ void freeObject( void * ptr )
 	struct ObjectFooter * checkFooter = (struct ObjectFooter *) temp;
     //printf("YOLO\n");
 
-    printf("checkFooter->_allocated = %d\n", checkFooter->_allocated);
-    printf("checkFooter->_objectSize = %d\n", (int) checkFooter->_objectSize);
+    //printf("checkFooter->_allocated = %d\n", checkFooter->_allocated);
+    //printf("checkFooter->_objectSize = %d\n", (int) checkFooter->_objectSize);
 
 	if (checkFooter->_allocated == 0) {
         flagFooter = 1;
@@ -349,8 +354,8 @@ void freeObject( void * ptr )
 
 	checkHeader = (struct ObjectHeader *) temp;
 
-    printf("checkHeader->_objectSize = %d\n", (int) checkHeader->_objectSize);
-    printf("checkHeader->_allocated = %d\n", checkHeader->_allocated);
+    //printf("checkHeader->_objectSize = %d\n", (int) checkHeader->_objectSize);
+    //printf("checkHeader->_allocated = %d\n", checkHeader->_allocated);
 
     if (checkHeader->_allocated == 0) {
         printf("YOLO1\n");
@@ -360,8 +365,10 @@ void freeObject( void * ptr )
     temp = temp + checkHeader->_objectSize - sizeof(struct ObjectFooter);
     checkFooter = (struct ObjectFooter *) temp;
 
-    printf("checkFooter->_allocated = %d\n", checkFooter->_allocated);
-    printf("checkFooter->_objectSize = %d\n", (int) checkFooter->_objectSize);
+    //printf("checkFooter = %d\ncheckHeader = %d\n", flagFooter, flagHeader);
+
+    //printf("checkFooter->_allocated = %d\n", checkFooter->_allocated);
+    //printf("checkFooter->_objectSize = %d\n", (int) checkFooter->_objectSize);
 
 	//Start the entire procedure:
 	if (flagHeader && flagFooter) {
@@ -369,14 +376,53 @@ void freeObject( void * ptr )
         //raise(SIGSEGV);
 	} else if (flagHeader) {
 		//Coalese with the lower node
+        //printf("I reached here!\n");
         //raise(SIGSEGV);
 	} else if (flagFooter) {
-		//Coalese with th higher node
+		//Coalese with the higher node
+        //printf("I reached here!\n");
         //raise(SIGSEGV);
 	} else {
+        //printf("I reached here!\n");
 		//Just remove the requested node without any coalesing
-        raise(SIGSEGV);
+        //raise(SIGSEGV);
+
+        //Just free this node and add it to the FreeList
+        //Just set allocated = 0 for header and footer and add the node to FreeList
+        struct ObjectHeader * changeHeader = (struct ObjectHeader *) change;
+        changeHeader->_allocated = 0;
+
+        //Go to the footer
+        change = change + changeHeader->_objectSize - sizeof(struct ObjectFooter);
+
+        struct ObjectFooter * changeFooter = (struct ObjectFooter *) change;
+        changeFooter->_allocated = 0;
 	}
+
+    //Add the node to the FreeList
+
+    //FreeList node(s)
+    struct ObjectHeader * prev = _freeList;
+    struct ObjectHeader * list = _freeList->_next;
+
+    if (removeHeader > _freeList) {
+        //printf("Yes\n");
+        //GO PRO
+    }
+
+    while (list != _freeList) {
+        //printf("Did I come here?\n");
+        if (list > removeHeader) {
+            //printf("Yes I did!\n");
+            list->_prev->_next = removeHeader;
+            removeHeader->_prev = list->_prev;
+            removeHeader->_next = list;
+            list->_prev = removeHeader;
+        }
+        //break;
+        prev = list;
+        list = list->_next;
+    }
 
 	return;
 
