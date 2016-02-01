@@ -375,6 +375,38 @@ void freeObject( void * ptr )
 		//Coalese both the nodes with the nodes which needs to be freed
         //raise(SIGSEGV);
 
+        //Assign variables to midHeader
+        struct ObjectHeader * changeMidHeader = (struct ObjectHeader *) change;
+
+        change = change + changeMidHeader->_objectSize;
+
+        struct ObjectHeader * changeDownHeader = (struct ObjectHeader *) change;
+
+        change = change + changeDownHeader->_objectSize - sizeof(struct ObjectFooter);
+
+        struct ObjectFooter * changeDownFooter = (struct ObjectFooter *) change;
+
+        change = change - changeDownFooter->_objectSize - changeMidHeader->_objectSize;
+
+        struct ObjectFooter * changeUpFooter = (struct ObjectFooter *) change;
+
+        change = change + sizeof(struct ObjectFooter) - changeUpFooter->_objectSize;
+
+        struct ObjectHeader * changeUpHeader = (struct ObjectHeader *) change;
+
+        //Assign variables for
+        changeUpHeader->_objectSize = changeUpHeader->_objectSize + changeMidHeader->_objectSize + changeDownHeader->_objectSize;
+
+        changeDownFooter->_objectSize = changeUpHeader->_objectSize;
+
+        changeUpHeader->_next = changeDownHeader->_next;
+        //Go to the upper node and change
+
+
+        //Go to the lower node and change
+
+
+        //Update the FreeList
 	} else if (flagHeader) {
 		//Coalese with the lower node
         //printf("I reached here!\n");
@@ -406,6 +438,29 @@ void freeObject( void * ptr )
 		//Coalese with the higher node
         //printf("I reached here!\n");
         //raise(SIGSEGV);
+
+        struct ObjectHeader * changeHeader = (struct ObjectHeader *) change;
+        changeHeader->_allocated = 0;
+        size_t copy;
+        change = change - sizeof(struct ObjectFooter);
+
+        struct ObjectFooter * changeFooter = (struct ObjectFooter *) change;
+        //If (SHIROYA) then _allocated = 0;
+        copy = changeFooter->_objectSize;
+        change = change - changeFooter->_objectSize + sizeof(struct ObjectFooter);
+
+        //Change the objectSize in the upper header
+        struct ObjectHeader * changeHeader1 = (struct ObjectHeader *) change;
+        changeHeader1->_objectSize = changeHeader1->_objectSize + copy;
+
+        //Change the footer in the last node
+        change = change + changeHeader1->_objectSize - sizeof(struct ObjectFooter);
+
+        //Assign a node to the last ObjectFooter
+        struct ObjectFooter * changeFooter1 = (struct ObjectFooter *) change;
+        changeFooter1->_allocated = 0;
+        changeFooter1->_objectSize = changeHeader1->_objectSize;
+
 	} else {
         //printf("I reached here!\n");
 		//Just remove the requested node without any coalesing
