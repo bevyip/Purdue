@@ -157,6 +157,8 @@ void initialize()
 }
 
 void initializeNew() {
+
+    //Initialize method for getting memory from OS
     void * _mem = getMemoryFromOS( ArenaSize + (2*sizeof(struct ObjectHeader)) + (2*sizeof(struct ObjectFooter)) );
     //establish fence posts
     struct ObjectFooter * fencepost1 = (struct ObjectFooter *)_mem;
@@ -373,71 +375,52 @@ void freeObject( void * ptr )
 	//Start the entire procedure:
 	if (flagHeader && flagFooter) {
 		//Coalese both the nodes with the nodes which needs to be freed
-        //raise(SIGSEGV);
 
-        //Assign variables to midHeader
+        //Assigning MidHeader
         struct ObjectHeader * changeMidHeader = (struct ObjectHeader *) change;
-
         change = change + changeMidHeader->_objectSize;
 
+        //Assigning Down (right) header and footer
         struct ObjectHeader * changeDownHeader = (struct ObjectHeader *) change;
-
         change = change + changeDownHeader->_objectSize - sizeof(struct ObjectFooter);
-
         struct ObjectFooter * changeDownFooter = (struct ObjectFooter *) change;
 
+        //Assigning Up (left) footer and header
         change = change - changeDownFooter->_objectSize - changeMidHeader->_objectSize;
-
         struct ObjectFooter * changeUpFooter = (struct ObjectFooter *) change;
-
         change = change + sizeof(struct ObjectFooter) - changeUpFooter->_objectSize;
-
         struct ObjectHeader * changeUpHeader = (struct ObjectHeader *) change;
 
         //Assign variables for
         changeUpHeader->_objectSize = changeUpHeader->_objectSize + changeMidHeader->_objectSize + changeDownHeader->_objectSize;
-
         changeDownFooter->_objectSize = changeUpHeader->_objectSize;
-
         changeUpHeader->_next = changeDownHeader->_next;
-        //Go to the upper node and change
 
-
-        //Go to the lower node and change
-
-
-        //Update the FreeList
 	} else if (flagHeader) {
 		//Coalese with the lower node
-        //printf("I reached here!\n");
-        //raise(SIGSEGV);
 
         struct ObjectHeader * changeHeader = (struct ObjectHeader *) change;
         changeHeader->_allocated = 0;
-        size_t copy;// = changeHeader->_objectSize;
+        size_t copy;
         change = change + changeHeader->_objectSize - sizeof(struct ObjectFooter);
-//printf("I reached here!1\n");
         struct ObjectFooter * changeFooter = (struct ObjectFooter *) change;
-        //printf("I reached here!\n");
+
         changeFooter->_allocated = 0;
-//printf("I reached here!2\n");
+
         //Go to the lower node
         change = change + sizeof(struct ObjectFooter);
-//printf("I reached here!3\n");
+
         struct ObjectHeader * changeHeader1 = (struct ObjectHeader *) change;
         copy = changeHeader1->_objectSize;
         changeHeader1->_next->_prev = changeHeader1->_prev;
         changeHeader1->_prev->_next = changeHeader1->_next;
-//printf("I reached here!4\n");
+
         //Update the objectSize in Header;
         changeHeader->_objectSize = changeHeader->_objectSize + copy;
         changeFooter->_objectSize = changeFooter->_objectSize + copy;
-//printf("I reached here!5\n");
 
 	} else if (flagFooter) {
 		//Coalese with the higher node
-        //printf("I reached here!\n");
-        //raise(SIGSEGV);
 
         struct ObjectHeader * changeHeader = (struct ObjectHeader *) change;
         changeHeader->_allocated = 0;
@@ -462,9 +445,7 @@ void freeObject( void * ptr )
         changeFooter1->_objectSize = changeHeader1->_objectSize;
 
 	} else {
-        //printf("I reached here!\n");
 		//Just remove the requested node without any coalesing
-        //raise(SIGSEGV);
 
         //Just free this node and add it to the FreeList
         //Just set allocated = 0 for header and footer and add the node to FreeList
@@ -484,24 +465,16 @@ void freeObject( void * ptr )
     struct ObjectHeader * prev = _freeList;
     struct ObjectHeader * list = _freeList->_next;
 
-    if (removeHeader > _freeList) {
-        //printf("Yes\n");
-        //GO PRO
-    }
-
     int lastFlag = 0;
 
     while (list != _freeList) {
-        //printf("Did I come here?\n");
         if (list > removeHeader) {
-            //printf("Yes I did!\n");
             list->_prev->_next = removeHeader;
             removeHeader->_prev = list->_prev;
             removeHeader->_next = list;
             list->_prev = removeHeader;
             lastFlag = 1;
         }
-        //break;
         prev = list;
         list = list->_next;
     }
