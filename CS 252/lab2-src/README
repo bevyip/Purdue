@@ -7,12 +7,18 @@ Textfile (regex-test.txt) //My testing purposes
 
 FUNCTIONAL:
 	Everything Works (No extra features)
-
+	1. Password checks the length of the string
+	2. Checks all the special, alphanumeric characters and performs the appropriate calculations on the final Password Score.
+	
 NON FUNCTIONAL:
 
 CPU AND MEMORY MONITOR (monitor.sh)
 
 FUNCTIONAL:
 	Everything Works (No extra features)
+	1. Monitor script generates the CPU Usage of a given Process ID for a given Time Interval.
+	2. Sends me an email if the exceeds the given CPU Threshold.
+	3. Only generates the number of reports specified in the initial command.
+	4. -mem command also implemented, so it also sends an email when the memory threshold is exceeded.
 
 NON FUNCTIONAL:
