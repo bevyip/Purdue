@@ -344,10 +344,16 @@ void expandWildcards(char * prefix, char * suffix, char * extra) {
                 directory = strdup(".");
             } else {
                 printf("case 3\n");
-                while (*suffix != '/' && *suffix != '\0') {
-
+                char * ttt = (char *) malloc (100);
+                char * tmpSuffix = suffix;
+                int i = 0;
+                while (*tmpSuffix != '/' && *tmpSuffix != '\0') {
+                    ttt[i++] = *tmpSuffix;
+                    tmpSuffix++;
                 }
-
+                ttt[i] = '\0';
+                printf("ttt: %s\n", ttt);
+                newSuffix = strdup(ttt);
             }
         }
     } else {
@@ -462,20 +468,24 @@ void expandWildcards(char * prefix, char * suffix, char * extra) {
                 //printf("dir: %s\nyy: %s\nname: %s\n", directory, yy, ent->d_name);
                 //printf("Comes here\n");
 
-                char * yy = (char *) malloc (1024);
-                strcat(yy, "");
-                strcat(yy, directory);
-                if (strcmp(directory, "/")) {
-                    strcat(yy, "/");
-                }
-                strcat(yy, ent->d_name);
-                strcat(yy, "\0");
-                while (*yy != directory[0]) { yy++; }
-                //printf("yy: %s\n", yy);
+                if (!strcmp(directory, ".")) {
+                    fileList[numEntries++] = strdup(ent->d_name);
+                } else {
+                    char * yy = (char *) malloc (1024);
+                    strcat(yy, "");
+                    strcat(yy, directory);
+                    if (strcmp(directory, "/")) {
+                        strcat(yy, "/");
+                    }
+                    strcat(yy, ent->d_name);
+                    strcat(yy, "\0");
+                    while (*yy != directory[0]) { yy++; }
+                    //printf("yy: %s\n", yy);
 
-                fileList[numEntries++] = strdup(yy);
-                //fileList[numEntries++] = strdup(ent->d_name);
-		        //printf("Dir: %s\n", ent->d_name);
+                    fileList[numEntries++] = strdup(yy);
+                    //fileList[numEntries++] = strdup(ent->d_name);
+    		        //printf("Dir: %s\n", ent->d_name);
+                }
             }
         }
     }
