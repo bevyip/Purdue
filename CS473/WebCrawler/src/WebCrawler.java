@@ -44,7 +44,7 @@ public class WebCrawler {
         }
     }
 
-    public static void crawlDFS(String url) {
+    public static void crawlDFS(String url) throws IOException {
         try {
             Document doc = Jsoup.connect(url).get();
             String title = doc.title();
@@ -76,6 +76,16 @@ public class WebCrawler {
         }
 
         System.out.println(q.size());
-        System.out.println("Queue is empty now!");
+        System.out.println("This is what remains of the queue!");
+
+        counter = 0;
+        while (counter != 100) {
+            counter++;
+            String ur = (String) s.pop();
+            crawlDFS(ur);
+        }
+
+        System.out.println(s.size());
+        System.out.println("This is what remains of the stack!");
     }
 }
