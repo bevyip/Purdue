@@ -39,7 +39,6 @@ public class WebCrawler {
                     links.put(u, linc.toString());
                 }
             }
-
         } catch (Exception e) {
         }
     }
@@ -53,11 +52,19 @@ public class WebCrawler {
 
             Elements elem = doc.select("a[href]");
 
+            String[] elems = new String[elem.size()];
+            int i = 0;
+
             for (Element linc : elem) {
                 String u = linc.attr("abs:href").toString();
+
                 if (!links.containsKey(u)) {
-                    crawlDFS(u);
+                    //crawlDFS(u);
+                    links.put(u, linc.toString());
                 }
+
+                elems[i++] = u;
+
             }
         } catch (Exception e) {
             //Do nothing have fun
