@@ -11,88 +11,54 @@ import java.util.*;
 
 public class WebCrawler {
 
-    static Queue q = new LinkedList();
-    static Stack s = new Stack();
-    static Hashtable<String, String> links = new Hashtable<>();
+    static HashMap storedLinks = new HashMap<String, Integer>();
+    static Queue queue = new LinkedList<String>();
     static int counter = 0;
+    static int dupCounter = 0;
+    static int currentDepth = 0;
 
-    public static void crawlBFS(String url) throws IOException {
-
-        try {
-            //System.out.println(url);
-            Document doc = Jsoup.connect(url).get();
-
-            String title = doc.title();
-
-            links.put(url, title);
-
-            //Extract the URLs from the page here
-            Elements link = doc.select("a[href]");
-
-            for (Element linc:link) {
-                String u = linc.attr("abs:href").toString();
-                if (!links.containsKey(u)) {
-                    System.out.println(u + " " + counter);
-                    if (!q.contains(u)) {
-                        q.add(u);
-                    }
-                    links.put(u, linc.toString());
-                }
-            }
-        } catch (Exception e) {
-        }
-    }
-
-    public static void crawlDFS(String url) throws IOException {
+    public static void crawlBFS(String url) {
         try {
             Document doc = Jsoup.connect(url).get();
-            String title = doc.title();
 
-            links.put(url, title);
+            Elements links = doc.select("a[href]");
 
-            Elements elem = doc.select("a[href]");
-
-            String[] elems = new String[elem.size()];
-            int i = 0;
-
-            for (Element linc : elem) {
-                String u = linc.attr("abs:href").toString();
-
-                if (!links.containsKey(u)) {
-                    //crawlDFS(u);
-                    links.put(u, linc.toString());
+            for (Element link: links) {
+                String absUrl = link.attr("abs:href").toString();
+                if (!storedLinks.containsKey(absUrl)) {
+                    //System.out.println(absUrl + " " + counter);
+                    storedLinks.put(absUrl, (int) storedLinks.get(url) + 1);
+                    queue.add(absUrl);
+                } else {
+                    dupCounter++;
                 }
-
-                elems[i++] = u;
-
             }
+            //currentDepth++;
         } catch (Exception e) {
-            //Do nothing have fun
+            //Do nothing
         }
     }
+    public static void crawlDFS(String url) {
+        try {
+            
+        } catch (Exception e) {
+            //Do nothing
+        }
+    }
+    public static void main(String[] args) {
+        String url = "https://www.purdue.edu/";
+        storedLinks.put(url, currentDepth++);
+        queue.add(url);
 
-    public static void main(String[] args) throws IOException {
-        String url = "http://www.purdue.edu/";
-
-        q.add(url);
-
-        while (counter != 100) {
+        while(!queue.isEmpty() && counter <= 1000) {
+            String u = (String) queue.remove();
+            System.out.println("Current depth is " + storedLinks.get(u));
+            crawlBFS(u);
             counter++;
-            String ur = (String) q.remove();
-            crawlBFS(ur);
         }
 
-        System.out.println(q.size());
-        System.out.println("This is what remains of the queue!");
-
-        counter = 0;
-        while (counter != 100) {
-            counter++;
-            String ur = (String) s.pop();
-            crawlDFS(ur);
-        }
-
-        System.out.println(s.size());
-        System.out.println("This is what remains of the stack!");
+        System.out.println("The currentDepth is: " + currentDepth);
+        System.out.println("The remaining number of elements are: " + queue.size());
+        System.out.println("The number of duplicate urls encountered are: " + dupCounter);
     }
 }
