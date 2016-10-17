@@ -1,0 +1,4 @@
+﻿  WaveEditView.cpp
+d:\projects\lab1-src\waveedit\waveedit\waveeditview.cpp(124): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  WaveEdit.vcxproj -> D:\Projects\lab1-src\WaveEdit\Debug\WaveEdit.exe
+  WaveEdit.vcxproj -> D:\Projects\lab1-src\WaveEdit\Debug\WaveEdit.pdb (Partial PDB)
