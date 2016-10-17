@@ -1,22 +1,30 @@
 Shreyaansh Bassi
+Login: sbassi
 
-PASSWORD (pwcheck.sh)
-Textfile (regex-test.txt) //My testing purposes
+Part 1:
+    Working features:
+        All
+    Extra Features:
+    	Wrote a testall script that provides the inputs
+	tested for in the rubric. This script executes
+	pwcheck.sh with the inputs used in the rubric
+	and then runs the script on them.
 
-FUNCTIONAL:
-	Everything Works (No extra features)
-	1. Password checks the length of the string
-	2. Checks all the special, alphanumeric characters and performs the appropriate calculations on the final Password Score.
-
-NON FUNCTIONAL:
-
-CPU AND MEMORY MONITOR (monitor.sh)
-
-FUNCTIONAL:
-	Everything Works (No extra features)
-	1. Monitor script generates the CPU Usage of a given Process ID for a given Time Interval.
-	2. Sends me an email if the exceeds the given CPU Threshold.
-	3. Only generates the number of reports specified in the initial command.
-	4. -mem command also implemented, so it also sends an email when the memory threshold is exceeded.
-
-NON FUNCTIONAL:
+Part 2:
+    Working features:
+   	All
+    Extra features:
+        Added an additional -m flag. If the flag is
+	present, it sends the tar file to your Purdue
+	email address. You can also specify another
+	email address after the -m tag and the program
+	will send the tar file to the email specified
+	instead of your Purdue CS email.
+	
+    Usage:
+	./xkcdownload.sh start_range end_range [-m] [Optional email address]
+	
+    Examples:
+	./xkcdownload.sh 1000 1010 -m (Sends the tar file to your Purdue email)
+	./xkcdownload.sh 1000 1010 -m example@gmail.com (Sends the tar file to the email specified)
+	./xkcdownload.sh 1000 1010 (Just saves the tar file)

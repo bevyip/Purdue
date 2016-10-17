@@ -1,14 +1,15 @@
-//
-// CS252: MyMalloc Project
-//
-// The current implementation gets memory from the OS
-// every time memory is requested and never frees memory.
-//
-// You will implement the allocator as indicated in the handout.
-//
-// Also you will need to add the necessary locking mechanisms to
-// support multi-threaded programs.
-//
+/*
+ * CS252: MyMalloc Project
+ *
+ * The current implementation gets memory from the OS
+ * every time memory is requested and never frees memory.
+ *
+ * You will implement the allocator as indicated in the handout,
+ * as well as the deallocator.
+ *
+ * You will also need to add the necessary locking mechanisms to
+ * support multi-threaded programs.
+ */
 
 #include <stdlib.h>
 #include <string.h>
@@ -16,617 +17,431 @@
 #include <unistd.h>
 #include <sys/mman.h>
 #include <pthread.h>
-#include <signal.h>
 #include "MyMalloc.h"
 
 static pthread_mutex_t mutex;
 
-const int ArenaSize = 2097152;
-const int NumberOfFreeLists = 1;
+const int arenaSize = 2097152;
 
-// Header of an object. Used both when the object is allocated and freed
-struct ObjectHeader {
-    size_t _objectSize;         // Real size of the object.
-    int _allocated;             // 1 = yes, 0 = no 2 = sentinel
-    struct ObjectHeader * _next;       // Points to the next object in the freelist (if free).
-    struct ObjectHeader * _prev;       // Points to the previous object.
-};
+void increaseMallocCalls()  { _mallocCalls++; }
 
-struct ObjectFooter {
-    size_t _objectSize;
-    int _allocated;
-};
+void increaseReallocCalls() { _reallocCalls++; }
 
-  //STATE of the allocator
+void increaseCallocCalls()  { _callocCalls++; }
 
-  // Size of the heap
-  static size_t _heapSize;
+void increaseFreeCalls()    { _freeCalls++; }
 
-  // initial memory pool
-  static void * _memStart;
-
-  // number of chunks request from OS
-  static int _numChunks;
-
-  // True if heap has been initialized
-  static int _initialized;
-
-  // Verbose mode
-  static int _verbose;
-
-  // # malloc calls
-  static int _mallocCalls;
-
-  // # free calls
-  static int _freeCalls;
-
-  // # realloc calls
-  static int _reallocCalls;
-
-  // # realloc calls
-  static int _callocCalls;
-
-  // Free list is a sentinel
-  static struct ObjectHeader _freeListSentinel; // Sentinel is used to simplify list operations
-  static struct ObjectHeader *_freeList;
-
-
-  //FUNCTIONS
-
-  //Initializes the heap
-  void initialize();
-
-  // Allocates an object
-  void * allocateObject( size_t size );
-
-  // Frees an object
-  void freeObject( void * ptr );
-
-  // Returns the size of an object
-  size_t objectSize( void * ptr );
-
-  // At exit handler
-  void atExitHandler();
-
-  //Prints the heap size and other information about the allocator
-  void print();
-  void print_list();
-
-  // Gets memory from the OS
-  void * getMemoryFromOS( size_t size );
-
-  void increaseMallocCalls() { _mallocCalls++; }
-
-  void increaseReallocCalls() { _reallocCalls++; }
-
-  void increaseCallocCalls() { _callocCalls++; }
-
-  void increaseFreeCalls() { _freeCalls++; }
-
-extern void
-atExitHandlerInC()
+extern void atExitHandlerInC()
 {
-  atExitHandler();
+    atExitHandler();
 }
 
+/*
+ * Initial setup of allocator. First chunk is retrieved from the OS,
+ * and the fence posts and freeList are initialized.
+ */
 void initialize()
 {
-  // Environment var VERBOSE prints stats at end and turns on debugging
-  // Default is on
-  _verbose = 1;
-  const char * envverbose = getenv( "MALLOCVERBOSE" );
-  if ( envverbose && !strcmp( envverbose, "NO") ) {
-    _verbose = 0;
-  }
+    // Environment var VERBOSE prints stats at end and turns on debugging
+    // Default is on
+    _verbose = 1;
+    const char *envverbose = getenv("MALLOCVERBOSE");
+    if (envverbose && !strcmp(envverbose, "NO")) {
+        _verbose = 0;
+    }
 
-  pthread_mutex_init(&mutex, NULL);
-  void * _mem = getMemoryFromOS( ArenaSize + (2*sizeof(struct ObjectHeader)) + (2*sizeof(struct ObjectFooter)) );
+    pthread_mutex_init(&mutex, NULL);
+    void *_mem = getMemoryFromOS(arenaSize);
 
-  // In verbose mode register also printing statistics at exit
-  atexit( atExitHandlerInC );
+    // In verbose mode register also printing statistics at exit
+    atexit(atExitHandlerInC);
 
-  //establish fence posts
-  struct ObjectFooter * fencepost1 = (struct ObjectFooter *)_mem;
-  fencepost1->_allocated = 1;
-  fencepost1->_objectSize = 123456789;
-  char * temp =
-      (char *)_mem + (2*sizeof(struct ObjectFooter)) + sizeof(struct ObjectHeader) + ArenaSize;
-  struct ObjectHeader * fencepost2 = (struct ObjectHeader *)temp;
-  fencepost2->_allocated = 1;
-  fencepost2->_objectSize = 123456789;
-  fencepost2->_next = NULL;
-  fencepost2->_prev = NULL;
+    // establish fence posts
+    ObjectHeader * fencePostHead = (ObjectHeader *)_mem;
+    fencePostHead->_allocated = 1;
+    fencePostHead->_objectSize = 0;
 
-  //initialize the list to point to the _mem
-  temp = (char *) _mem + sizeof(struct ObjectFooter);
-  struct ObjectHeader * currentHeader = (struct ObjectHeader *) temp;
-  temp = (char *)_mem + sizeof(struct ObjectFooter) + sizeof(struct ObjectHeader) + ArenaSize;
-  struct ObjectFooter * currentFooter = (struct ObjectFooter *) temp;
-  _freeList = &_freeListSentinel;
-  currentHeader->_objectSize = ArenaSize + sizeof(struct ObjectHeader) + sizeof(struct ObjectFooter); //2MB
-  currentHeader->_allocated = 0;
-  currentHeader->_next = _freeList;
-  currentHeader->_prev = _freeList;
-  currentFooter->_allocated = 0;
-  currentFooter->_objectSize = currentHeader->_objectSize;
-  _freeList->_prev = currentHeader;
-  _freeList->_next = currentHeader;
-  _freeList->_allocated = 2; // sentinel. no coalescing.
-  _freeList->_objectSize = 0;
-  _memStart = (char*) currentHeader;
-}
+    char *temp = (char *)_mem + arenaSize - sizeof(ObjectHeader);
+    ObjectHeader * fencePostFoot = (ObjectHeader *)temp;
+    fencePostFoot->_allocated = 1;
+    fencePostFoot->_objectSize = 0;
+    fencePostFoot->_leftObjectSize = arenaSize - (2*sizeof(ObjectHeader));
 
-void initializeNew() {
+    // Set up the sentinel as the start of the freeList
+    _freeList = &_freeListSentinel;
 
-    //Initialize method for getting memory from OS
-    void * _mem = getMemoryFromOS( ArenaSize + (2*sizeof(struct ObjectHeader)) + (2*sizeof(struct ObjectFooter)) );
-    //establish fence posts
-    struct ObjectFooter * fencepost1 = (struct ObjectFooter *)_mem;
-    fencepost1->_allocated = 1;
-    fencepost1->_objectSize = 123456789;
-    char * temp =
-        (char *)_mem + (2*sizeof(struct ObjectFooter)) + sizeof(struct ObjectHeader) + ArenaSize;
-    struct ObjectHeader * fencepost2 = (struct ObjectHeader *)temp;
-    fencepost2->_allocated = 1;
-    fencepost2->_objectSize = 123456789;
-    fencepost2->_next = NULL;
-    fencepost2->_prev = NULL;
-
-    //initialize the list to point to the _mem
-    temp = (char *) _mem + sizeof(struct ObjectFooter);
-    struct ObjectHeader * currentHeader = (struct ObjectHeader *) temp;
-    temp = (char *)_mem + sizeof(struct ObjectFooter) + sizeof(struct ObjectHeader) + ArenaSize;
-    struct ObjectFooter * currentFooter = (struct ObjectFooter *) temp;
-    currentHeader->_objectSize = ArenaSize + sizeof(struct ObjectHeader) + sizeof(struct ObjectFooter); //2MB
+    // Initialize the list to point to the _mem
+    temp = (char *)_mem + sizeof(ObjectHeader);
+    ObjectHeader *currentHeader = (ObjectHeader *)temp;
+    currentHeader->_objectSize = arenaSize - (2*sizeof(ObjectHeader)); // ~2MB
+    currentHeader->_leftObjectSize = 0;
     currentHeader->_allocated = 0;
-    currentHeader->_next = _freeList;
-    currentFooter->_allocated = 0;
-    currentFooter->_objectSize = currentHeader->_objectSize;
-    currentHeader->_prev = _freeList->_prev->_next;
+    currentHeader->_listNext = _freeList;
+    currentHeader->_listPrev = _freeList;
+    _freeList->_listNext = currentHeader;
+    _freeList->_listPrev = currentHeader;
 
-    _freeList->_prev->_next = currentHeader;
+    // Set the start of the allocated memory
+    _memStart = (char *)currentHeader;
+
+    _initialized = 1;
 }
 
-void * allocateObject( size_t size )
+void * initializeNew (size_t size) {
+
+	//Get a chunk of 2MB memory from the OS
+	void * _mem = getMemoryFromOS(arenaSize);
+
+	//Establish fence posts
+	ObjectHeader * fencePostHead = (ObjectHeader *) _mem;
+	fencePostHead->_allocated = 1;
+	fencePostHead->_objectSize = 0;
+
+	char * temp = (char *) _mem + arenaSize - sizeof(ObjectHeader);
+	ObjectHeader * fencePostTail = (ObjectHeader *) temp;
+	fencePostTail->_allocated = 1;
+	fencePostTail->_objectSize = 0;
+    fencePostTail->_leftObjectSize = arenaSize - (2*sizeof(ObjectHeader));
+
+	//Initialize the block by making the first header
+	temp = (char *) _mem + sizeof(ObjectHeader);
+	ObjectHeader * currentHeader = (ObjectHeader *) temp;
+	currentHeader->_objectSize = arenaSize - (2 * sizeof(ObjectHeader));
+	currentHeader->_allocated = 0;
+	currentHeader->_leftObjectSize = 0;
+
+	//Put this free block in the free list
+    currentHeader->_listNext = _freeList->_listNext;
+    currentHeader->_listPrev = _freeList;
+
+    _freeList->_listNext->_listPrev = currentHeader;
+    _freeList->_listNext = currentHeader;
+
+    //Call the allocate function now that new memory has been initialized
+    return allocateObject(size);
+
+}
+
+void * allocateObject(size_t size)
 {
-  //Make sure that allocator is initialized
-  if ( !_initialized ) {
-    _initialized = 1;
-    initialize();
-  }
+    // Make sure that allocator is initialized
+    if (!_initialized)
+        initialize();
 
-  // Add the ObjectHeader/Footer to the size and round the total size up to a multiple of
-  // 8 bytes for alignment.
-  size_t roundedSize = (size + sizeof(struct ObjectHeader) + sizeof(struct ObjectFooter) + 7) & ~7;
+    /* Add the ObjectHeader to the size and round the total size up to a
+     * multiple of 8 bytes for alignment.
+     */
+    size_t roundedSize = (size + sizeof(ObjectHeader) + 7) & ~7;
 
-    //Make a pointer to the freelist
-    struct ObjectHeader * p = _freeList->_next;
+    //Make a pointer to the free list
+    ObjectHeader * p = _freeList->_listNext;
 
-    char * temp;
-
-    struct ObjectHeader * oldHeader;
-    struct ObjectHeader * removeHeader;
-
+    //Flag for Case 3:
     int flag = 0;
 
+    ObjectHeader * t = _freeList->_listNext;
+
+    //Traverse the free list to find a chunk of the requested or larger size
     while (p != _freeList) {
+
         flag = 0;
-        //Case 1: When we don't need to break the chunk into two parts
-        if (p->_objectSize >= roundedSize && p->_objectSize < roundedSize + sizeof(struct ObjectHeader) + sizeof(struct ObjectFooter) + 8) {
-            //You found the right sized
-            temp = (char *) p;
-            removeHeader = p;
 
-            //Set the head's allocated = 1 and remove it from the FreeList
-            removeHeader->_allocated = 1;
+        //Case 1: Where you don't need to break the chunk into two parts
+        if (p->_objectSize >= roundedSize && p->_objectSize < roundedSize + sizeof(ObjectHeader) + 8) {
 
-            //Removing the header from the FreeList
-            removeHeader->_prev->_next = removeHeader->_next;
-            removeHeader->_next->_prev = removeHeader->_prev;
+            //You can allocate this chunk without any problems
 
-            //Going to make changes to the Footer
-            temp = temp + removeHeader->_objectSize - sizeof(struct ObjectFooter);
-            struct ObjectFooter * removeFooter = (struct ObjectFooter *) temp;
+            //Change the header settings
+            p->_allocated = 1;
 
-            //Change the variable in Footer
-            removeFooter->_allocated = 1;
-            removeFooter->_objectSize = removeHeader->_objectSize;
+            //Remove the block from the free list
+            p->_listNext->_listPrev = p->_listPrev;
+            p->_listPrev->_listNext = p->_listNext;
 
-            //Change the header variable to what you want to return
-            oldHeader = removeHeader;
-
-            //Break out of the loop because you're done
+            //Get out of the loop
             break;
 
-        } //Case 2: When you can break the memory chunk into two parts
-        else if (p->_objectSize >= roundedSize + sizeof(struct ObjectHeader) + sizeof(struct ObjectFooter) + 8) {
+        } //Case 2: Where you do need to break the memory into two parts
+        else if (p->_objectSize >= roundedSize + sizeof(ObjectHeader) + 8) {
 
-            temp = (char *) p;
-            oldHeader = p;
+            //Update the current block's _objectSize
+            p->_objectSize -= roundedSize;
 
-            //Create a new Footer at the end of the requested size
-            temp = temp + roundedSize - sizeof(struct ObjectFooter);
-            struct ObjectFooter * oldFooter = (struct ObjectFooter *) temp;
+            //Get the pointer to the point of split
+            char * temp = (char *) p + p->_objectSize;
 
-            //Allocate the variables in the Old Footer
-            oldFooter->_allocated = 1;
-            oldFooter->_objectSize = roundedSize;
+            //Make a header here
+            struct ObjectHeader * newHeader = (ObjectHeader *) temp;
 
-            //Create a new Header
-            temp = temp + sizeof(struct ObjectFooter);
-            struct ObjectHeader * newHeader = (struct ObjectHeader *) temp;
+            //Assign values to the header
+            newHeader->_objectSize = roundedSize;
+            newHeader->_leftObjectSize = p->_objectSize;
+            newHeader->_allocated = 1;
 
-            //Allocate the variables in the new header
-            newHeader->_allocated = 0;
-            newHeader->_objectSize = oldHeader->_objectSize - roundedSize;
-            newHeader->_next = oldHeader->_next;
-            newHeader->_prev = oldHeader->_prev;
+            //Update the proceeding header's _leftObjectSize
+            temp += newHeader->_objectSize;
+            ObjectHeader * rightHeader = (ObjectHeader *) temp;
+            rightHeader->_leftObjectSize = newHeader->_objectSize;
 
-            //Double linked list operations (adding the new broken block to the list and removing the old block)
-            oldHeader->_prev->_next = newHeader;
-            oldHeader->_next->_prev = newHeader;
-            oldHeader->_objectSize = roundedSize;
+            //Set the return value
+            p = newHeader;
 
-            //Change the variables in Old Header
-            oldHeader->_allocated = 1;
-            oldHeader->_next = newHeader;
-
-
-            //Allocate the variables in New Footer
-            temp = temp + newHeader->_objectSize - sizeof(struct ObjectFooter);
-            struct ObjectFooter * newFooter = (struct ObjectFooter *) temp;
-            newFooter->_allocated = 0;
-            newFooter->_objectSize = newHeader->_objectSize;
-
-            //Break out of the loop because the job is done
+            //Break out of the loop cause you done!
             break;
-        } //Case 3: All the memory chunk in the initial 2MB block is full/or not enough memory remaining to return for the requested size.
-        else {
+
+        }  //Case 3: Where the memory request cannot be fulfilled by the current free list and so you
+           //			 need to get more memory from the OS and then add it to the free list.
+	else {
+
+            //Set a flag so that you know if there was no chunk of memory that could satisfy
+            // the request.
             flag = 1;
 
-        }
-        //Move on to the next node in the FreeList
-        p = p->_next;
+		}
+
+        //Move on to the next chunk of memory in the free list
+        p = p->_listNext;
     }
 
-    if (flag == 1) {
-        initializeNew();
-        allocateObject(size);
-    }
-  // Store the size in the header
-  //struct ObjectHeader * o = (struct ObjectHeader *) _mem;
+    //Check for case 3 flag
+    if (flag == 1)
+        return initializeNew(size);
 
-  //o->_objectSize = roundedSize;
+    pthread_mutex_unlock(&mutex);
 
-  pthread_mutex_unlock(&mutex);
-
-  // Return a pointer to usable memory
-  return (void *) (oldHeader + 1);
+    // Return a pointer to usable memory
+    return (void *) (p + 1);
 }
 
-void freeObject( void * ptr )
+void freeObject(void *ptr)
 {
 
-	// Add your code here
-	//Trying to write freeeeeeeeeeeeee
+    //Assign a pointer to the start of the free list
+    ObjectHeader * p = _freeList->_listNext;
 
-	//Warnings: Ptr object given just below the header of the object, so you have to traverse up by sizeof(struct ObjectHeader) to gain access to know the upper and lower node
+    //Make flags
+    int leftFlag = 0;
+    int rightFlag = 0;
 
-	//Case 1: Coalese with the upper node
-	//Case 2: Coalese with the lower node
-	//Case 3: Coalese with both nodes
+    //Make a pointer to the currentHeader
+    char * temp = (char *) ptr - sizeof(ObjectHeader);
+    ObjectHeader * currentHeader = (ObjectHeader *) temp;
 
-	//Check the Upper and Lower nodes and check the appropriate flags.
+    //Go to the left header
+    temp -= currentHeader->_leftObjectSize;
+    ObjectHeader * leftHeader = (ObjectHeader *) temp;
 
-	int flagFooter = 0, flagHeader = 0;
+    //Setting the flag
+    if (!leftHeader->_allocated)
+        leftFlag = 1;
 
-	//Make a temp pointer
-	char * temp = (char *) ptr;
+    //Go to the right header this time
+    temp += leftHeader->_objectSize + currentHeader->_objectSize;
+    ObjectHeader * rightHeader = (ObjectHeader *) temp;
 
-	//Go to the header of the given pointer
-	temp = temp - sizeof(struct ObjectHeader);
+    //Set the flag again
+    if (!rightHeader->_allocated)
+        rightFlag = 1;
 
-    char * change = temp;
+    //Set the big check condition now
 
-	struct ObjectHeader * checkHeader = (struct ObjectHeader *) temp;
+    //Case 1: Coalesce with both sides
+    if (leftFlag && rightFlag) {
 
-    //If we only remove the specified node. (No coalesing)
-    struct ObjectHeader * removeHeader = (struct ObjectHeader *) temp;
+        //Update left node's object size
+        leftHeader->_objectSize += currentHeader->_objectSize + rightHeader->_objectSize;
 
-    //printf("checkHeader->_allocated = %d\n", checkHeader->_allocated);
-    //printf("checkHeader->_objectSize = %d\n", (int) checkHeader->_objectSize);
-
-	//Check the upper footer
-	temp = temp - sizeof(struct ObjectFooter);
-
-	struct ObjectFooter * checkFooter = (struct ObjectFooter *) temp;
-    //printf("YOLO\n");
-
-    //printf("checkFooter->_allocated = %d\n", checkFooter->_allocated);
-    //printf("checkFooter->_objectSize = %d\n", (int) checkFooter->_objectSize);
-
-	if (checkFooter->_allocated == 0) {
-        flagFooter = 1;
-        //printf("YOLO\n");
-    }
-    //printf("YOLO\n");
-	//Check the lower header
-	temp = temp + sizeof(struct ObjectFooter) + checkHeader->_objectSize;
-
-
-	checkHeader = (struct ObjectHeader *) temp;
-
-    //printf("checkHeader->_objectSize = %d\n", (int) checkHeader->_objectSize);
-    //printf("checkHeader->_allocated = %d\n", checkHeader->_allocated);
-
-    if (checkHeader->_allocated == 0) {
-        //printf("YOLO1\n");
-		flagHeader = 1;
-    }
-
-    temp = temp + checkHeader->_objectSize - sizeof(struct ObjectFooter);
-    checkFooter = (struct ObjectFooter *) temp;
-
-    //printf("checkFooter = %d\ncheckHeader = %d\n", flagFooter, flagHeader);
-
-    //printf("checkFooter->_allocated = %d\n", checkFooter->_allocated);
-    //printf("checkFooter->_objectSize = %d\n", (int) checkFooter->_objectSize);
-
-	//Start the entire procedure:
-	if (flagHeader && flagFooter) {
-		//Coalese both the nodes with the nodes which needs to be freed
-
-        //Assigning MidHeader
-        struct ObjectHeader * changeMidHeader = (struct ObjectHeader *) change;
-        change = change + changeMidHeader->_objectSize;
-
-        //Assigning Down (right) header and footer
-        struct ObjectHeader * changeDownHeader = (struct ObjectHeader *) change;
-        change = change + changeDownHeader->_objectSize - sizeof(struct ObjectFooter);
-        struct ObjectFooter * changeDownFooter = (struct ObjectFooter *) change;
-
-        //Assigning Up (left) footer and header
-        change = change - changeDownFooter->_objectSize - changeMidHeader->_objectSize;
-        struct ObjectFooter * changeUpFooter = (struct ObjectFooter *) change;
-        change = change + sizeof(struct ObjectFooter) - changeUpFooter->_objectSize;
-        struct ObjectHeader * changeUpHeader = (struct ObjectHeader *) change;
-
-        //Assign variables for
-        changeUpHeader->_objectSize = changeUpHeader->_objectSize + changeMidHeader->_objectSize + changeDownHeader->_objectSize;
-        changeDownFooter->_objectSize = changeUpHeader->_objectSize;
-        changeUpHeader->_next = changeDownHeader->_next;
-
-	} else if (flagHeader) {
-		//Coalese with the lower node
-
-        struct ObjectHeader * changeHeader = (struct ObjectHeader *) change;
-        changeHeader->_allocated = 0;
-        size_t copy;
-        change = change + changeHeader->_objectSize - sizeof(struct ObjectFooter);
-        struct ObjectFooter * changeFooter = (struct ObjectFooter *) change;
-
-        changeFooter->_allocated = 0;
-
-        //Go to the lower node
-        change = change + sizeof(struct ObjectFooter);
-
-        struct ObjectHeader * changeHeader1 = (struct ObjectHeader *) change;
-        copy = changeHeader1->_objectSize;
-        changeHeader1->_next->_prev = changeHeader1->_prev;
-        changeHeader1->_prev->_next = changeHeader1->_next;
-
-        //Update the objectSize in Header;
-        changeHeader->_objectSize = changeHeader->_objectSize + copy;
-        changeFooter->_objectSize = changeFooter->_objectSize + copy;
-
-	} else if (flagFooter) {
-		//Coalese with the higher node
-
-        struct ObjectHeader * changeHeader = (struct ObjectHeader *) change;
-        changeHeader->_allocated = 0;
-        size_t copy;
-        change = change - sizeof(struct ObjectFooter);
-
-        struct ObjectFooter * changeFooter = (struct ObjectFooter *) change;
-        //If (SHIROYA) then _allocated = 0;
-        copy = changeFooter->_objectSize;
-        change = change - changeFooter->_objectSize + sizeof(struct ObjectFooter);
-
-        //Change the objectSize in the upper header
-        struct ObjectHeader * changeHeader1 = (struct ObjectHeader *) change;
-        changeHeader1->_objectSize = changeHeader1->_objectSize + copy;
-
-        //Change the footer in the last node
-        change = change + changeHeader1->_objectSize - sizeof(struct ObjectFooter);
-
-        //Assign a node to the last ObjectFooter
-        struct ObjectFooter * changeFooter1 = (struct ObjectFooter *) change;
-        changeFooter1->_allocated = 0;
-        changeFooter1->_objectSize = changeHeader1->_objectSize;
-
-	} else {
-		//Just remove the requested node without any coalesing
-
-        //Just free this node and add it to the FreeList
-        //Just set allocated = 0 for header and footer and add the node to FreeList
-        struct ObjectHeader * changeHeader = (struct ObjectHeader *) change;
-        changeHeader->_allocated = 0;
-
-        //Go to the footer
-        change = change + changeHeader->_objectSize - sizeof(struct ObjectFooter);
-
-        struct ObjectFooter * changeFooter = (struct ObjectFooter *) change;
-        changeFooter->_allocated = 0;
-	}
-
-    //Add the node to the FreeList
-
-    //FreeList node(s)
-    struct ObjectHeader * prev = _freeList;
-    struct ObjectHeader * list = _freeList->_next;
-
-    int lastFlag = 0;
-
-    while (list != _freeList) {
-        if (list > removeHeader) {
-            list->_prev->_next = removeHeader;
-            removeHeader->_prev = list->_prev;
-            removeHeader->_next = list;
-            list->_prev = removeHeader;
-            lastFlag = 1;
+        //Remove right node from the free list
+        while (p->_listNext != rightHeader) {
+            p = p->_listNext;
         }
-        prev = list;
-        list = list->_next;
-    }
-    if (!lastFlag) {
-        list->_prev->_next = removeHeader;
-        removeHeader->_prev = list->_prev;
-        removeHeader->_next = list;
-        list->_prev = removeHeader;
-    }
-	return;
 
+        p->_listNext->_listNext->_listPrev = p;
+        p->_listNext = p->_listNext->_listNext;
+
+        //Update the right right node's objectSize
+        char * temp = (char *) rightHeader + rightHeader->_objectSize;
+        ObjectHeader * rightRightNode = (ObjectHeader *) temp;
+        rightRightNode->_leftObjectSize = leftHeader->_objectSize;
+
+    } //Case 2: Coalesce with left
+    else if (leftFlag) {
+
+        //Go to the left header and increase its _objectSize
+        leftHeader->_objectSize += currentHeader->_objectSize;
+
+        //Go to the right header and update the _leftObjectSize
+        rightHeader->_leftObjectSize = leftHeader->_objectSize;
+
+    } //Case 3: Coalesce with right
+    else if (rightFlag) {
+
+        //Increase the currentHeader's _objectSize by adding the right header's _objectSize
+        currentHeader->_objectSize += rightHeader->_objectSize;
+
+        //Change the pointers to fix the free list
+        currentHeader->_listNext = rightHeader->_listNext;
+        currentHeader->_listPrev = rightHeader->_listPrev;
+
+        rightHeader->_listPrev->_listNext = currentHeader;
+        rightHeader->_listNext->_listPrev = currentHeader;
+
+        //Change the allocated value in the currentHeader
+        currentHeader->_allocated = 0;
+
+        //Go to the header right of the rightHeader to update the _leftObjectSize
+        char * temp = (char *) rightHeader + rightHeader->_objectSize;
+        ObjectHeader * rightRightHeader = (ObjectHeader *) temp;
+
+        //Update the _leftObjectSize
+        rightRightHeader->_leftObjectSize = currentHeader->_objectSize;
+
+    } //Case 4: No coalescing
+    else {
+
+        //Just add the block to the head of the free list
+        currentHeader->_listNext = _freeList->_listNext;
+        currentHeader->_listPrev = _freeList;
+        _freeList->_listNext = currentHeader;
+
+        //Change the allocated value in the currentHeader
+        currentHeader->_allocated = 0;
+
+    }
+
+    return;
 }
 
-size_t objectSize( void * ptr )
-{
-  // Return the size of the object pointed by ptr. We assume that ptr is a valid obejct.
-  struct ObjectHeader * o =
-    (struct ObjectHeader *) ( (char *) ptr - sizeof(struct ObjectHeader) );
-
-  // Substract the size of the header
-  return o->_objectSize;
-}
-
+/*
+ * Prints the current state of the heap.
+ */
 void print()
 {
-  printf("\n-------------------\n");
+    printf("\n-------------------\n");
 
-  printf("HeapSize:\t%zd bytes\n", _heapSize );
-  printf("# mallocs:\t%d\n", _mallocCalls );
-  printf("# reallocs:\t%d\n", _reallocCalls );
-  printf("# callocs:\t%d\n", _callocCalls );
-  printf("# frees:\t%d\n", _freeCalls );
+    printf("HeapSize:\t%zd bytes\n", _heapSize );
+    printf("# mallocs:\t%d\n", _mallocCalls );
+    printf("# reallocs:\t%d\n", _reallocCalls );
+    printf("# callocs:\t%d\n", _callocCalls );
+    printf("# frees:\t%d\n", _freeCalls );
 
-  printf("\n-------------------\n");
+    printf("\n-------------------\n");
 }
 
-void print_list()
-{
-  printf("FreeList: ");
-  if ( !_initialized ) {
-    _initialized = 1;
-    initialize();
-  }
-  struct ObjectHeader * ptr = _freeList->_next;
-  while(ptr != _freeList){
-      long offset = (long)ptr - (long)_memStart;
+/*
+ * Prints the current state of the freeList
+ */
+void print_list() {
+    printf("FreeList: ");
+    if (!_initialized)
+        initialize();
 
-      //Check this immediately
-      printf("[offset:%ld,size:%zd]",offset,ptr->_objectSize);
-      ptr = ptr->_next;
-      if(ptr != NULL){
-          printf("->");
-      }
-  }
-  printf("\n");
+    ObjectHeader * ptr = _freeList->_listNext;
+
+    while (ptr != _freeList) {
+        long offset = (long)ptr - (long)_memStart;
+        printf("[offset:%ld,size:%zd]", offset, ptr->_objectSize);
+        ptr = ptr->_listNext;
+        if (ptr != NULL)
+            printf("->");
+    }
+    printf("\n");
 }
 
-void * getMemoryFromOS( size_t size )
+/*
+ * This function employs the actual system call, sbrk, that retrieves memory
+ * from the OS.
+ *
+ * @param: the chunk size that is requested from the OS
+ * @return: pointer to the beginning of the chunk retrieved from the OS
+ */
+void * getMemoryFromOS(size_t size)
 {
-  // Use sbrk() to get memory from OS
-  _heapSize += size;
+    _heapSize += size;
 
-  void * _mem = sbrk( size );
+    // Use sbrk() to get memory from OS
+    void *_mem = sbrk(size);
 
-  if(!_initialized){
-      _memStart = _mem;
-  }
+    // if the list hasn't been initialized, initialize memStart to mem
+    if (!_initialized)
+        _memStart = _mem;
 
-  _numChunks++;
-
-  return _mem;
+    return _mem;
 }
 
 void atExitHandler()
 {
-  // Print statistics when exit
-  if ( _verbose ) {
-    print();
-  }
+    // Print statistics when exit
+    if (_verbose)
+        print();
 }
 
-//
-// C interface
-//
+/*
+ * C interface
+ */
 
-extern void *
-malloc(size_t size)
+extern void * malloc(size_t size)
 {
-  pthread_mutex_lock(&mutex);
-  increaseMallocCalls();
+    pthread_mutex_lock(&mutex);
+    increaseMallocCalls();
 
-  return allocateObject( size );
+    return allocateObject(size);
 }
 
-extern void
-free(void *ptr)
+extern void free(void *ptr)
 {
-  pthread_mutex_lock(&mutex);
-  increaseFreeCalls();
+    pthread_mutex_lock(&mutex);
+    increaseFreeCalls();
 
-  if ( ptr == 0 ) {
-    // No object to free
-    pthread_mutex_unlock(&mutex);
-    return;
-  }
-
-  freeObject( ptr );
-}
-
-extern void *
-realloc(void *ptr, size_t size)
-{
-  pthread_mutex_lock(&mutex);
-  increaseReallocCalls();
-
-  // Allocate new object
-  void * newptr = allocateObject( size );
-
-  // Copy old object only if ptr != 0
-  if ( ptr != 0 ) {
-
-    // copy only the minimum number of bytes
-    size_t sizeToCopy =  objectSize( ptr );
-    if ( sizeToCopy > size ) {
-      sizeToCopy = size;
+    if (ptr == 0) {
+        // No object to free
+        pthread_mutex_unlock(&mutex);
+        return;
     }
 
-    memcpy( newptr, ptr, sizeToCopy );
-
-    //Free old object
-    freeObject( ptr );
-  }
-
-  return newptr;
+    freeObject(ptr);
 }
 
-extern void *
-calloc(size_t nelem, size_t elsize)
+extern void * realloc(void *ptr, size_t size)
 {
-  pthread_mutex_lock(&mutex);
-  increaseCallocCalls();
+    pthread_mutex_lock(&mutex);
+    increaseReallocCalls();
 
-  // calloc allocates and initializes
-  size_t size = nelem * elsize;
+    // Allocate new object
+    void *newptr = allocateObject(size);
 
-  void * ptr = allocateObject( size );
+    // Copy old object only if ptr != 0
+    if (ptr != 0) {
 
-  if ( ptr ) {
-    // No error
-    // Initialize chunk with 0s
-    memset( ptr, 0, size );
-  }
+        // copy only the minimum number of bytes
+        ObjectHeader* hdr = (ObjectHeader *)((char *) ptr - sizeof(ObjectHeader));
+        size_t sizeToCopy =  hdr->_objectSize;
+        if (sizeToCopy > size)
+            sizeToCopy = size;
 
-  return ptr;
+        memcpy(newptr, ptr, sizeToCopy);
+
+        //Free old object
+        freeObject(ptr);
+    }
+
+    return newptr;
+}
+
+extern void * calloc(size_t nelem, size_t elsize)
+{
+    pthread_mutex_lock(&mutex);
+    increaseCallocCalls();
+
+    // calloc allocates and initializes
+    size_t size = nelem *elsize;
+
+    void *ptr = allocateObject(size);
+
+    if (ptr) {
+        // No error; initialize chunk with 0s
+        memset(ptr, 0, size);
+    }
+
+    return ptr;
 }

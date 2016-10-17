@@ -1,18 +1,18 @@
 
 ---- Running test1 ---
 Before any allocation
-FreeList: [offset:0,size:2097200]->
+FreeList: [offset:0,size:2097088]->
 mem1 = malloc(8)
-FreeList: [offset:56,size:2097144]->
+FreeList: [offset:0,size:2097048]->
 mem2 = malloc(8)
-FreeList: [offset:112,size:2097088]->
+FreeList: [offset:0,size:2097008]->
 mem3 = malloc(8)
-FreeList: [offset:168,size:2097032]->
+FreeList: [offset:0,size:2096968]->
 free(mem2))
-FreeList: [offset:168,size:2097032]->
+FreeList: [offset:2097008,size:40]->[offset:0,size:2096968]->
 
 -------------------
-HeapSize:	2097248 bytes
+HeapSize:	2097152 bytes
 # mallocs:	3
 # reallocs:	0
 # callocs:	0

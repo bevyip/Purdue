@@ -17,8 +17,7 @@ main( int argc, char **argv )
   *mem1 = 10;
 
   printf("mem1 = malloc(8)\n");
-  //printf("Comes here\n");
   print_list();
-  //printf("Doesn't come here\n");
+
   exit(0);
 }

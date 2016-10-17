@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include "MyMalloc.h"
 
-int allocations =10000;
+int allocations = 10000;
 
 int
 main( int argc, char **argv )
@@ -14,7 +14,7 @@ main( int argc, char **argv )
   char * ptrs[15410];
   int i;
   for (i = 0; i < allocations; i++ ) {
-    char * p1 = (char *) malloc(100 );
+    char * p1 = (char *) malloc(100);
     ptrs[i] = p1;
     *p1 = 100;
   }
@@ -32,11 +32,10 @@ main( int argc, char **argv )
 
   printf("---- Allocate 100 blocks ----\n");
   for (i = 0; i < allocations; i++ ) {
-    char * p1 = (char *) malloc(100 );
+    char * p1 = (char *) malloc(100);
     ptrs[i] = p1;
     *p1 = 100;
   }
   print_list();
   exit( 0 );
 }
-
