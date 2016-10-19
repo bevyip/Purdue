@@ -145,56 +145,70 @@ background_optional:
 
 %%
 
-bool is_dir(const char * path) {
-	struct stat buf;
-	stat(path, &buf);
-	return S_ISDIR(buf.st_mode);
-}
+int maxEntries = 20;
+int nEntries = 0;
+char ** entries;
 
 void expandWildCardsIfNecessary(char * arg) {
 
-	if (strchr(arg, '*') || strchr(arg, '?')) expandWildCards(NULL, arg);
-	else Command::_currentSimpleCommand->insertArgument(arg);
+	maxEntries = 20;
+	nEntries = 0;
+	entries = (char **) malloc (maxEntries * sizeof(char *));
+
+	if (strchr(arg, '*') || strchr(arg, '?')) {
+		expandWildCards(NULL, arg);
+		qsort(entries, nEntries, sizeof(char *), cmpfunc);
+		for (int i = 0; i < nEntries; i++) Command::_currentSimpleCommand->insertArgument(entries[i]);
+	}
+	else {
+		Command::_currentSimpleCommand->insertArgument(arg);
+	}
 	return;
 }
 
+int cmpfunc (const void *file1, const void *file2) {
+	const char *_file1 = *(const char **)file1;
+	const char *_file2 = *(const char **)file2;
+	return strcmp(_file1, _file2);
+}
+
 void expandWildCards(char * prefix, char * arg) {
-	
-	char * dir = NULL;
-	
-	if (prefix) dir = strcat(prefix, "/");
 
 	char * temp = arg;
-	char * tDir = (char *) malloc (100);
-	char * save = tDir;
+	char * save = (char *) malloc (strlen(arg) + 10);
+	char * dir = save;
 
-	while (*temp != '/' && *temp) *(tDir++) = *(temp++);
-	*tDir = '\0';
+	if (temp[0] == '/') *(save++) = *(temp++);
 
-	if (strchr(save, '*') || strchr(save, '?')) {
-		//if (dir) save = strcat(prefix, save);
-		//printf("preprefix is: %s\n", save);
-		//if (*temp) expandWildCards(save, ++temp);
-		char * reg = (char *) malloc (2 * strlen(arg) + 10);
-		char * a = arg;
+	while (*temp != '/' && *temp) *(save++) = *(temp++);
+	*save = '\0';
+
+	if (strchr(dir, '*') || strchr(dir, '?')) {
+		if (!prefix && arg[0] == '/') {
+			prefix = strdup("/");
+			dir++;
+		}  
+
+		char * reg = (char *) malloc (2*strlen(arg) + 10);
+		char * a = dir;
 		char * r = reg;
-		*(r++) = '^';
 
+		*(r++) = '^';
 		while (*a) {
 			if (*a == '*') { *(r++) = '.'; *(r++) = '*'; }
 			else if (*a == '?') { *(r++) = '.'; }
 			else if (*a == '.') { *(r++) = '\\'; *(r++) = '.'; }
-				else { *(r++) = *a; }
+			else { *(r++) = *a; }
 			a++;
 		}
-
 		*(r++) = '$'; *r = '\0';
 
 		regex_t re;
 
 		int expbuf = regcomp(&re, reg, REG_EXTENDED|REG_NOSUB);
 
-		DIR * dir = opendir((prefix) ? prefix:".");
+		char * toOpen = strdup((prefix)?prefix:".");
+		DIR * dir = opendir(toOpen);
 		if (dir == NULL) {
 			perror("opendir");
 			return;
@@ -203,23 +217,41 @@ void expandWildCards(char * prefix, char * arg) {
 		struct dirent * ent;
 		regmatch_t match;
 
-		char ** fileList = (char **) malloc (10000 * sizeof(char *));
-		int maxEntries = 100;
-		int numEntries = 0;
-
-		char yy[1000];
-
 		while ((ent = readdir(dir)) != NULL) {
-			expbuf = regexec(&re, ent->d_name, 1, &match, 0);
-			if (expbuf == 0) {
-				
+			if (!regexec(&re, ent->d_name, 1, &match, 0)) {
+				if (*temp) {
+					if (ent->d_type == DT_DIR) {
+						char * nPrefix = (char *) malloc (150);
+						if (!strcmp(toOpen, ".")) nPrefix = strdup(ent->d_name);
+						else if (!strcmp(toOpen, "/")) sprintf(nPrefix, "%s%s", toOpen, ent->d_name);
+						else sprintf(nPrefix, "%s/%s", toOpen, ent->d_name);
+						expandWildCards(nPrefix, (*temp == '/')?++temp:temp);
+					}
+				} else {
+					
+					if (nEntries == maxEntries) { maxEntries *= 2; entries = (char **) realloc (entries, maxEntries * sizeof(char *)); }
+					char * argument = (char *) malloc (100);
+					argument[0] = '\0';
+					if (prefix) sprintf(argument, "%s/%s", prefix, ent->d_name);
+
+					if (ent->d_name[0] == '.') {
+						if (arg[0] == '.') {
+							entries[nEntries++] = (argument[0] != '\0')?strdup(argument):strdup(ent->d_name);
+						}
+					} else {
+						entries[nEntries++] = (argument[0] != '\0')?strdup(argument):strdup(ent->d_name);
+					}
+				}
 			}
 		}
+
+		closedir(dir);
 	} else {
-		if (dir) save = strcat(prefix, save);
-		printf("prefix is: %s\n", save);
-		if (*temp) expandWildCards(save, ++temp);
-		else Command::_currentSimpleCommand->insertArgument(save);
+		char * preToSend;
+		if (prefix) {preToSend = strdup(prefix); strcat(preToSend, "/"); strcat(preToSend, dir); }
+		else { preToSend = strdup(dir); }
+
+		if (*temp) expandWildCards(preToSend, ++temp);
 	}
 }
 
