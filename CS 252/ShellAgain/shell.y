@@ -153,18 +153,75 @@ bool is_dir(const char * path) {
 
 void expandWildCardsIfNecessary(char * arg) {
 
-	if (strchr(arg, '*') || strchr(arg, '?'))
-		expandWildCards(NULL, arg);
-	else
-		Command::_currentSimpleCommand->insertArgument(arg);
-	
+	if (strchr(arg, '*') || strchr(arg, '?')) expandWildCards(NULL, arg);
+	else Command::_currentSimpleCommand->insertArgument(arg);
 	return;
 }
 
 void expandWildCards(char * prefix, char * arg) {
-	printf("Hey, it came here!\n");
-	return;
-} 
+	
+	char * dir = NULL;
+	
+	if (prefix) dir = strcat(prefix, "/");
+
+	char * temp = arg;
+	char * tDir = (char *) malloc (100);
+	char * save = tDir;
+
+	while (*temp != '/' && *temp) *(tDir++) = *(temp++);
+	*tDir = '\0';
+
+	if (strchr(save, '*') || strchr(save, '?')) {
+		//if (dir) save = strcat(prefix, save);
+		//printf("preprefix is: %s\n", save);
+		//if (*temp) expandWildCards(save, ++temp);
+		char * reg = (char *) malloc (2 * strlen(arg) + 10);
+		char * a = arg;
+		char * r = reg;
+		*(r++) = '^';
+
+		while (*a) {
+			if (*a == '*') { *(r++) = '.'; *(r++) = '*'; }
+			else if (*a == '?') { *(r++) = '.'; }
+			else if (*a == '.') { *(r++) = '\\'; *(r++) = '.'; }
+				else { *(r++) = *a; }
+			a++;
+		}
+
+		*(r++) = '$'; *r = '\0';
+
+		regex_t re;
+
+		int expbuf = regcomp(&re, reg, REG_EXTENDED|REG_NOSUB);
+
+		DIR * dir = opendir((prefix) ? prefix:".");
+		if (dir == NULL) {
+			perror("opendir");
+			return;
+		}
+
+		struct dirent * ent;
+		regmatch_t match;
+
+		char ** fileList = (char **) malloc (10000 * sizeof(char *));
+		int maxEntries = 100;
+		int numEntries = 0;
+
+		char yy[1000];
+
+		while ((ent = readdir(dir)) != NULL) {
+			expbuf = regexec(&re, ent->d_name, 1, &match, 0);
+			if (expbuf == 0) {
+				
+			}
+		}
+	} else {
+		if (dir) save = strcat(prefix, save);
+		printf("prefix is: %s\n", save);
+		if (*temp) expandWildCards(save, ++temp);
+		else Command::_currentSimpleCommand->insertArgument(save);
+	}
+}
 
 void
 yyerror(const char * s)
