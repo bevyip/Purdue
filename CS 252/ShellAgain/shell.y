@@ -244,12 +244,11 @@ void expandWildCards(char * prefix, char * arg) {
 				}
 			}
 		}
-
 		closedir(dir);
 	} else {
-		char * preToSend;
-		if (prefix) {preToSend = strdup(prefix); strcat(preToSend, "/"); strcat(preToSend, dir); }
-		else { preToSend = strdup(dir); }
+		char * preToSend = (char *) malloc (100);
+		if (prefix) sprintf(preToSend, "%s/%s", prefix, dir);
+		else preToSend = strdup(dir);
 
 		if (*temp) expandWildCards(preToSend, ++temp);
 	}

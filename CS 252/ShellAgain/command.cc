@@ -301,7 +301,7 @@ Command::execute()
 
 	// Check if there is the exit command is called
 	if (!strcmp(_simpleCommands[0]->_arguments[0], "exit") || !strcmp(_simpleCommands[0]->_arguments[0], "bye")) {
-		printf("Bye Bye!\n");
+		//printf("Bye Bye!\n");
 		exit(1);
 	}
 
